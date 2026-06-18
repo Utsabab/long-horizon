@@ -1,0 +1,9 @@
+jericho
+anthropic
+openai
+fire
+PyYAML
+python-dotenv
+pydantic
+numpy
+tqdm

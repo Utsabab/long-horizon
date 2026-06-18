@@ -1,0 +1,15 @@
+# Configuration for TextQuests experiments
+openrouter:
+  api_key: "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"
+  model: "google/gemma-4-26b-a4b-it"
+  base_url: "https://openrouter.ai/api/v1"
+experiments:
+  max_steps: 500
+  autosave_every: 1
+  accepted_local_error_k: 3
+  info_seek_window: 10
+  games: ["zork1", "wishbringer"]
+logs:
+  out_dir: "./experiments/logs"
+scout:
+  project: "textquests"
