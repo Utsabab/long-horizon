@@ -1,6 +1,6 @@
 # Configuration for TextQuests experiments
+textquests_root: "../textquests"
 openrouter:
-  OPENROUTER_API_KEY: ""
   model: "google/gemma-4-26b-a4b-it"
   base_url: "https://openrouter.ai/api/v1"
 experiments:

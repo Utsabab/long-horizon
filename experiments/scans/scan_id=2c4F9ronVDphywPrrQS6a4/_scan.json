@@ -1,0 +1,34 @@
+{
+  "scan_id": "2c4F9ronVDphywPrrQS6a4",
+  "scan_name": "experiments",
+  "timestamp": "2026-06-18T02:51:00.534270-04:00",
+  "revision": {
+    "type": "git",
+    "origin": "https://github.com/Utsabab/long-horizon.git",
+    "version": "0.0.0-dev.0+unknown",
+    "commit": "65707c5"
+  },
+  "packages": {
+    "inspect_ai": "0.3.240",
+    "inspect_scout": "0.4.41"
+  },
+  "options": {
+    "max_transcripts": 25,
+    "limit": 10
+  },
+  "transcripts": {
+    "type": "database",
+    "location": "./logs",
+    "filter": [],
+    "transcript_ids": {},
+    "count": 0
+  },
+  "scanners": {
+    "accepted_local_error_scan": {
+      "name": "accepted_local_error_scan",
+      "version": 0,
+      "file": "scanner.py",
+      "params": {}
+    }
+  }
+}

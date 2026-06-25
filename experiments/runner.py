@@ -9,33 +9,54 @@ from harness import AcceptedLocalErrorDetector
 from openrouter_client import OpenRouterClient
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
+DEFAULT_TEXTQUESTS_ROOT = REPO_ROOT / 'textquests'
 
-try:
+for path in (REPO_ROOT, DEFAULT_TEXTQUESTS_ROOT):
+    if str(path) not in sys.path:
+        sys.path.insert(0, str(path))
+
+def _resolve_textquests_root(config):
+    configured = (
+        os.getenv('TEXTQUESTS_ROOT')
+        or (config.get('textquests_root') if isinstance(config, dict) else None)
+        or DEFAULT_TEXTQUESTS_ROOT
+    )
+    return Path(configured).expanduser().resolve()
+
+
+def _load_textquests_env(textquests_root):
+    if str(textquests_root) not in sys.path:
+        sys.path.insert(0, str(textquests_root))
     from src.textquests_env import TextQuestsEnv
-except Exception:
-    TextQuestsEnv = None
+    return TextQuestsEnv
 
 class Runner:
-    def __init__(self, env_name, out_dir, model_client, config):
-        self.env_name = env_name
+    def __init__(self, game_name, out_dir, model_client, config, textquests_root):
+        self.game_name = game_name
         self.out_dir = Path(out_dir)
         self.logger = JSONLogger(self.out_dir)
         self.detector = AcceptedLocalErrorDetector(k=config.get('accepted_local_error_k',3), window=config.get('info_seek_window',10))
         self.model_client = model_client
         self.max_steps = config.get('max_steps',500)
+        self.textquests_root = Path(textquests_root).expanduser().resolve()
+        self.TextQuestsEnv = None
+
+    def _resolve_game_path(self):
+        candidate = self.textquests_root / 'data' / 'jiminy-cricket' / self.game_name
+        if candidate.exists():
+            return candidate
+        raise FileNotFoundError(
+            f'Could not find TextQuests game folder: {candidate}. Set TEXTQUESTS_ROOT to an external TextQuests checkout.'
+        )
 
     def _make_history_str(self, history):
         return [f"OBS: {o['obs']}\nACT: {o['action']}\nREAS: {o.get('reasoning','')}" for o in history]
 
     def run_once(self, seed=0):
         run_id = uuid.uuid4().hex
-        env = None
-        if TextQuestsEnv:
-            env = TextQuestsEnv(self.env_name, seed=seed)
-        else:
-            raise RuntimeError("TextQuests env not importable. Ensure repo is on PYTHONPATH.")
+        if self.TextQuestsEnv is None:
+            self.TextQuestsEnv = _load_textquests_env(self.textquests_root)
+        env = self.TextQuestsEnv(str(self._resolve_game_path()), seed=seed)
 
         history = []
         autosaves = {}
@@ -199,7 +220,8 @@ class Runner:
 
 if __name__ == '__main__':
     import yaml
-    cfg = yaml.safe_load(open('config.yaml'))
+    cfg = yaml.safe_load(open(Path(__file__).resolve().parent / 'config.yaml'))
+    textquests_root = _resolve_textquests_root(cfg)
     openrouter_cfg = cfg.get('openrouter', {}) or {}
     api_key = (
         openrouter_cfg.get('api_key')
@@ -211,5 +233,5 @@ if __name__ == '__main__':
         model=openrouter_cfg.get('model'),
         base_url=openrouter_cfg.get('base_url'),
     )
-    r = Runner('zork1', './experiments/logs', orc, cfg['experiments'])
+    r = Runner('zork1', Path(__file__).resolve().parent / 'logs', orc, cfg['experiments'], textquests_root)
     r.run_once()
