@@ -1,6 +1,0 @@
-OUT
-TOUCH EYE
-Ro Bot
-YES
-GREEN
-YES
