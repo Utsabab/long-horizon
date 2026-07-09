@@ -1,16 +1,22 @@
-import pytest
-from experiments.harness import AcceptedLocalErrorDetector
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from channels.ale import AcceptedLocalErrorDetector
+
 
 def test_detector_triggers():
     d = AcceptedLocalErrorDetector(k=3, window=5)
     d.add('open door', 0)
     d.add('open door', 0)
     d.add('open door', 0)
-    assert d.check()
+    assert d.check_repetition()
+
 
 def test_detector_no_trigger_on_progress():
     d = AcceptedLocalErrorDetector(k=3, window=5)
     d.add('open door', 0)
     d.add('open door', 0)
     d.add('open door', 1)
-    assert not d.check()
+    assert not d.check_repetition()

@@ -1,0 +1,85 @@
+{
+  "run_id": "a6bb93ea7f0f41a4a9e0a202cbf422d7",
+  "game": "wishbringer",
+  "summary": {
+    "total_steps": 6,
+    "final_progress": 5,
+    "final_score": 6,
+    "game_over": false,
+    "label": "baseline",
+    "fork_step": null,
+    "started_at": "2026-07-09T04:58:30.818538+00:00",
+    "completed_at": "2026-07-09T04:59:00.930736+00:00"
+  },
+  "milestones": [
+    {
+      "step": 4,
+      "progress_before": 0,
+      "progress_after": 5,
+      "score": 1,
+      "action": "ASK MR. CRISP ABOUT POSTCARDS"
+    }
+  ],
+  "steps": [
+    {
+      "step": 0,
+      "obs": "\n\"Behind you!\" cries the Princess. \"It's a trap!\"\n\nToo late. The drawbridge crashes shut against the tower wall. You turn to face your enemy, and find yourself staring into the open maw of Thermofax.\n\nOnly your Magick sword can save you now. You swing it high, speak the Word and stand unhurt as the blade absorbs the searing dragon-breath.\n\nThe reptile bellows with rage and flaps its wings to fan the fire in its belly. You are advancing, sword poised to strike, when a familiar voice shatters the daydream and stays your mighty hand...\n\nWISHBRINGER\nThe Magick Stone of Dreams\nCopyright (C)1985 Infocom, Inc. All rights reserved.\nWishbringer is a registered trademark of Infocom, Inc.\nRelease 1 / Serial Number 210629\n\nHilltop\nYou're on a hilltop overlooking the seaside village of Festeron.\n\nTo the south stands the Festeron Post Office. It's a little brick building with a neatly-trimmed lawn. The Post Office door stands invitingly open.\n\nRoads run down the hill to the east and west. There's a signpost nearby.\n\nSomebody inside the Post Office is calling you.\n\nOkay, what do you want to do now?\n",
+      "action": "GO SOUTH",
+      "reasoning": "The player is on a hilltop and hears someone calling from the Post Office to the south. The first logical step is to investigate the voice.",
+      "progress": 0,
+      "score": 1,
+      "reward": 1,
+      "tokens": 402
+    },
+    {
+      "step": 1,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is behind the service counter reading other people's postcards.\n\nMr. Crisp hides the postcards away as you enter. \"Where have you been?\" he barks angrily. \"Daydreaming again, eh? I've been looking everywhere for you!\"\n\n(Your score just went up by 1 point! Your total score is 1 out of 101.)\n\nWhat next?\n",
+      "action": "TALK TO MR. CRISP",
+      "reasoning": "I have arrived at the Post Office and met Mr. Crisp. I need to interact with him to find out what he wants or what my task is.",
+      "progress": 0,
+      "score": 1,
+      "reward": 0,
+      "tokens": 580
+    },
+    {
+      "step": 2,
+      "obs": "\"Don't talk back to me!\" Mr. Crisp growls.\n\nWhat next?\n",
+      "action": "ASK MR. CRISP FOR WORK",
+      "reasoning": "Mr. Crisp is angry and has just scolded me. Since talking back is discouraged, I should try to appease him or ask him what he needs to get back to work.",
+      "progress": 0,
+      "score": 1,
+      "reward": 0,
+      "tokens": 651
+    },
+    {
+      "step": 3,
+      "obs": "(This story doesn't know the word \"work.\")\n\nWhat next?\n",
+      "action": "ASK MR. CRISP WHAT HE WANTS",
+      "reasoning": "Mr. Crisp is angry and the previous attempt to ask for 'work' failed. I need to find a different way to interact with him or ask what he needs to do to satisfy him.",
+      "progress": 0,
+      "score": 1,
+      "reward": 0,
+      "tokens": 724
+    },
+    {
+      "step": 4,
+      "obs": "(To ask about something, use the command: ASK CHARACTER ABOUT THING.)\n\nWhat next?\n",
+      "action": "ASK MR. CRISP ABOUT POSTCARDS",
+      "reasoning": "The game provided a hint on how to use the ASK command. I need to try asking Mr. Crisp about something specific or general to progress the dialogue, but since I don't know what he wants, I will try to ask him about his business or his mood to see if it triggers a response.",
+      "progress": 5,
+      "score": 1,
+      "reward": 0,
+      "tokens": 825
+    },
+    {
+      "step": 5,
+      "obs": "You can't do that. Mr. Crisp has hidden them.\n\nMr. Crisp reaches under the service counter and pulls out a mysterious envelope. \"We just got this Special Delivery,\" he snarls, tossing it onto the service counter. \"I want you to drop it off right away. That means NOW!\"\n\nWhat next?\n",
+      "action": "TAKE ENVELOPE",
+      "reasoning": "Mr. Crisp has provided a task: deliver a Special Delivery envelope. The first step is to retrieve the envelope from the service counter.",
+      "progress": 5,
+      "score": 6,
+      "reward": 5,
+      "tokens": 949
+    }
+  ]
+}

@@ -1,0 +1,455 @@
+{
+  "run_id": "ac4208b5bd9346e9b993e3520687a231",
+  "game": "wishbringer",
+  "summary": {
+    "total_steps": 40,
+    "final_progress": 5,
+    "final_score": 6,
+    "game_over": false,
+    "label": "baseline",
+    "fork_step": null,
+    "started_at": "2026-07-09T06:56:22.466131+00:00",
+    "completed_at": "2026-07-09T06:57:12.928127+00:00"
+  },
+  "milestones": [
+    {
+      "step": 2,
+      "progress_before": 0,
+      "progress_after": 5,
+      "score": 1,
+      "action": "LOOK"
+    }
+  ],
+  "steps": [
+    {
+      "step": 0,
+      "obs": "\n\"Behind you!\" cries the Princess. \"It's a trap!\"\n\nToo late. The drawbridge crashes shut against the tower wall. You turn to face your enemy, and find yourself staring into the open maw of Thermofax.\n\nOnly your Magick sword can save you now. You swing it high, speak the Word and stand unhurt as the blade absorbs the searing dragon-breath.\n\nThe reptile bellows with rage and flaps its wings to fan the fire in its belly. You are advancing, sword poised to strike, when a familiar voice shatters the daydream and stays your mighty hand...\n\nWISHBRINGER\nThe Magick Stone of Dreams\nCopyright (C)1985 Infocom, Inc. All rights reserved.\nWishbringer is a registered trademark of Infocom, Inc.\nRelease 1 / Serial Number 210629\n\nHilltop\nYou're on a hilltop overlooking the seaside village of Festeron.\n\nTo the south stands the Festeron Post Office. It's a little brick building with a neatly-trimmed lawn. The Post Office door stands invitingly open.\n\nRoads run down the hill to the east and west. There's a signpost nearby.\n\nSomebody inside the Post Office is calling you.\n\nOkay, what do you want to do now?\n",
+      "action": "GO SOUTH",
+      "reasoning": "The player is currently on a hilltop and hears someone calling from inside the Post Office to the south. The most logical next step is to investigate the source of the voice.",
+      "progress": 0,
+      "score": 1,
+      "reward": 1,
+      "tokens": 408
+    },
+    {
+      "step": 1,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is behind the service counter reading other people's postcards.\n\nMr. Crisp hides the postcards away as you enter. \"Where have you been?\" he barks angrily. \"Daydreaming again, eh? I've been looking everywhere for you!\"\n\n(Your score just went up by 1 point! Your total score is 1 out of 101.)\n\nWhat next?\n",
+      "action": "TALK TO MR. CRISP",
+      "reasoning": "I have arrived at the Post Office and met my boss, Mr. Crisp. I need to interact with him to find out what he wants or what my task is.",
+      "progress": 0,
+      "score": 1,
+      "reward": 0,
+      "tokens": 588
+    },
+    {
+      "step": 2,
+      "obs": "\"Don't talk back to me!\" Mr. Crisp growls.\n\nWhat next?\n",
+      "action": "LOOK",
+      "reasoning": "Mr. Crisp is angry and has told me not to talk back. I need to find a way to appease him or find out what he wants without further aggravating him. Since I cannot talk back, I will try to see if there is anything else to do in the room or if I can look at the surroundings to find a way to be useful.",
+      "progress": 5,
+      "score": 1,
+      "reward": 0,
+      "tokens": 689
+    },
+    {
+      "step": 3,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is watching you impatiently.\n\nMr. Crisp reaches under the service counter and pulls out a mysterious envelope. \"We just got this Special Delivery,\" he snarls, tossing it onto the service counter. \"I want you to drop it off right away. That means NOW!\"\n\nWhat next?\n",
+      "action": "TAKE ENVELOPE",
+      "reasoning": "Mr. Crisp has given me a task: deliver a mysterious envelope that was just delivered as a Special Delivery. The envelope is on the service counter. I need to take it before I can deliver it.",
+      "progress": 5,
+      "score": 6,
+      "reward": 5,
+      "tokens": 855
+    },
+    {
+      "step": 4,
+      "obs": "Taken.\n\n(Your score just went up by 5 points! Your total score is 6 out of 101.)\n\nMr. Crisp drums his fingers on the service counter impatiently. \"Scram! The Magick Shoppe closes at five o'clock!\"\n\nWhat next?\n",
+      "action": "LOOK",
+      "reasoning": "Mr. Crisp has given me a task to deliver the envelope to the Magick Shoppe. I need to find out where the Magick Shoppe is located, so I will look around the Post Office or check the signpost to find directions.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 975
+    },
+    {
+      "step": 5,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is watching you impatiently.\n\nMr. Crisp screams, \"Get going!\"\n\nWhat next?\n",
+      "action": "GO NORTH",
+      "reasoning": "I have the envelope and need to find the Magick Shoppe. Since the Post Office description doesn't mention its location, I should return to the hilltop to check the signpost for directions.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 1095
+    },
+    {
+      "step": 6,
+      "obs": "As you leave the Post Office, somebody slams and locks the door behind you.\n\nHilltop\n\nWhat next?\n",
+      "action": "EXAMINE SIGNPOST",
+      "reasoning": "I am back on the hilltop. To find the Magick Shoppe, I need to check the signpost mentioned in the initial description of the hilltop.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 1164
+    },
+    {
+      "step": 7,
+      "obs": "There are two arrows on the signpost. The arrow pointing west says \"To Cemetery.\" The east arrow is marked \"To Festeron.\"\n\nWhat next?\n",
+      "action": "GO EAST",
+      "reasoning": "The signpost points west to the Cemetery and east to Festeron. The Magick Shoppe is likely in the village of Festeron, so I should head east.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 1245
+    },
+    {
+      "step": 8,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAs you approach the cottage you are greeted by the tiniest poodle you've ever seen in your entire life. It charges across the street, yapping angrily and showing its sharp little teeth.\n\nYou can smell the poodle's hot breath as it yaps.\n\nWhat next?\n",
+      "action": "LOOK",
+      "reasoning": "I am on the road to Festeron and have encountered a yapping poodle outside Miss Voss's cottage. I need to see if I can bypass it or if there is anything else to interact with to continue my journey toward the village.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 1400
+    },
+    {
+      "step": 9,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\nWhat next?\n",
+      "action": "GO NORTH",
+      "reasoning": "The poodle is blocking the path. I need to see if there is any way to deal with the dog or if I can move around it, but first I should check if there are any items in my inventory that might help, or simply try to move past it.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 1528
+    },
+    {
+      "step": 10,
+      "obs": "The poodle won't let you go that way.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\nWhat next?\n",
+      "action": "INVENTORY",
+      "reasoning": "The poodle is physically blocking the path to the north. Since I cannot pass through it, I need to find a way to distract, appease, or remove the dog. I will check my inventory to see if I have anything that might interest a dog.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 1625
+    },
+    {
+      "step": 11,
+      "obs": "You're holding a mysterious envelope.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n(You won't see the \"What next?\" prompt any more.)\n",
+      "action": "LOOK",
+      "reasoning": "The poodle is preventing me from moving north toward the village. I have a mysterious envelope, but nothing else in my inventory. I need to find a way to distract or appease the dog. Since I cannot pass, I will look around the immediate area to see if there is anything useful nearby.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 1735
+    },
+    {
+      "step": 12,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "LOOK AT PUDDLE",
+      "reasoning": "The poodle is blocking the path to the north. I have no items in my inventory to distract it. I have already used LOOK, so I will try to see if there is anything else in the environment I can interact with, but since the previous LOOK didn't reveal anything new, I will try to see if I can move in a different direction or if there is something I missed. However, the current location only offers North. I will try to see if there is anything else to look at specifically, like the cottage or the poodle.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 1920
+    },
+    {
+      "step": 13,
+      "obs": "(Sorry, but this story doesn't recognize the word \"puddle.\")\n\n",
+      "action": "LOOK AT POODLE",
+      "reasoning": "The player is stuck by an angry poodle. I have already tried LOOK and INVENTORY. I need to see if there is anything specific about the poodle or the cottage that I can interact with to bypass the dog. I will try looking at the poodle specifically.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2003
+    },
+    {
+      "step": 14,
+      "obs": "The poodle is tiny, mean and hungry-looking.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "LOOK AT COTTAGE",
+      "reasoning": "The poodle is described as 'hungry-looking'. Since I have no food in my inventory, I should look for something in the environment that might satisfy its hunger or distract it, such as looking at the cottage or searching the area.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2089
+    },
+    {
+      "step": 15,
+      "obs": "It's a tidy, happy-looking little place.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "OPEN COTTAGE",
+      "reasoning": "The poodle is described as 'hungry-looking'. I have already looked at the cottage and the poodle. I need to find something to distract or feed the dog. Since I cannot move north, I will try to see if there is anything else in the immediate vicinity or if I can interact with the cottage door/entrance.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2199
+    },
+    {
+      "step": 16,
+      "obs": "How can you do that to a cottage?\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "GO WEST",
+      "reasoning": "The poodle is described as 'hungry-looking' and is blocking the path. I cannot open the cottage, and I have no food. I need to find a way to deal with the dog. Since I cannot go north, I will try to go back to the hilltop to see if there is anything else I can find or if I missed something.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2307
+    },
+    {
+      "step": 17,
+      "obs": "The poodle yaps a threat as you back away.\n\nHilltop\n\n",
+      "action": "EXAMINE SIGNPOST",
+      "reasoning": "I have returned to the hilltop. I need to find a way to deal with the hungry poodle. I will check the signpost again to see if there are any other directions or if I missed anything, or perhaps check the Post Office again for items.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2387
+    },
+    {
+      "step": 18,
+      "obs": "There are two arrows on the signpost. The arrow pointing west says \"To Cemetery.\" The east arrow is marked \"To Festeron.\"\n\n",
+      "action": "GO SOUTH",
+      "reasoning": "I have already checked the signpost and it only points West to the Cemetery and East to Festeron. I need to find something to deal with the hungry poodle. I will return to the Post Office to see if there is anything else there that I might have missed or can use.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2486
+    },
+    {
+      "step": 19,
+      "obs": "The Post Office door is closed.\n\n",
+      "action": "GO NORTH",
+      "reasoning": "I am back at the Post Office, but the door is closed. I need to find a way to enter or find something useful. Since I cannot enter the Post Office, I will return to the hilltop to see if there are any other items or paths I missed.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2559
+    },
+    {
+      "step": 20,
+      "obs": "You'd fall down the hill if you went that way.\n\n",
+      "action": "GO SOUTH",
+      "reasoning": "I am currently at the Post Office, but the door is closed. I previously tried to go North from the Post Office and was told I would fall down the hill. I need to return to the Hilltop to re-evaluate my options or check the signpost again.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2639
+    },
+    {
+      "step": 21,
+      "obs": "The Post Office door is closed.\n\n",
+      "action": "GO NORTH",
+      "reasoning": "I am currently at the Post Office and the door is closed. I need to return to the Hilltop to re-evaluate my options and check the signpost or other directions.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2694
+    },
+    {
+      "step": 22,
+      "obs": "You'd tumble down the hill if you went that way.\n\n",
+      "action": "GO SOUTH",
+      "reasoning": "I am currently at the Post Office and the door is closed. I previously tried to go North from the Post Office and was told I would fall down the hill. I need to return to the Hilltop to re-evaluate my options and check the signpost or other directions.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2775
+    },
+    {
+      "step": 23,
+      "obs": "The Post Office door is closed.\n\n",
+      "action": "GO SOUTH",
+      "reasoning": "I am currently at the Post Office and the door is closed. I need to return to the Hilltop to re-evaluate my options. Based on the previous movement, going North from the Post Office is not possible, so I must go South to return to the Hilltop.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2850
+    },
+    {
+      "step": 24,
+      "obs": "The Post Office door is closed.\n\n",
+      "action": "GO SOUTH",
+      "reasoning": "I am currently at the Post Office and the door is closed. I need to return to the Hilltop to re-evaluate my options. Based on the previous movement, going North from the Post Office is not possible, so I must go South to return to the Hilltop.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2925
+    },
+    {
+      "step": 25,
+      "obs": "The Post Office door is closed.\n\n",
+      "action": "GO WEST",
+      "reasoning": "I am stuck at the Post Office with the door closed. I previously tried to go North and South, but the descriptions suggest I am in a loop or misinterpreting the directions. I need to re-orient myself. I will try to GO WEST to see if that leads back to the hilltop or another path.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3008
+    },
+    {
+      "step": 26,
+      "obs": "Outside Cemetery\nYou're standing next to an open iron gate that leads west into the Festeron Cemetery. A road runs east to the top of Post Office Hill.\n\n",
+      "action": "GO WEST",
+      "reasoning": "I have reached the Cemetery entrance. I need to explore this new area to see if there are any items or clues that might help me deal with the hungry poodle or progress my mission.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3092
+    },
+    {
+      "step": 27,
+      "obs": "The cemetery is a spooky place. Are you sure you want to go in there?\n\n(Please type YES or NO.)",
+      "action": "YES",
+      "reasoning": "I have reached the entrance to the Cemetery. To proceed and explore this new area, I must answer the prompt to enter.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3153
+    },
+    {
+      "step": 28,
+      "obs": " \nYou have been warned.\n\nCreepy Corner\nYou're in a creepy corner of the Festeron Cemetery, surrounded by silent tombstones. An iron gate opens to the east, and a narrow lane wanders north.\n\n",
+      "action": "LOOK",
+      "reasoning": "I have entered the cemetery. I need to explore the area to find something that might help me with the poodle (like food) or progress the story. I will start by looking around the current location.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3253
+    },
+    {
+      "step": 29,
+      "obs": "Creepy Corner\nYou're in a creepy corner of the Festeron Cemetery, surrounded by silent tombstones. An iron gate opens to the east, and a narrow lane wanders north.\n\n",
+      "action": "GO NORTH",
+      "reasoning": "I am in the Creepy Corner of the cemetery. I need to explore the area to find anything useful, such as food for the poodle or clues for my mission. I will move north to see where the narrow lane leads.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3351
+    },
+    {
+      "step": 30,
+      "obs": "Spooky Copse\nA copse of willow trees makes this part of the cemetery look really spooky. Narrow lanes wander south and west.\n\nThere's an open grave nearby, freshly dug, with a tombstone erected next to it.\n\nAn old gravedigger is resting under a willow tree.\n\nThe gravedigger nods a greeting as you approach.\n\n",
+      "action": "TALK TO GRAVEDIGGER",
+      "reasoning": "I have arrived at the Spooky Copse and encountered an old gravedigger. Since the poodle was described as 'hungry-looking', I should interact with the gravedigger to see if he has anything useful, like food, or if he can provide information.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3496
+    },
+    {
+      "step": 31,
+      "obs": "The gravedigger doesn't respond. He seems to be a bit hard of hearing.\n\n",
+      "action": "LOOK AT GRAVEDIGGER",
+      "reasoning": "The gravedigger is hard of hearing and didn't respond to my attempt to talk. I need to try a different way to get his attention or see if there is anything else in the area that might be useful, such as looking at the open grave or the gravedigger more closely.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3591
+    },
+    {
+      "step": 32,
+      "obs": "He's the town gravedigger, a village fixture since before you were born.\n\nThe gravedigger notices the mysterious envelope you're holding. \"That's a mighty mysterious-lookin' envelope you got there,\" he says. \"Let's have a look at it.\"\n\n",
+      "action": "SHOW ENVELOPE",
+      "reasoning": "The gravedigger has expressed interest in the mysterious envelope I am carrying. To progress the interaction and potentially gain information or items, I should show him the envelope.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3700
+    },
+    {
+      "step": 33,
+      "obs": "(to the gravedigger)\nThe gravedigger peers at the address on the mysterious envelope. \"Hmm,\" he mutters, handing it back to you. \"Could've sworn I buried that old woman years ago.\"\n\n(You are again holding the mysterious envelope.)\n\n\"Couldn't ask for a nicer day for diggin' graves.\"\n\n",
+      "action": "LOOK AT GRAVE",
+      "reasoning": "The gravedigger has looked at the envelope and mentioned he buried the person it is addressed to. This implies the recipient is dead, which is a strange situation for a 'Special Delivery'. I need to find out more about this person or the grave to see if there's a way to progress, or perhaps look for something in the nearby open grave.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3859
+    },
+    {
+      "step": 34,
+      "obs": "It's six feet deep and freshly dug. You can see an old bone inside.\n\n\"Got to go,\" says the gravedigger, picking up his shovel. \"See you soon.\"\n\nThe old man ambles away to the west.\n\n",
+      "action": "LOOK AT GRAVE",
+      "reasoning": "The gravedigger mentioned the envelope is for someone he buried years ago, and the open grave contains an old bone. I need to investigate the grave further to see if there is anything useful inside or if there are clues related to the recipient.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3973
+    },
+    {
+      "step": 35,
+      "obs": "It's six feet deep and freshly dug. You can see an old bone inside.\n\n",
+      "action": "LOOK AT BONE",
+      "reasoning": "The gravedigger mentioned he buried the person the envelope is addressed to, and there is a freshly dug grave with an old bone visible. I want to see if there is anything else in the grave or if I can interact with the bone.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 4054
+    },
+    {
+      "step": 36,
+      "obs": "You see nothing extraordinary about the old bone.\n\n",
+      "action": "LOOK",
+      "reasoning": "The gravedigger has left, and I have examined the bone in the grave. I need to continue exploring the cemetery or the surrounding areas to find something useful, perhaps something to deal with the poodle or progress the delivery. I will try to see if there is anything else in the Spooky Copse.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 4136
+    },
+    {
+      "step": 37,
+      "obs": "Spooky Copse\nA copse of willow trees makes this part of the cemetery look really spooky. Narrow lanes wander south and west.\n\nThere's an open grave nearby, freshly dug, with a tombstone erected next to it.\n\n",
+      "action": "GO WEST",
+      "reasoning": "I have explored the Spooky Copse and the grave. The gravedigger has left. I need to continue exploring the cemetery to find something useful, perhaps to deal with the poodle. I will try moving west to see where the lane leads.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 4247
+    },
+    {
+      "step": 38,
+      "obs": "Twilight Glen\nThe trees here are so thick, it's almost too dark to see! You can make out an open iron gate to the north, and a narrow lane between the tombstones winds off to the east.\n\nThere must have been a burial here recently. Somebody left their umbrella leaning up against a tombstone.\n\nThe gravedigger is locking the iron gate from the outside as you approach. \"Keep out of the cemetery after Dark,\" he tells you with a sly wink.\n\nYou can hear him chuckling as he disappears to the north.\n\n",
+      "action": "LOOK AT UMBRELLA",
+      "reasoning": "I have reached Twilight Glen. I see an umbrella leaning against a tombstone. Since the poodle was described as 'hungry-looking' and I have no food, I will check if the umbrella or the area around it has anything else, or simply take the umbrella in case it's useful for something else, but first I'll look at the umbrella.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 4451
+    },
+    {
+      "step": 39,
+      "obs": "The handle of the closed umbrella is carved like a parrot's head.\n\n",
+      "action": "TAKE UMBRELLA",
+      "reasoning": "I have found an umbrella with a parrot-head handle. Since I am looking for ways to deal with the hungry poodle or progress my mission, I will try to take the umbrella to see if it is a useful item.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 4527
+    }
+  ],
+  "ale_events": [
+    {
+      "step": 24,
+      "belief": [
+        "have_item",
+        "no food"
+      ],
+      "contradiction": true,
+      "evidence": {
+        "reason": "inventory_probe",
+        "item": "no food",
+        "probe_text": "> Hilltop                                                                                                            Time:  3:22 pm                    \nYou're holding a mysterious envelope.\n\n",
+        "has_item": false
+      }
+    },
+    {
+      "step": 25,
+      "belief": [
+        "have_item",
+        "no food"
+      ],
+      "contradiction": true,
+      "evidence": {
+        "reason": "inventory_probe",
+        "item": "no food",
+        "probe_text": "> Hilltop                                                                                                            Time:  3:23 pm                    \nYou're holding a mysterious envelope.\n\n",
+        "has_item": false
+      }
+    }
+  ]
+}

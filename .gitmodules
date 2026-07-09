@@ -1,0 +1,3 @@
+[submodule "textquests"]
+	path = textquests
+	url = https://github.com/centerforaisafety/textquests.git
