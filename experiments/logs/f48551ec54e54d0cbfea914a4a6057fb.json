@@ -1,0 +1,355 @@
+{
+  "run_id": "f48551ec54e54d0cbfea914a4a6057fb",
+  "game": "zork1",
+  "summary": {
+    "total_steps": 30,
+    "final_progress": 5,
+    "final_score": 10,
+    "game_over": false,
+    "label": "baseline",
+    "fork_step": null,
+    "started_at": "2026-07-09T07:25:46.307235+00:00",
+    "completed_at": "2026-07-09T07:27:10.251025+00:00"
+  },
+  "milestones": [
+    {
+      "step": 14,
+      "progress_before": 0,
+      "progress_after": 5,
+      "score": 10,
+      "action": "ENTER WINDOW"
+    }
+  ],
+  "steps": [
+    {
+      "step": 0,
+      "obs": "ZORK I: The Great Underground Empire\nInfocom interactive fiction - a fantasy story\nCopyright (c) 1981, 1982, 1983, 1984, 1985, 1986 Infocom, Inc. All rights reserved.\nZORK is a registered trademark of Infocom, Inc.\nRelease 1 / Serial number 210628\n\nWest of House\nYou are standing in an open field west of a white house, with a boarded front door.\nThere is a small mailbox here.\n\n",
+      "action": "OPEN MAILBOX",
+      "reasoning": "I am at the starting location. I need to see what is in the mailbox to begin my adventure.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 242
+    },
+    {
+      "step": 1,
+      "obs": "Opening the small mailbox reveals a leaflet.\n\n",
+      "action": "TAKE LEAFLET",
+      "reasoning": "I have opened the mailbox and discovered a leaflet. I should now take the leaflet to see if it contains useful information.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 300
+    },
+    {
+      "step": 2,
+      "obs": "Taken.\n\n",
+      "action": "LOOK",
+      "reasoning": "I have taken the leaflet. Now I need to examine the surroundings and find a way into the house.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 322
+    },
+    {
+      "step": 3,
+      "obs": "West of House\nYou are standing in an open field west of a white house, with a boarded front door.\nThere is a small mailbox here.\n\n",
+      "action": "GO NORTH",
+      "reasoning": "I have taken the leaflet and am currently west of the house. The front door is boarded, so I need to explore the area around the house to find an entrance.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 399
+    },
+    {
+      "step": 4,
+      "obs": "North of House\nYou are facing the north side of a white house. There is no door here, and all the windows are boarded up. To the north a narrow path winds through the trees.\n\n",
+      "action": "GO NORTH",
+      "reasoning": "I am currently north of the house. The path leads further north, so I will follow it to see where it goes.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 476
+    },
+    {
+      "step": 5,
+      "obs": "Forest Path\nThis is a path winding through a dimly lit forest. The path heads north-south here. One particularly large tree with some low branches stands at the edge of the path.\n\n",
+      "action": "EXAMINE TREE",
+      "reasoning": "I am on the forest path. I need to explore the area, specifically checking the large tree mentioned in the description.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 552
+    },
+    {
+      "step": 6,
+      "obs": "There's nothing special about the tree.\n\n",
+      "action": "GO SOUTH",
+      "reasoning": "I have explored the immediate area and the large tree, but found nothing of interest. I will now head back south to return to the house area and look for other directions.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 608
+    },
+    {
+      "step": 7,
+      "obs": "North of House\n\n",
+      "action": "GO EAST",
+      "reasoning": "I have returned to the North of House after finding nothing at the tree. I need to explore other directions around the house to find an entrance.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 652
+    },
+    {
+      "step": 8,
+      "obs": "Behind House\nYou are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar.\n\n",
+      "action": "GO EAST",
+      "reasoning": "I have reached the area behind the house and noticed a small window that is slightly ajar. This is a potential entrance to the house.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 729
+    },
+    {
+      "step": 9,
+      "obs": "Clearing\nYou are in a small clearing in a well marked forest path that extends to the east and west.\n\n",
+      "action": "LOOK",
+      "reasoning": "I have moved east from 'Behind House' and arrived in a 'Clearing'. I need to explore this new area to find a way back towards the house or find other items.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 799
+    },
+    {
+      "step": 10,
+      "obs": "Clearing\nYou are in a small clearing in a well marked forest path that extends to the east and west.\n\n",
+      "action": "GO WEST",
+      "reasoning": "I am in a clearing. I have already explored the north and east directions from the house. I need to explore the west direction to see if it leads back to the house or to another area.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 873
+    },
+    {
+      "step": 11,
+      "obs": "Behind House\n\n",
+      "action": "LOOK",
+      "reasoning": "I have returned to the 'Behind House' location from the 'Clearing'. I previously noted a small window that is slightly ajar here, which might be an entrance.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 921
+    },
+    {
+      "step": 12,
+      "obs": "Behind House\nYou are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar.\n\n",
+      "action": "ENTER WINDOW",
+      "reasoning": "I am behind the house and have noticed a small window that is slightly ajar. This is the most likely entrance into the house.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 997
+    },
+    {
+      "step": 13,
+      "obs": "The kitchen window is closed.\n\n",
+      "action": "OPEN WINDOW",
+      "reasoning": "I attempted to enter the window, but the observation indicates the kitchen window is closed. I need to see if I can interact with it or if there is another way.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1060
+    },
+    {
+      "step": 14,
+      "obs": "With great effort, you open the window far enough to allow entry.\n\n",
+      "action": "ENTER WINDOW",
+      "reasoning": "I have successfully opened the window. Now I need to enter the house through it.",
+      "progress": 5,
+      "score": 10,
+      "reward": 10,
+      "tokens": 1092
+    },
+    {
+      "step": 15,
+      "obs": "Kitchen\nYou are in the kitchen of the white house. A table seems to have been used recently for the preparation of food. A passage leads to the west and a dark staircase can be seen leading upward. A dark chimney leads down and to the east is a small window which is open.\nOn the table is an elongated brown sack, smelling of hot peppers.\nA bottle is sitting on the table.\nThe glass bottle contains:\n  A quantity of water\n\n",
+      "action": "EXAMINE SACK",
+      "reasoning": "I have entered the kitchen. I need to examine the items on the table to see if they are useful.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 1224
+    },
+    {
+      "step": 16,
+      "obs": "The brown sack is closed.\n\n",
+      "action": "OPEN SACK",
+      "reasoning": "I have entered the kitchen and found a sack and a bottle on the table. I have already examined the sack and found it is closed. I should now try to open it to see what is inside.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 1283
+    },
+    {
+      "step": 17,
+      "obs": "Opening the brown sack reveals a lunch, and a clove of garlic.\n\n",
+      "action": "TAKE LUNCH",
+      "reasoning": "I have opened the sack and discovered a lunch and a clove of garlic. I should now take these items so I can use them later.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 1340
+    },
+    {
+      "step": 18,
+      "obs": "Taken.\n\n",
+      "action": "TAKE BOTTLE",
+      "reasoning": "I have taken the lunch. I should now check the other item on the table, the bottle, to see if it is useful.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 1383
+    },
+    {
+      "step": 19,
+      "obs": "Taken.\n\n",
+      "action": "LOOK",
+      "reasoning": "I have taken the lunch and the bottle of water. I am currently in the kitchen. I need to explore the room to see what else is available or where I can go.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 1431
+    },
+    {
+      "step": 20,
+      "obs": "Kitchen\nYou are in the kitchen of the white house. A table seems to have been used recently for the preparation of food. A passage leads to the west and a dark staircase can be seen leading upward. A dark chimney leads down and to the east is a small window which is open.\nSitting on the kitchen table is: \n  A brown sack\n  The brown sack contains:\n    A clove of garlic\n\n",
+      "action": "TAKE GARLIC",
+      "reasoning": "I have taken the lunch and the bottle. The sack is still on the table, and it contains a clove of garlic. I should take the garlic.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 1573
+    },
+    {
+      "step": 21,
+      "obs": "Taken.\n\n",
+      "action": "GO WEST",
+      "reasoning": "I have collected the lunch, the bottle of water, and the clove of garlic. I am currently in the kitchen. I need to explore the rest of the house to find more items or a way forward. I will check the passage to the west.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 1626
+    },
+    {
+      "step": 22,
+      "obs": "Living Room\nYou are in the living room. There is a doorway to the east, a wooden door with strange gothic lettering to the west, which appears to be nailed shut, a trophy case, and a large oriental rug in the center of the room.\nAbove the trophy case hangs an elvish sword of great antiquity.\nA battery-powered brass lantern is on the trophy case.\n\n",
+      "action": "TAKE LANTERN",
+      "reasoning": "I have entered the living room. I see an elvish sword and a brass lantern on the trophy case. I should take the lantern first as it will be essential for exploring dark areas.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 1756
+    },
+    {
+      "step": 23,
+      "obs": "Taken.\n\n",
+      "action": "TAKE SWORD",
+      "reasoning": "I have taken the lantern. Now I should take the elvish sword, as it is a significant item and likely useful for combat or exploration.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 1801
+    },
+    {
+      "step": 24,
+      "obs": "Taken.\n\n",
+      "action": "LOOK",
+      "reasoning": "I have collected the lunch, water, garlic, lantern, and sword. I am in the living room. I need to explore the room further, specifically checking the trophy case or the rug, or attempting to interact with the nailed shut door.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 1861
+    },
+    {
+      "step": 25,
+      "obs": "Living Room\nYou are in the living room. There is a doorway to the east, a wooden door with strange gothic lettering to the west, which appears to be nailed shut, a trophy case, and a large oriental rug in the center of the room.\n\n",
+      "action": "EXAMINE RUG",
+      "reasoning": "I have collected several useful items (lunch, water, garlic, lantern, sword) and am in the living room. The rug is a common place for hidden items in Zork, so I will examine it.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 1972
+    },
+    {
+      "step": 26,
+      "obs": "There's nothing special about the carpet.\n\n",
+      "action": "EXAMINE TROPHY CASE",
+      "reasoning": "I have examined the rug and found nothing. I have already taken the lantern and the sword. I will now examine the trophy case to see if there is anything else of interest.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2033
+    },
+    {
+      "step": 27,
+      "obs": "The trophy case is empty.\n\n",
+      "action": "OPEN DOOR",
+      "reasoning": "I have explored the living room and collected the lantern and sword. The rug and trophy case yielded nothing else. I will now try to open the nailed shut door to the west to see if it is possible to enter.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2095
+    },
+    {
+      "step": 28,
+      "obs": "The door cannot be opened.\n\n",
+      "action": "GO EAST",
+      "reasoning": "I have explored the living room and found that the western door is nailed shut. I have already taken the lantern and the sword. I will now try to go east to return to the kitchen and see if there are other paths or items.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2161
+    },
+    {
+      "step": 29,
+      "obs": "Kitchen\nSitting on the kitchen table is: \n  A brown sack\n\n",
+      "action": "LOOK",
+      "reasoning": "I have returned to the kitchen. I have already taken the lunch, the water, the garlic, the lantern, and the sword. I need to see if there is anything else in the kitchen or if I can find another way out, such as the chimney or the staircase.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2243
+    }
+  ],
+  "ale_events": [
+    {
+      "step": 5,
+      "belief": [
+        "have_item",
+        "taken the leaflet and am currently west of the house"
+      ],
+      "contradiction": true,
+      "evidence": {
+        "reason": "inventory_probe",
+        "item": "taken the leaflet and am currently west of the house",
+        "probe_text": "> Forest Path                                                                                                  Score: 0                Moves: 5              \nYou are carrying:\n  A leaflet\n\n",
+        "has_item": false
+      }
+    },
+    {
+      "step": 9,
+      "belief": [
+        "have_item",
+        "taken the leaflet and am currently west of the house"
+      ],
+      "contradiction": true,
+      "evidence": {
+        "reason": "inventory_probe",
+        "item": "taken the leaflet and am currently west of the house",
+        "probe_text": "> Clearing                                                                                                  Score: 0                Moves: 9              \nYou are carrying:\n  A leaflet\n\n",
+        "has_item": false
+      }
+    }
+  ]
+}

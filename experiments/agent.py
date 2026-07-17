@@ -34,14 +34,26 @@ def format_history(history):
     ]
 
 
-def build_step_messages(game_name, history, observation):
+def build_step_messages(game_name, history, observation, scratchpad=None):
     """Build the full messages list for a single game step.
+
+    Args:
+        game_name:   e.g. 'zork1'.
+        history:     list of step dicts (obs, action, reasoning).
+        observation: current game observation.
+        scratchpad:  optional rendered MemoryMechanism string (M2).  When
+                     provided it is appended to the system prompt so the model
+                     always sees its current goal and history of tried actions.
 
     Returns a list of {role, content} dicts ready for the LLM client.
     """
+    system_content = get_system_prompt(game_name)
+    if scratchpad:
+        system_content = f'{system_content}\n\n{scratchpad}'
+
     history_lines = format_history(history)
     user_content = '\n'.join(history_lines + [f'OBSERVE: {observation}'])
     return [
-        {'role': 'system', 'content': get_system_prompt(game_name)},
+        {'role': 'system', 'content': system_content},
         {'role': 'user', 'content': user_content},
     ]

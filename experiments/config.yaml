@@ -2,13 +2,25 @@
 openrouter:
   model: "google/gemma-4-26b-a4b-it"
   base_url: "https://openrouter.ai/api/v1"
-  request_timeout: 15
+  request_timeout: 60
 experiments:
   max_steps: 500
   autosave_every: 1
   accepted_local_error_k: 3
   info_seek_window: 10
   games: ["zork1", "wishbringer"]
+
+  # M2 target: control-path drift — oracle path distance detector
+  drift:
+    enabled: true
+    window: 20        # steps to look back when computing off-path rate
+    threshold: 0.80   # fraction of window that must be off-path to flag drift
+
+  # M2 harness mechanism: structured memory scratchpad
+  memory:
+    enabled: true
+    max_visited: 25       # max locations to show in the scratchpad
+    max_discoveries: 10   # max discoveries to retain
 logs:
   out_dir: "./experiments/logs"
 scout:

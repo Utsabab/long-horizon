@@ -29,11 +29,11 @@ if str(_HERE) not in sys.path:
     sys.path.insert(0, str(_HERE))
 
 from agent import build_step_messages, format_history
-from channels import AcceptedLocalErrorDetector, make_env_checker
+from channels import AcceptedLocalErrorDetector, DriftDetector, make_env_checker
 from env import find_game_path, load_env_class, resolve_root
 from llm import OpenRouterClient, extract_action_and_reasoning
 from logger import RunLogger
-from mechanisms import InfoSeekingMechanism
+from mechanisms import InfoSeekingMechanism, MemoryMechanism
 
 
 class Runner:
@@ -63,9 +63,19 @@ class Runner:
             Path(textquests_root).expanduser().resolve() if textquests_root else None
         )
 
+        drift_cfg = config.get('drift', {}) or {}
+        self.drift_enabled   = drift_cfg.get('enabled', True)
+        self.drift_window    = drift_cfg.get('window', 20)
+        self.drift_threshold = drift_cfg.get('threshold', 0.8)
+
+        mem_cfg = config.get('memory', {}) or {}
+        self.memory_enabled        = mem_cfg.get('enabled', True)
+        self.memory_max_visited    = mem_cfg.get('max_visited', 25)
+        self.memory_max_discoveries = mem_cfg.get('max_discoveries', 10)
+
         self.logger = RunLogger(self.out_dir)
         self.llm = llm_client
-        self._env_class = None  # lazy-loaded on first run_once()
+        self._env_class = None
 
     # ------------------------------------------------------------------
     # Private helpers
@@ -81,7 +91,8 @@ class Runner:
         return self._get_env_class()(str(game_path), seed=seed)
 
     def _run_loop(self, env, logger, run_id, history, observation, info, progress, score,
-                  start_step, detector, env_checker, info_seeking=None, capture_fork=False):
+                  start_step, detector, env_checker, info_seeking=None, capture_fork=False,
+                  drift_detector=None, memory=None):
         """Run steps [start_step, self.max_steps) on a live env.
 
         Checks for an Accepted-Local-Error before deciding each step's action
@@ -120,9 +131,13 @@ class Runner:
                         'milestones_snapshot': list(logger._milestones),
                     }
                 if info_seeking is not None:
-                    proposed_action, parsed = info_seeking.intervene(
-                        format_history(history), details['belief'], details['evidence'],
-                    )
+                    try:
+                        proposed_action, parsed = info_seeking.intervene(
+                            format_history(history), details['belief'], details['evidence'],
+                        )
+                    except Exception as exc:
+                        logger.add_error({'step': step, 'error': f'info_seeking.intervene failed: {exc}'})
+                        proposed_action = ''
                     if proposed_action:
                         action = proposed_action
                         reasoning = parsed.get('content', '') if isinstance(parsed, dict) else str(parsed)
@@ -130,9 +145,15 @@ class Runner:
                         used_intervention = True
 
             if not used_intervention:
-                messages = build_step_messages(self.game_name, history, observation)
-                resp = self.llm.generate(messages, max_tokens=128, reasoning_enabled=False)
-                parsed = self.llm.parse_completion(resp)
+                scratchpad = memory.render() if memory else None
+                messages = build_step_messages(self.game_name, history, observation,
+                                               scratchpad=scratchpad)
+                try:
+                    resp = self.llm.generate(messages, max_tokens=128, reasoning_enabled=False)
+                    parsed = self.llm.parse_completion(resp)
+                except Exception as exc:
+                    logger.add_error({'step': step, 'error': f'llm.generate failed: {exc}'})
+                    break
                 content = parsed.get('content', '') if isinstance(parsed, dict) else str(parsed)
                 tokens = parsed.get('tokens', 0) if isinstance(parsed, dict) else 0
                 action, reasoning = extract_action_and_reasoning(content)
@@ -168,6 +189,19 @@ class Runner:
                 })
                 print(f'[{run_id[:8]}] step {step:>4}  {progress:.1f}% → {new_progress:.1f}%  score {score}  action: {action}')
 
+            # --- M2: update memory scratchpad ---
+            if memory:
+                memory.update(observation, new_observation, action, reasoning)
+
+            # --- Drift detection ---
+            if drift_detector:
+                drift_detector.add(action)
+                is_drifting, drift_details = drift_detector.check_drift()
+                if is_drifting:
+                    logger.add_drift_event({'step': step, **drift_details})
+                    print(f'[{run_id[:8]}] step {step:>4}  DRIFT  off-path {drift_details["off_path_rate"]:.0%}'
+                          f'  ({drift_details["steps_since_on_path"]} consecutive off-path steps)')
+
             try:
                 last_checkpoint_id = env.save_checkpoint(new_observation, info)
             except Exception:
@@ -196,7 +230,7 @@ class Runner:
     # ------------------------------------------------------------------
 
     def run_once(self, seed=0):
-        """Run one episode with plain ALE detection/logging, no intervention.
+        """Run one episode with plain ALE + drift detection/logging, no intervention.
 
         Returns
         -------
@@ -209,9 +243,33 @@ class Runner:
         detector = AcceptedLocalErrorDetector(k=self.ale_k, window=self.ale_window)
         env_checker = make_env_checker(env)
 
+        # --- Drift detector (oracle path distance) ---
+        drift_detector = None
+        if self.drift_enabled:
+            game_path = find_game_path(self.game_name, self.textquests_root)
+            wt_path = game_path / f'{self.game_name}_walkthrough.txt'
+            try:
+                drift_detector = DriftDetector(wt_path,
+                                               window=self.drift_window,
+                                               threshold=self.drift_threshold)
+                print(f'[{run_id[:8]}] drift detector loaded  '
+                      f'({drift_detector.walkthrough_length}-step walkthrough, '
+                      f'window={self.drift_window}, threshold={self.drift_threshold:.0%})')
+            except FileNotFoundError as exc:
+                print(f'[{run_id[:8]}] WARNING: {exc}  — drift detection disabled')
+
+        # --- Memory scratchpad (M2) ---
+        memory = None
+        if self.memory_enabled:
+            memory = MemoryMechanism(max_visited=self.memory_max_visited,
+                                     max_discoveries=self.memory_max_discoveries)
+            # Seed location from initial observation
+            memory.update('', observation, '', '')
+
         result = self._run_loop(
             env, self.logger, run_id, [], observation, info, 0, 0, 0,
             detector, env_checker, info_seeking=None, capture_fork=False,
+            drift_detector=drift_detector, memory=memory,
         )
 
         path = self.logger.save(run_id, self.game_name, {

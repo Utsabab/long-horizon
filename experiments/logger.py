@@ -26,8 +26,9 @@ Schema
     { "step": int, "obs": str, "action": str, "reasoning": str,
       "progress": float, "score": int, "reward": int|float }
   ],
-  "errors": [                  # omitted if empty
-    { "step": int, "error": str }
+  "drift_events": [              # omitted if empty; one entry each time check_drift() flags
+    { "step": int, "off_path_rate": float, "steps_since_on_path": int,
+      "window": int, "threshold": float, "recent_actions": [...] }
   ],
   "ale_events": [               # omitted if empty; one entry each time check_ale() confirms
     { "step": int, "belief": [...], "contradiction": bool, "evidence": {...} }
@@ -52,6 +53,7 @@ class RunLogger:
         self._milestones = []
         self._errors = []
         self._ale_events = []
+        self._drift_events = []
         self._started_at = datetime.now(timezone.utc).isoformat()
 
     def add_step(self, record):
@@ -69,6 +71,10 @@ class RunLogger:
     def add_ale(self, record):
         """Record a confirmed Accepted-Local-Error. Expected keys: step, belief, contradiction, evidence."""
         self._ale_events.append(record)
+
+    def add_drift_event(self, record):
+        """Record a confirmed drift detection. Expected keys: step, off_path_rate, steps_since_on_path, ..."""
+        self._drift_events.append(record)
 
     def save(self, run_id, game_name, summary):
         """Write the transcript and reset for the next run.
@@ -98,6 +104,8 @@ class RunLogger:
             transcript['errors'] = self._errors
         if self._ale_events:
             transcript['ale_events'] = self._ale_events
+        if self._drift_events:
+            transcript['drift_events'] = self._drift_events
 
         path = self.out_dir / f'{run_id}.json'
         with open(path, 'w', encoding='utf-8') as f:

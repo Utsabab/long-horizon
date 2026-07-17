@@ -1,0 +1,85 @@
+{
+  "run_id": "d15e833bcd2a4893812becf9c10ae39d",
+  "game": "wishbringer",
+  "summary": {
+    "total_steps": 6,
+    "final_progress": 5,
+    "final_score": 6,
+    "game_over": false,
+    "label": "baseline",
+    "fork_step": null,
+    "started_at": "2026-07-14T16:16:29.284201+00:00",
+    "completed_at": "2026-07-14T16:16:56.624437+00:00"
+  },
+  "milestones": [
+    {
+      "step": 2,
+      "progress_before": 0,
+      "progress_after": 5,
+      "score": 1,
+      "action": "LOOK"
+    }
+  ],
+  "steps": [
+    {
+      "step": 0,
+      "obs": "\n\"Behind you!\" cries the Princess. \"It's a trap!\"\n\nToo late. The drawbridge crashes shut against the tower wall. You turn to face your enemy, and find yourself staring into the open maw of Thermofax.\n\nOnly your Magick sword can save you now. You swing it high, speak the Word and stand unhurt as the blade absorbs the searing dragon-breath.\n\nThe reptile bellows with rage and flaps its wings to fan the fire in its belly. You are advancing, sword poised to strike, when a familiar voice shatters the daydream and stays your mighty hand...\n\nWISHBRINGER\nThe Magick Stone of Dreams\nCopyright (C)1985 Infocom, Inc. All rights reserved.\nWishbringer is a registered trademark of Infocom, Inc.\nRelease 1 / Serial Number 210629\n\nHilltop\nYou're on a hilltop overlooking the seaside village of Festeron.\n\nTo the south stands the Festeron Post Office. It's a little brick building with a neatly-trimmed lawn. The Post Office door stands invitingly open.\n\nRoads run down the hill to the east and west. There's a signpost nearby.\n\nSomebody inside the Post Office is calling you.\n\nOkay, what do you want to do now?\n",
+      "action": "GO SOUTH",
+      "reasoning": "The player is currently on a hilltop and hears someone calling from inside the Post Office to the south. The most logical next step is to investigate the voice.",
+      "progress": 0,
+      "score": 1,
+      "reward": 1,
+      "tokens": 405
+    },
+    {
+      "step": 1,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is behind the service counter reading other people's postcards.\n\nMr. Crisp hides the postcards away as you enter. \"Where have you been?\" he barks angrily. \"Daydreaming again, eh? I've been looking everywhere for you!\"\n\n(Your score just went up by 1 point! Your total score is 1 out of 101.)\n\nWhat next?\n",
+      "action": "TALK TO MR. CRISP",
+      "reasoning": "I have arrived at the Post Office and met Mr. Crisp. I need to interact with him to find out what he wants or what my task is.",
+      "progress": 0,
+      "score": 1,
+      "reward": 0,
+      "tokens": 583
+    },
+    {
+      "step": 2,
+      "obs": "\"Don't talk back to me!\" Mr. Crisp yells.\n\nWhat next?\n",
+      "action": "LOOK",
+      "reasoning": "Mr. Crisp is angry and has just yelled at me. Since talking back was unsuccessful and he is my boss, I should try to find a way to appease him or look for instructions/work to do to avoid further trouble.",
+      "progress": 5,
+      "score": 1,
+      "reward": 0,
+      "tokens": 658
+    },
+    {
+      "step": 3,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is watching you impatiently.\n\nMr. Crisp reaches under the service counter and pulls out a mysterious envelope. \"We just got this Special Delivery,\" he snarls, tossing it onto the service counter. \"I want you to drop it off right away. That means NOW!\"\n\nWhat next?\n",
+      "action": "TAKE ENVELOPE",
+      "reasoning": "Mr. Crisp has provided a task: deliver a Special Delivery envelope. I need to retrieve the envelope from the service counter to begin the quest.",
+      "progress": 5,
+      "score": 6,
+      "reward": 5,
+      "tokens": 812
+    },
+    {
+      "step": 4,
+      "obs": "Taken.\n\n(Your score just went up by 5 points! Your total score is 6 out of 101.)\n\nMr. Crisp drums his fingers on the service counter impatiently. \"Don't just stand there, chowderbrain! The Magick Shoppe closes at five o'clock!\"\n\nWhat next?\n",
+      "action": "LOOK",
+      "reasoning": "I have the Special Delivery envelope. Mr. Crisp mentioned the Magick Shoppe, which is likely my destination. I need to find a way to get there, so I should check the surroundings or the signpost to find directions.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 937
+    },
+    {
+      "step": 5,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is watching you impatiently.\n\nMr. Crisp screams, \"Quit stalling!\"\n\nWhat next?\n",
+      "action": "GO NORTH",
+      "reasoning": "I have the envelope and Mr. Crisp is pressuring me to leave. I need to exit the Post Office to find my way to the Magick Shoppe, so I should head back to the hilltop.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 1059
+    }
+  ]
+}

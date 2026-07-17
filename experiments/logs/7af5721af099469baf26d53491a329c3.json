@@ -1,0 +1,77 @@
+{
+  "run_id": "7af5721af099469baf26d53491a329c3",
+  "game": "zork1",
+  "summary": {
+    "total_steps": 6,
+    "final_progress": 0,
+    "final_score": 0,
+    "game_over": false,
+    "label": "baseline",
+    "fork_step": null,
+    "started_at": "2026-07-09T07:24:10.346778+00:00",
+    "completed_at": "2026-07-09T07:24:36.326216+00:00"
+  },
+  "milestones": [],
+  "steps": [
+    {
+      "step": 0,
+      "obs": "ZORK I: The Great Underground Empire\nInfocom interactive fiction - a fantasy story\nCopyright (c) 1981, 1982, 1983, 1984, 1985, 1986 Infocom, Inc. All rights reserved.\nZORK is a registered trademark of Infocom, Inc.\nRelease 1 / Serial number 210628\n\nWest of House\nYou are standing in an open field west of a white house, with a boarded front door.\nThere is a small mailbox here.\n\n",
+      "action": "OPEN MAILBOX",
+      "reasoning": "I am at the starting location. I need to see what is in the mailbox to begin my adventure.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 242
+    },
+    {
+      "step": 1,
+      "obs": "Opening the small mailbox reveals a leaflet.\n\n",
+      "action": "TAKE LEAFLET",
+      "reasoning": "I have opened the mailbox and found a leaflet. I need to take the leaflet to see what information it provides.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 288
+    },
+    {
+      "step": 2,
+      "obs": "Taken.\n\n",
+      "action": "EXAMINE LEAFLET",
+      "reasoning": "I have taken the leaflet. Now I need to examine it to understand the context or instructions provided.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 325
+    },
+    {
+      "step": 3,
+      "obs": "\"WELCOME TO ZORK!\n\nZORK is a game of adventure, danger, and low cunning. In it you will explore some of the most amazing territory ever seen by mortals. No computer should be without one!\"\n\n",
+      "action": "GO EAST",
+      "reasoning": "I have read the leaflet and now need to explore the surroundings. The white house is the most logical next step to find an entrance.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 407
+    },
+    {
+      "step": 4,
+      "obs": "The door is boarded and you can't remove the boards.\n\n",
+      "action": "GO WEST",
+      "reasoning": "The front door of the white house is boarded up and cannot be removed. I need to find another way into the house or explore the immediate area further.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 464
+    },
+    {
+      "step": 5,
+      "obs": "Forest\nThis is a forest, with trees in all directions. To the east, there appears to be sunlight.\n\n",
+      "action": "GO EAST",
+      "reasoning": "I have explored the area west of the house and found the front door is boarded up. I have moved west into the forest. I need to explore the forest to find another way around or find something useful.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 540
+    }
+  ]
+}
