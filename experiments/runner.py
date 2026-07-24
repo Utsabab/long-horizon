@@ -64,9 +64,12 @@ class Runner:
         )
 
         drift_cfg = config.get('drift', {}) or {}
-        self.drift_enabled   = drift_cfg.get('enabled', True)
-        self.drift_window    = drift_cfg.get('window', 20)
-        self.drift_threshold = drift_cfg.get('threshold', 0.8)
+        self.drift_enabled      = drift_cfg.get('enabled', True)
+        self.drift_window       = drift_cfg.get('window', 20)
+        self.drift_threshold    = drift_cfg.get('threshold', 0.65)
+        self.drift_w_stagnation = drift_cfg.get('w_stagnation', 0.5)
+        self.drift_w_loop       = drift_cfg.get('w_loop', 0.3)
+        self.drift_w_coherence  = drift_cfg.get('w_coherence', 0.2)
 
         mem_cfg = config.get('memory', {}) or {}
         self.memory_enabled        = mem_cfg.get('enabled', True)
@@ -195,12 +198,14 @@ class Runner:
 
             # --- Drift detection ---
             if drift_detector:
-                drift_detector.add(action)
+                drift_detector.add(action, new_progress, reasoning)
                 is_drifting, drift_details = drift_detector.check_drift()
                 if is_drifting:
                     logger.add_drift_event({'step': step, **drift_details})
-                    print(f'[{run_id[:8]}] step {step:>4}  DRIFT  off-path {drift_details["off_path_rate"]:.0%}'
-                          f'  ({drift_details["steps_since_on_path"]} consecutive off-path steps)')
+                    print(f'[{run_id[:8]}] step {step:>4}  DRIFT  score={drift_details["drift_score"]:.2f}'
+                          f'  (stagnation={drift_details["stagnation"]:.2f}'
+                          f'  loop={drift_details["loop_rate"]:.2f}'
+                          f'  incoherence={drift_details["incoherence"]:.2f})')
 
             try:
                 last_checkpoint_id = env.save_checkpoint(new_observation, info)
@@ -243,20 +248,18 @@ class Runner:
         detector = AcceptedLocalErrorDetector(k=self.ale_k, window=self.ale_window)
         env_checker = make_env_checker(env)
 
-        # --- Drift detector (oracle path distance) ---
+        # --- Drift detector (composite: stagnation + loop + coherence) ---
         drift_detector = None
         if self.drift_enabled:
-            game_path = find_game_path(self.game_name, self.textquests_root)
-            wt_path = game_path / f'{self.game_name}_walkthrough.txt'
-            try:
-                drift_detector = DriftDetector(wt_path,
-                                               window=self.drift_window,
-                                               threshold=self.drift_threshold)
-                print(f'[{run_id[:8]}] drift detector loaded  '
-                      f'({drift_detector.walkthrough_length}-step walkthrough, '
-                      f'window={self.drift_window}, threshold={self.drift_threshold:.0%})')
-            except FileNotFoundError as exc:
-                print(f'[{run_id[:8]}] WARNING: {exc}  — drift detection disabled')
+            drift_detector = DriftDetector(
+                window=self.drift_window,
+                threshold=self.drift_threshold,
+                w_stagnation=self.drift_w_stagnation,
+                w_loop=self.drift_w_loop,
+                w_coherence=self.drift_w_coherence,
+            )
+            print(f'[{run_id[:8]}] drift detector enabled  '
+                  f'(window={self.drift_window}, threshold={self.drift_threshold:.2f})')
 
         # --- Memory scratchpad (M2) ---
         memory = None

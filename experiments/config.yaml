@@ -10,11 +10,14 @@ experiments:
   info_seek_window: 10
   games: ["zork1", "wishbringer"]
 
-  # M2 target: control-path drift — oracle path distance detector
+  # Composite drift detector: stagnation + behavioral loops + reasoning coherence
   drift:
     enabled: true
-    window: 20        # steps to look back when computing off-path rate
-    threshold: 0.80   # fraction of window that must be off-path to flag drift
+    window: 20          # steps in the rolling window
+    threshold: 0.65     # composite score at or above which drift is flagged
+    w_stagnation: 0.50  # weight: no progress increase in window
+    w_loop: 0.30        # weight: repetitive action sequences
+    w_coherence: 0.20   # weight: vague vs. goal-directed reasoning
 
   # M2 harness mechanism: structured memory scratchpad
   memory:
