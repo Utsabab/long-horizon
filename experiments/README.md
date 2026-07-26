@@ -162,22 +162,7 @@ restore `max_steps` to its real value (e.g. 500) before the real run. The full
 8-combo sweep at 500 steps each makes a lot of LLM calls and will take a while
 and spend real API credits.
 
-## 6. ALE-specific baseline-vs-harness comparison (`run_ale_comparison.py`)
-
-A narrower, older comparison: plays one baseline episode unaided; the moment an
-Accepted-Local-Error is confirmed, it forks a second episode from that exact
-step with the M1 info-seeking harness turned on, so you can see the two
-branches diverge right at the failure point.
-
-```bash
-cd experiments
-python run_ale_comparison.py wishbringer --seed 0 --out compare_ale.png
-```
-
-If no ALE is ever confirmed during the baseline episode, only the baseline
-branch is plotted (the script prints a message and skips the harness branch).
-
-## 7. Inspecting a transcript directly
+## 6. Inspecting a transcript directly
 
 Transcripts are plain JSON (`logs/<run_id>.json`); the schema is documented in
 full at the top of `logger.py`. Useful fields per step: `action`, `reasoning`,
@@ -197,7 +182,7 @@ for s in data['steps']:
 "
 ```
 
-## 8. Running the test suite
+## 7. Running the test suite
 
 ```bash
 cd experiments
