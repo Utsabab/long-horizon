@@ -18,13 +18,7 @@ repetition, until it's pre-verified) is a future extension tracked as a TODO.
 Targets channel: Accepted-Local-Error, Control-path drift (§2.1).
 """
 
-import re
-
-# Matches a leading label the model sometimes prepends to its command line
-# despite the prompt asking for the command "on its own line" (e.g.
-# "ACT: SEARCH ROAD"). Left in place, the game parser fails outright
-# (e.g. "This story doesn't know the word 'act:.'"), wasting the step.
-_LABEL_PREFIX = re.compile(r'^(?:>\s*|(?:ACT(?:ION)?|COMMAND)\s*:\s*)', re.I)
+from mechanisms.action_templating import normalize_action
 
 _PROMPT_TEMPLATE = (
     'You are an assistant helping an agent playing a text-based game.\n'
@@ -104,7 +98,7 @@ class InfoSeekingMechanism:
 
         content = parsed.get('content', '') if isinstance(parsed, dict) else str(parsed)
         lines = [line.strip() for line in content.splitlines() if line.strip()]
-        proposed = _LABEL_PREFIX.sub('', lines[-1]).strip() if lines else ''
+        proposed = normalize_action(lines[-1]) if lines else ''
 
         # Prefix the logged reasoning with the verified fact itself (not just the
         # model's paraphrase of it), so once this step lands in history, the

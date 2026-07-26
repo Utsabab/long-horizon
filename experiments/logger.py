@@ -24,7 +24,13 @@ Schema
   ],
   "steps": [                   # one entry per game step
     { "step": int, "obs": str, "action": str, "reasoning": str,
-      "progress": float, "score": int, "reward": int|float }
+      "progress": float, "score": int, "reward": int|float,
+      "tokens": int,          # main generation/intervention tokens + all judge/replan tokens this step
+      "judge_tokens": int,    # breakdown: portion of "tokens" spent on coherence/integration/replan judges
+      "goal": str|None, "subgoal": str|None,
+      "belief": {"type": str, "item": str, "location": str}|None,
+      "confidence": float|None,
+      "mechanisms_used": [str, ...] }   # e.g. ["m1_info_seeking"], ["m6_integration_gap", "m6_planning"]
   ],
   "drift_events": [              # omitted if empty; one entry each time check_drift() flags
     { "step": int, "off_path_rate": float, "steps_since_on_path": int,
@@ -32,6 +38,13 @@ Schema
   ],
   "ale_events": [               # omitted if empty; one entry each time check_ale() confirms
     { "step": int, "belief": [...], "contradiction": bool, "evidence": {...} }
+  ],
+  "budget_events": [            # omitted if empty; one entry each time check_budget() flags
+    { "step": int, "budget_risk": float, "step_ratio": float, "token_ratio": float,
+      "stall_ratio": float, "cumulative_tokens": int, "tokens_since_progress": int, "threshold": float }
+  ],
+  "integration_events": [       # omitted if empty; one entry each time the integration judge confirms a gap
+    { "step": int, "unused": [...], "gap": bool, "suggested_combination": str|None }
   ]
 }
 """
@@ -54,10 +67,13 @@ class RunLogger:
         self._errors = []
         self._ale_events = []
         self._drift_events = []
+        self._budget_events = []
+        self._integration_events = []
         self._started_at = datetime.now(timezone.utc).isoformat()
 
     def add_step(self, record):
-        """Record one game step. Expected keys: step, obs, action, reasoning, progress, score, reward."""
+        """Record one game step. Expected keys: step, obs, action, reasoning, progress,
+        score, reward, tokens, judge_tokens, goal, subgoal, belief, confidence, mechanisms_used."""
         self._steps.append(record)
 
     def add_milestone(self, record):
@@ -75,6 +91,14 @@ class RunLogger:
     def add_drift_event(self, record):
         """Record a confirmed drift detection. Expected keys: step, off_path_rate, steps_since_on_path, ..."""
         self._drift_events.append(record)
+
+    def add_budget_event(self, record):
+        """Record a confirmed budget/liveness risk. Expected keys: step, budget_risk, step_ratio, ..."""
+        self._budget_events.append(record)
+
+    def add_integration_event(self, record):
+        """Record a confirmed integration gap. Expected keys: step, unused, gap, suggested_combination."""
+        self._integration_events.append(record)
 
     def save(self, run_id, game_name, summary):
         """Write the transcript and reset for the next run.
@@ -106,6 +130,10 @@ class RunLogger:
             transcript['ale_events'] = self._ale_events
         if self._drift_events:
             transcript['drift_events'] = self._drift_events
+        if self._budget_events:
+            transcript['budget_events'] = self._budget_events
+        if self._integration_events:
+            transcript['integration_events'] = self._integration_events
 
         path = self.out_dir / f'{run_id}.json'
         with open(path, 'w', encoding='utf-8') as f:

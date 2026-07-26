@@ -1,10 +1,10 @@
 # Configuration for TextQuests experiments
 openrouter:
-  model: "google/gemma-4-26b-a4b-it"
+  model: "anthropic/claude-sonnet-5"
   base_url: "https://openrouter.ai/api/v1"
   request_timeout: 60
 experiments:
-  max_steps: 500
+  max_steps: 100
   autosave_every: 1
   accepted_local_error_k: 3
   info_seek_window: 10
@@ -19,11 +19,35 @@ experiments:
     w_loop: 0.30        # weight: repetitive action sequences
     w_coherence: 0.20   # weight: vague vs. goal-directed reasoning
 
-  # M2 harness mechanism: structured memory scratchpad
+  # M2 harness mechanism: structured memory scratchpad (on/off via mechanisms.m2_memory)
   memory:
-    enabled: true
     max_visited: 25       # max locations to show in the scratchpad
     max_discoveries: 10   # max discoveries to retain
+
+  # Budget/liveness channel (M4's primary target): loops/stalls/overspend, pure arithmetic
+  budget:
+    enabled: true
+    token_budget: null          # null = no hard token cap, ratio stays 0
+    stall_token_threshold: 4000 # tokens since last progress increase considered "stalled"
+    w_step: 0.3    # weight: steps_used / max_steps
+    w_token: 0.3   # weight: tokens_used / token_budget (0 if no budget set)
+    w_stall: 0.4   # weight: tokens burned since last progress increase / stall_token_threshold
+    threshold: 0.7 # composite risk at or above which budget/liveness is flagged
+
+  # Integration channel (M6's primary target): known pieces never combined
+  integration:
+    enabled: true
+    min_unused: 2      # unused discoveries/inventory items needed to trip the pre-filter
+    recent_window: 10  # how many recent actions count as "referenced"
+
+  # Master switches for each harness mechanism (independent of channel-detector logging above)
+  mechanisms:
+    m1_info_seeking: true      # lead: prompted correction on confirmed ALE
+    m2_memory: true            # structured scratchpad
+    m3_state_ext: true         # ground-truth location/inventory probe
+    m4_adaptive: true          # risk-vector -> mechanism-bundle dispatch
+    m5_action_templating: true # normalize_action guardrail before env.step
+    m6_planning: true          # LLM replan on integration gap or sustained drift
 logs:
   out_dir: "./experiments/logs"
 scout:

@@ -18,9 +18,11 @@ we measure drift as a behavioural pattern across three independent signals:
        A looping agent issues the same commands repeatedly, getting nowhere.
 
   3. Reasoning incoherence
-       Fraction of reasoning language that is vague/exploratory vs.
-       goal-directed/specific.  Measured with lightweight regex — no extra
-       LLM call required.
+       How goal-directed the agent's reasoning still is, given its stated
+       goal/subgoal and recent history. Scored by LLMCoherenceJudge — a
+       small LLM call made every step — rather than a regex heuristic,
+       since "is this reasoning still goal-directed" is a semantic judgment
+       that pattern-matching vague/specific vocabulary approximates poorly.
 
 Composite
 ---------
@@ -29,45 +31,82 @@ Composite
   is_drifting when drift_score >= threshold AND window is full.
 
 All three signals are already available in the run loop (progress from info,
-action from the model output, reasoning from the parsed response).
+action from the model output, incoherence from LLMCoherenceJudge.score()).
 """
 
+import json
 import re
 from collections import deque
 
 # ---------------------------------------------------------------------------
-# Reasoning-coherence helpers
+# LLM-based coherence judge
 # ---------------------------------------------------------------------------
 
-# Vague / aimless language that suggests the agent has lost direction
-_VAGUE_RE = re.compile(
-    r'\b(?:explore|wander|random(?:ly)?|maybe|perhaps|not sure|unclear|'
-    r'try (?:different|various|random)|look around|see what happens|'
-    r'something|anything|somewhere|just try|no idea|might as well|'
-    r'not sure what|unsure|I guess|let me just)\b',
-    re.I,
-)
+class LLMCoherenceJudge:
+    """Score reasoning incoherence via a small LLM call (replaces regex).
 
-# Goal-directed / intentional language
-_SPECIFIC_RE = re.compile(
-    r'\b(?:need to|must|should|will|going to|plan to|intend to|trying to)\s+\w+|'
-    r'\b(?:take|get|open|close|drop|read|examine|enter|climb|push|pull|use|unlock|'
-    r'attack|kill|put|insert|turn|light|extinguish)\b|'
-    r'\b(?:because|in order to|so that|to (?:reach|find|open|get|use|unlock|access|escape))\b',
-    re.I,
-)
+    Same call pattern as mechanisms.info_seeking.InfoSeekingMechanism: a
+    cheap, low-max-tokens prompt, run every step (confirmed cost-acceptable),
+    asking whether the agent's current reasoning is still goal-directed given
+    its self-reported goal/subgoal and recent action history.
+    """
 
+    _PROMPT_TEMPLATE = (
+        "You are scoring whether a game-playing agent's reasoning is still "
+        'goal-directed.\n'
+        'Goal: {goal}\n'
+        'Subgoal: {subgoal}\n'
+        'Recent actions (oldest first): {recent_history}\n'
+        'Current reasoning: {reasoning}\n\n'
+        'On a scale from 0.0 (fully coherent and goal-directed) to 1.0 '
+        '(vague, aimless, or unrelated to the stated goal/subgoal), how '
+        'incoherent is this reasoning?\n'
+        'Return ONLY a JSON object with one key: {{"incoherence": <float 0.0-1.0>}}.'
+    )
 
-def _reasoning_incoherence(reasoning: str) -> float:
-    """Return incoherence in [0, 1]: 0 = goal-directed, 1 = vague/aimless."""
-    if not reasoning or not reasoning.strip():
-        return 0.5
-    vague    = len(_VAGUE_RE.findall(reasoning))
-    specific = len(_SPECIFIC_RE.findall(reasoning))
-    total = vague + specific
-    if total == 0:
-        return 0.3   # reasoning present but no clear signal — mild
-    return vague / total
+    def score(self, goal, subgoal, recent_history, reasoning, llm_client):
+        """Return (incoherence: float in [0,1], tokens: int) for this step.
+
+        Falls back to a neutral 0.5 (with 0 tokens charged) if reasoning is
+        empty, the LLM call fails, or the response can't be parsed — a judge
+        failure should read as "unknown", not silently as "fully coherent".
+        """
+        if not reasoning or not reasoning.strip():
+            return 0.5, 0
+
+        prompt = self._PROMPT_TEMPLATE.format(
+            goal=goal or 'unknown',
+            subgoal=subgoal or 'unknown',
+            recent_history='; '.join(recent_history[-5:]) if recent_history else '(none)',
+            reasoning=reasoning,
+        )
+        try:
+            resp = llm_client.generate(prompt, max_tokens=32, reasoning_enabled=False)
+            parsed = llm_client.parse_completion(resp)
+        except Exception:
+            return 0.5, 0
+
+        content = parsed.get('content', '') if isinstance(parsed, dict) else str(parsed)
+        tokens = parsed.get('tokens', 0) if isinstance(parsed, dict) else 0
+
+        start, end = content.find('{'), content.rfind('}')
+        if 0 <= start < end:
+            try:
+                obj = json.loads(content[start:end + 1])
+                value = float(obj.get('incoherence'))
+                return max(0.0, min(1.0, value)), tokens
+            except Exception:
+                pass
+
+        match = re.search(r'0?\.\d+|\d(?:\.\d+)?', content)
+        if match:
+            try:
+                value = float(match.group(0))
+                return max(0.0, min(1.0, value)), tokens
+            except Exception:
+                pass
+
+        return 0.5, tokens
 
 
 # ---------------------------------------------------------------------------
@@ -114,7 +153,7 @@ class DriftDetector:
     # Recording
     # ------------------------------------------------------------------
 
-    def add(self, action: str, progress: float, reasoning: str) -> None:
+    def add(self, action: str, progress: float, incoherence_score: float) -> None:
         """Record one agent step.
 
         Parameters
@@ -123,12 +162,13 @@ class DriftDetector:
             The action the agent issued this step.
         progress : float
             game_progress value returned by the env after the step.
-        reasoning : str
-            The agent's reasoning text for this step.
+        incoherence_score : float
+            Pre-computed incoherence in [0, 1] for this step's reasoning,
+            from LLMCoherenceJudge.score() (or any equivalent signal).
         """
         self._actions.append((action or '').lower().strip())
         self._progress.append(float(progress))
-        self._incoherence.append(_reasoning_incoherence(reasoning))
+        self._incoherence.append(float(incoherence_score))
 
     # ------------------------------------------------------------------
     # Component scores (each in [0, 1])

@@ -6,10 +6,26 @@ without pulling in the full runner dependency graph.
 
 SYSTEM_PROMPT_TEMPLATE = (
     'You are playing {game_name}. '
-    'Return ONLY a JSON object with keys "reasoning" and "action". '
+    'Return ONLY a JSON object with exactly these keys: '
+    '"reasoning", "action", "goal", "subgoal", "belief", "confidence". '
     'The action must be a short parser command such as LOOK, OPEN MAILBOX, '
     'TAKE LEAFLET, or GO NORTH. '
-    'Do not include markdown, bullets, or any extra text.'
+    '"goal" is your high-level objective for the whole game, restated each turn. '
+    '"subgoal" is what you are trying to accomplish in the next few steps. '
+    '"belief" is a single concrete fact you are currently relying on to choose '
+    'your action, reported as an object {{"type": "have_item"|"item_in_loc"|"none", '
+    '"item": "...", "location": "..."}}. Use "have_item" when you believe you are '
+    'carrying something (set "item", omit "location"). Use "item_in_loc" when you '
+    'believe something is at a location (set "location", and "item" if relevant). '
+    'Use "none" (with "item" and "location" omitted or empty) when your action does '
+    'not depend on a specific possession or location belief. '
+    '"confidence" is a number from 0.0 to 1.0 for how sure you are of that belief. '
+    'Do not include markdown, bullets, or any extra text. Example:\n'
+    '{{"reasoning": "The mailbox is closed; I need to open it to read the leaflet.", '
+    '"action": "OPEN MAILBOX", "goal": "explore the house and surroundings", '
+    '"subgoal": "read the leaflet in the mailbox", '
+    '"belief": {{"type": "item_in_loc", "item": "leaflet", "location": "mailbox"}}, '
+    '"confidence": 0.8}}'
 )
 
 

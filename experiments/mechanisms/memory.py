@@ -7,12 +7,20 @@ prompt.
 
 How it works
 ------------
-``update(obs_before, obs_after, action, reasoning)`` is called after every
-env.step().  It updates the scratchpad heuristically using regex patterns on
-the observation and reasoning text — no extra LLM call required.
+``update(...)`` is called after every env.step(). It no longer scrapes
+observation/reasoning text with regex to guess location, subgoal, or
+discoveries — every field is handed in already structured:
+
+  - location / inventory_items come from mechanisms.state_ext.StateExternalizer
+    (M3), a read-only ground-truth probe of the live environment.
+  - goal / subgoal come from the model's own structured self-report each turn
+    (agent.SYSTEM_PROMPT_TEMPLATE / llm.extract_step_fields).
+  - action_failed is a structural signal the runner computes by comparing
+    the M3 probe before and after the step (state unchanged), not by
+    pattern-matching rejection phrases in the observation text.
 
 ``render()`` returns a compact, structured string that the runner injects into
-the system prompt before asking the model for its next action.  With the
+the system prompt before asking the model for its next action. With the
 scratchpad visible, the model always sees its current goal, what it has tried
 here, and what it has discovered — making it much harder to drift invisibly.
 
@@ -24,45 +32,12 @@ On / Off switch
 Targets channel: control-path drift (§2.1).
 """
 
-import re
 from collections import defaultdict
 
-# ---------------------------------------------------------------------------
-# Heuristic pattern constants
-# ---------------------------------------------------------------------------
-
-# Parser rejection phrases — when the observation matches, the action failed.
-_FAILURE_RE = re.compile(
-    r"(?:you can'?t|that'?s not|i don'?t (?:understand|know the word|see any)|"
-    r"nothing happens|impossible|it is already|there is no|you don'?t see|"
-    r"you cannot|that doesn'?t|invalid|no verb in|i don'?t know what)",
-    re.I,
-)
-
-# Discovery phrases — "There is a X", "You see a X", etc.
-_DISCOVERY_RE = re.compile(
-    r'(?:there (?:is|are)|you (?:see|notice|find|spot)|'
-    r'lying here|sitting here|resting here|is here)\s+'
-    r'(?:a |an |the |some )?(?P<item>[A-Za-z][A-Za-z0-9\s\'\-]{2,35})',
-    re.I,
-)
-
-# Subgoal intent phrases in the agent's reasoning.
-_SUBGOAL_RE = re.compile(
-    r'(?:I need to|I should|I must|my (?:next )?(?:goal|plan|task) is|'
-    r"I(?:'m| am) (?:trying|going|planning) to|I want to|I will|let me)\s+"
-    r'(?P<intent>[A-Za-z].{5,80}?)(?:\.|,|;|$)',
-    re.I,
-)
-
 _MAX_TRIED = 10     # max tried-actions to show per location
-_MAX_DISC  = 10     # max discoveries to retain
+_MAX_ITEMS = 10     # max inventory items to retain
 _MAX_VISIT = 25     # max visited locations to show
 
-
-# ---------------------------------------------------------------------------
-# MemoryMechanism
-# ---------------------------------------------------------------------------
 
 class MemoryMechanism:
     """Structured scratchpad (M2) for the memory / context harness mechanism.
@@ -71,111 +46,99 @@ class MemoryMechanism:
     ----------
     goal : str, optional
         High-level goal statement.  If not supplied, defaults to "complete the
-        game" until the runner sets it from the first observation.
+        game" until a step reports one.
     max_visited : int
         Maximum number of visited locations to show in render().
     max_discoveries : int
-        Maximum number of key discoveries to retain.
+        Maximum number of inventory items to retain (kept as
+        ``max_discoveries`` for config-key backward compatibility).
     """
 
     def __init__(self, goal: str | None = None,
                  max_visited: int = _MAX_VISIT,
-                 max_discoveries: int = _MAX_DISC):
+                 max_discoveries: int = _MAX_ITEMS):
         self.goal: str = goal or 'complete the game'
         self.subgoal: str | None = None
         self.max_visited = max_visited
-        self.max_discoveries = max_discoveries
+        self.max_items = max_discoveries
 
         self._current_location: str | None = None
         self._visited: list[str] = []           # ordered, deduplicated
         self._tried:  dict[str, list[str]] = defaultdict(list)   # loc → actions
         self._failed: dict[str, list[str]] = defaultdict(list)   # loc → actions
-        self._discoveries: list[str] = []
-        self._disc_seen: set[str] = set()       # dedup key
+        self._inventory_items: list[str] = []
 
     # ------------------------------------------------------------------
-    # Internal helpers
+    # Accessors
     # ------------------------------------------------------------------
-
-    def _extract_location(self, obs: str) -> str | None:
-        """First non-empty, non-boilerplate line is usually the room name."""
-        skip_prefixes = ('ZORK', 'Infocom', 'Copyright', 'Release', '>')
-        for line in obs.splitlines():
-            line = line.strip()
-            if line and not any(line.startswith(p) for p in skip_prefixes):
-                # Room names are typically short (< 60 chars) and mostly words
-                if len(line) < 60 and re.search(r'[A-Za-z]', line):
-                    return line
-        return None
-
-    def _extract_subgoal(self, reasoning: str) -> str | None:
-        m = _SUBGOAL_RE.search(reasoning or '')
-        if m:
-            intent = m.group('intent').strip().rstrip('.,;')
-            if 10 <= len(intent) <= 80:
-                return intent
-        return None
-
-    def _extract_discoveries(self, obs: str) -> list[str]:
-        found = []
-        for m in _DISCOVERY_RE.finditer(obs):
-            item = m.group('item').strip().rstrip('.,;').lower()
-            if item and item not in self._disc_seen and len(item) >= 3:
-                found.append(item)
-                self._disc_seen.add(item)
-        return found
-
-    def _action_failed(self, obs: str) -> bool:
-        return bool(_FAILURE_RE.search(obs or ''))
 
     def set_goal(self, goal: str) -> None:
-        """Override the high-level goal (e.g. extracted from first observation)."""
+        """Override the high-level goal (e.g. seeded before the first step)."""
         self.goal = goal
 
-    def update(self, obs_before: str, obs_after: str, action: str,
-               reasoning: str) -> None:
-        """Update memory after one env.step().
+    @property
+    def inventory_items(self) -> list[str]:
+        """Most recent M3-verified inventory, for IntegrationDetector."""
+        return list(self._inventory_items)
+
+    @property
+    def recent_actions(self) -> list[str]:
+        """Flattened recent tried-actions across all locations, most-recent last."""
+        actions = []
+        for loc in self._visited:
+            actions.extend(self._tried.get(loc, []))
+        return actions
+
+    # ------------------------------------------------------------------
+    # Update
+    # ------------------------------------------------------------------
+
+    def update(self, location: str | None, inventory_items: list[str] | None,
+               action: str, action_failed: bool,
+               goal: str | None = None, subgoal: str | None = None) -> None:
+        """Update memory after one env.step(), fed structured fields directly.
 
         Parameters
         ----------
-        obs_before : str
-            Observation the agent saw BEFORE taking the action (the context
-            in which the action was chosen — used for tried/failed tracking).
-        obs_after : str
-            Observation returned by env.step() (where the agent is now).
+        location : str or None
+            Ground-truth room name from mechanisms.state_ext (M3), i.e. where
+            the agent is now.
+        inventory_items : list[str] or None
+            Ground-truth inventory from mechanisms.state_ext (M3).
         action : str
-            The action the agent took.
-        reasoning : str
-            The agent's reasoning text for this step.
+            The action the agent took this step.
+        action_failed : bool
+            Structural signal (computed by the runner from before/after M3
+            state) indicating the action had no observable effect.
+        goal : str, optional
+            Self-reported goal for this step; updates self.goal if given.
+        subgoal : str, optional
+            Self-reported subgoal for this step; updates self.subgoal if given.
         """
-        # --- Current location (where we landed) ---
-        new_loc = self._extract_location(obs_after)
-        if new_loc:
-            self._current_location = new_loc
-            if new_loc not in self._visited:
-                self._visited.append(new_loc)
+        if goal:
+            self.goal = goal
+        if subgoal:
+            self.subgoal = subgoal
 
-        # --- Tried / failed actions (at the location we were in before) ---
-        prev_loc = self._extract_location(obs_before) or self._current_location
-        if prev_loc and action:
-            tried = self._tried[prev_loc]
+        prev_location = self._current_location
+
+        if location:
+            self._current_location = location
+            if location not in self._visited:
+                self._visited.append(location)
+
+        tracking_loc = prev_location or self._current_location
+        if tracking_loc and action:
+            tried = self._tried[tracking_loc]
             if action not in tried:
                 tried.append(action)
-            if self._action_failed(obs_after):
-                failed = self._failed[prev_loc]
+            if action_failed:
+                failed = self._failed[tracking_loc]
                 if action not in failed:
                     failed.append(action)
 
-        # --- Key discoveries from the new observation ---
-        new_discs = self._extract_discoveries(obs_after)
-        self._discoveries.extend(new_discs)
-        if len(self._discoveries) > self.max_discoveries:
-            self._discoveries = self._discoveries[-self.max_discoveries:]
-
-        # --- Subgoal from reasoning ---
-        subgoal = self._extract_subgoal(reasoning)
-        if subgoal:
-            self.subgoal = subgoal
+        if inventory_items is not None:
+            self._inventory_items = list(inventory_items)[-self.max_items:]
 
     def render(self) -> str:
         """Return a compact structured string for prompt injection.
@@ -205,10 +168,8 @@ class MemoryMechanism:
             if failed:
                 lines.append('Failed here: ' + ', '.join(failed[-_MAX_TRIED:]))
 
-        if self._discoveries:
-            lines.append('Discoveries:')
-            for d in self._discoveries:
-                lines.append(f'  • {d}')
+        if self._inventory_items:
+            lines.append('Carrying: ' + ', '.join(self._inventory_items))
 
         lines.append('=== END MEMORY ===')
         return '\n'.join(lines)

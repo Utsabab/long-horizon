@@ -142,3 +142,84 @@ def extract_action_and_reasoning(content, default_action='look'):
 
     lines = [line.strip() for line in text.splitlines() if line.strip()]
     return (lines[-1], text) if lines else (default_action, text)
+
+
+_VALID_BELIEF_TYPES = ('have_item', 'item_in_loc', 'none')
+
+
+def _coerce_belief(raw):
+    """Normalize a self-reported belief dict; return None if unusable."""
+    if not isinstance(raw, dict):
+        return None
+    btype = str(raw.get('type', 'none')).strip().lower()
+    if btype not in _VALID_BELIEF_TYPES or btype == 'none':
+        return None
+    item = str(raw.get('item') or '').strip() or None
+    location = str(raw.get('location') or '').strip() or None
+    if btype == 'have_item' and not item:
+        return None
+    if btype == 'item_in_loc' and not location:
+        return None
+    return {'type': btype, 'item': item, 'location': location}
+
+
+def extract_step_fields(content, default_action='look'):
+    """Parse a model response into the full structured step schema.
+
+    Superset of extract_action_and_reasoning: also pulls goal, subgoal,
+    belief, and confidence when the model reports them. Any field the model
+    omits or reports malformed is simply absent from the result (None /
+    empty) rather than reconstructed via a text-parsing fallback — mechanisms
+    that depend on a field just get no signal that step.
+
+    Returns a dict with keys: action, reasoning, goal, subgoal, belief
+    (None or {type, item, location}), confidence (float or None).
+    """
+    text = (content or '').strip()
+    result = {
+        'action': default_action,
+        'reasoning': '',
+        'goal': None,
+        'subgoal': None,
+        'belief': None,
+        'confidence': None,
+    }
+    if not text:
+        return result
+
+    candidates = []
+    fenced = re.search(r'```json\s*(.*?)\s*```', text, re.S | re.I)
+    if fenced:
+        candidates.append(fenced.group(1).strip())
+    if text.startswith('{') and text.endswith('}'):
+        candidates.append(text)
+    start, end = text.find('{'), text.rfind('}')
+    if 0 <= start < end:
+        candidates.append(text[start:end + 1].strip())
+
+    for candidate in candidates:
+        try:
+            parsed = json.loads(candidate)
+        except Exception:
+            continue
+        if not isinstance(parsed, dict):
+            continue
+        action = str(parsed.get('action', '')).strip()
+        if not action:
+            continue
+        result['action'] = action
+        result['reasoning'] = str(parsed.get('reasoning', '')).strip() or text
+        result['goal'] = str(parsed.get('goal') or '').strip() or None
+        result['subgoal'] = str(parsed.get('subgoal') or '').strip() or None
+        result['belief'] = _coerce_belief(parsed.get('belief'))
+        try:
+            confidence = parsed.get('confidence')
+            result['confidence'] = float(confidence) if confidence is not None else None
+        except (TypeError, ValueError):
+            result['confidence'] = None
+        return result
+
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    result['action'] = lines[-1] if lines else default_action
+    result['reasoning'] = text
+    return result

@@ -1,0 +1,141 @@
+{
+  "run_id": "75088339c22a47df80ebd856f297a184",
+  "game": "wishbringer",
+  "summary": {
+    "total_steps": 6,
+    "final_progress": 5,
+    "final_score": 6,
+    "game_over": false,
+    "label": "vanilla",
+    "fork_step": null,
+    "started_at": "2026-07-24T04:37:09.430731+00:00",
+    "completed_at": "2026-07-24T04:37:47.938100+00:00"
+  },
+  "milestones": [
+    {
+      "step": 2,
+      "progress_before": 0,
+      "progress_after": 5,
+      "score": 1,
+      "action": "LISTEN TO CRISP"
+    }
+  ],
+  "steps": [
+    {
+      "step": 0,
+      "obs": "\n\"Behind you!\" cries the Princess. \"It's a trap!\"\n\nToo late. The drawbridge crashes shut against the tower wall. You turn to face your enemy, and find yourself staring into the open maw of Thermofax.\n\nOnly your Magick sword can save you now. You swing it high, speak the Word and stand unhurt as the blade absorbs the searing dragon-breath.\n\nThe reptile bellows with rage and flaps its wings to fan the fire in its belly. You are advancing, sword poised to strike, when a familiar voice shatters the daydream and stays your mighty hand...\n\nWISHBRINGER\nThe Magick Stone of Dreams\nCopyright (C)1985 Infocom, Inc. All rights reserved.\nWishbringer is a registered trademark of Infocom, Inc.\nRelease 1 / Serial Number 210629\n\nHilltop\nYou're on a hilltop overlooking the seaside village of Festeron.\n\nTo the south stands the Festeron Post Office. It's a little brick building with a neatly-trimmed lawn. The Post Office door stands invitingly open.\n\nRoads run down the hill to the east and west. There's a signpost nearby.\n\nSomebody inside the Post Office is calling you.\n\nOkay, what do you want to do now?\n",
+      "action": "READ SIGNPOST",
+      "reasoning": "Starting the game; I should get my bearings and head into the Post Office since I'm being called there, but first let me check the signpost for information about the area.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1357,
+      "judge_tokens": 265,
+      "goal": "Progress through the Wishbringer story and complete the adventure",
+      "subgoal": "Explore the hilltop area before entering the Post Office",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "signpost",
+        "location": "Hilltop"
+      },
+      "confidence": 0.7,
+      "mechanisms_used": []
+    },
+    {
+      "step": 1,
+      "obs": "There are two arrows on the signpost. The arrow pointing west says \"To Cemetery.\" The east arrow is marked \"To Festeron.\"\n\nSomebody inside the Post Office is calling you.\n\nWhat next?\n",
+      "action": "GO SOUTH",
+      "reasoning": "I've read the signpost; now I should respond to the person calling me from the Post Office, which is directly south.",
+      "progress": 0,
+      "score": 1,
+      "reward": 1,
+      "tokens": 1463,
+      "judge_tokens": 257,
+      "goal": "Complete Wishbringer's quest to save Festeron",
+      "subgoal": "Enter the Post Office and find out who is calling me",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "person",
+        "location": "Post Office"
+      },
+      "confidence": 0.7,
+      "mechanisms_used": []
+    },
+    {
+      "step": 2,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is behind the service counter reading other people's postcards.\n\nMr. Crisp hides the postcards away as you enter. \"Where have you been?\" he barks angrily. \"Daydreaming again, eh? I've been looking everywhere for you!\"\n\n(Your score just went up by 1 point! Your total score is 1 out of 101.)\n\nWhat next?\n",
+      "action": "LISTEN TO CRISP",
+      "reasoning": "I've entered the Post Office and Mr. Crisp is speaking to me. I should wait to hear what he wants or respond to him before taking action.",
+      "progress": 5,
+      "score": 1,
+      "reward": 0,
+      "tokens": 1745,
+      "judge_tokens": 278,
+      "goal": "Complete the Wishbringer adventure and win the game",
+      "subgoal": "Find out what Mr. Crisp wants from me",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "Mr. Crisp",
+        "location": "Post Office"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": []
+    },
+    {
+      "step": 3,
+      "obs": "At the moment, Mr. Crisp makes no sound.\n\nMr. Crisp reaches under the service counter and pulls out a mysterious envelope. \"We just got this Special Delivery,\" he snarls, tossing it onto the service counter. \"I want you to drop it off right away. That means NOW!\"\n\nWhat next?\n",
+      "action": "TAKE ENVELOPE",
+      "reasoning": "Mr. Crisp has placed a special delivery envelope on the counter. I should take it so I can deliver it as instructed.",
+      "progress": 5,
+      "score": 6,
+      "reward": 5,
+      "tokens": 1893,
+      "judge_tokens": 279,
+      "goal": "Progress through the Wishbringer story and complete the quest",
+      "subgoal": "Take the envelope from the counter",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "envelope",
+        "location": "counter"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 4,
+      "obs": "Taken.\n\n(Your score just went up by 5 points! Your total score is 6 out of 101.)\n\nMr. Crisp drums his fingers on the service counter impatiently. \"Quit stalling, knucklehead! The Magick Shoppe closes at five o'clock!\"\n\nWhat next?\n",
+      "action": "READ ENVELOPE",
+      "reasoning": "Mr. Crisp told me the Magick Shoppe closes at five, meaning I need to deliver the envelope there. I should examine the envelope first to see the address, then head out to deliver it.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2121,
+      "judge_tokens": 321,
+      "goal": "Deliver the special delivery envelope and progress through the game's story",
+      "subgoal": "Find out the destination address on the envelope before heading out",
+      "belief": {
+        "type": "have_item",
+        "item": "envelope",
+        "location": null
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 5,
+      "obs": "(You'll find the envelope inside your Wishbringer package.)\n\nMr. Crisp yells, \"Get going!\"\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"Mr. Crisp is telling me to hurry up and deliver the envelope to the Magick Shoppe before it closes. I should head out of the Post Office and go find the Magick Shoppe. I'll go west since the signpost mentioned town directions.\", \"action\": \"GO NORTH\", \"goal\": \"Deliver the special delivery envelope to the Magick Shoppe before it closes at five\", \"subgoal\": \"Leave the Post Office and find the way to the Magick Shoppe\", \"belief\": {\"type\": \"have_item\", \"item\": \"envelope\"}, \"confidence",
+      "reasoning": "{\"reasoning\": \"Mr. Crisp is telling me to hurry up and deliver the envelope to the Magick Shoppe before it closes. I should head out of the Post Office and go find the Magick Shoppe. I'll go west since the signpost mentioned town directions.\", \"action\": \"GO NORTH\", \"goal\": \"Deliver the special delivery envelope to the Magick Shoppe before it closes at five\", \"subgoal\": \"Leave the Post Office and find the way to the Magick Shoppe\", \"belief\": {\"type\": \"have_item\", \"item\": \"envelope\"}, \"confidence",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2412,
+      "judge_tokens": 461,
+      "goal": "Deliver the special delivery envelope and progress through the game's story",
+      "subgoal": "Find out the destination address on the envelope before heading out",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    }
+  ]
+}

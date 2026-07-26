@@ -1,0 +1,133 @@
+{
+  "run_id": "4b8a635bb65b46a88afd95c23fbfe422",
+  "game": "zork1",
+  "summary": {
+    "total_steps": 6,
+    "final_progress": 0,
+    "final_score": 0,
+    "game_over": false,
+    "label": "vanilla",
+    "fork_step": null,
+    "started_at": "2026-07-24T04:52:58.040189+00:00",
+    "completed_at": "2026-07-24T04:53:34.444690+00:00"
+  },
+  "milestones": [],
+  "steps": [
+    {
+      "step": 0,
+      "obs": "ZORK I: The Great Underground Empire\nInfocom interactive fiction - a fantasy story\nCopyright (c) 1981, 1982, 1983, 1984, 1985, 1986 Infocom, Inc. All rights reserved.\nZORK is a registered trademark of Infocom, Inc.\nRelease 1 / Serial number 210628\n\nWest of House\nYou are standing in an open field west of a white house, with a boarded front door.\nThere is a small mailbox here.\n\n",
+      "action": "OPEN MAILBOX",
+      "reasoning": "Starting the classic Zork opening. I should check the mailbox for the leaflet, a standard first move to get oriented.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1064,
+      "judge_tokens": 250,
+      "goal": "Explore the underground empire and collect treasures",
+      "subgoal": "Check the mailbox for the leaflet",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "leaflet",
+        "location": "mailbox"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 1,
+      "obs": "Opening the small mailbox reveals a leaflet.\n\n",
+      "action": "READ LEAFLET",
+      "reasoning": "The mailbox is now open and contains a leaflet. I should read it for information before exploring further.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1122,
+      "judge_tokens": 243,
+      "goal": "explore the world and collect treasures to score points",
+      "subgoal": "read the leaflet for game info",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "leaflet",
+        "location": "mailbox"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 2,
+      "obs": "(Taken)\n\"WELCOME TO ZORK!\n\nZORK is a game of adventure, danger, and low cunning. In it you will explore some of the most amazing territory ever seen by mortals. No computer should be without one!\"\n\n",
+      "action": "DROP LEAFLET",
+      "reasoning": "I've read the leaflet. Now I should start exploring the house exterior to find a way in, since the front door is boarded.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1256,
+      "judge_tokens": 257,
+      "goal": "explore the underground empire and collect treasures",
+      "subgoal": "find a way into the house",
+      "belief": {
+        "type": "have_item",
+        "item": "leaflet",
+        "location": null
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 3,
+      "obs": "Dropped.\n\n",
+      "action": "NORTH",
+      "reasoning": "Now I should explore around the house to find a way in since the front door is boarded. I'll head north to circle around the house.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1343,
+      "judge_tokens": 271,
+      "goal": "explore the house and surroundings to find entry and collect treasures",
+      "subgoal": "find a way into the house",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "house",
+        "location": "West of House"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": []
+    },
+    {
+      "step": 4,
+      "obs": "North of House\nYou are facing the north side of a white house. There is no door here, and all the windows are boarded up. To the north a narrow path winds through the trees.\n\n",
+      "action": "EAST",
+      "reasoning": "I'm circling the house looking for an entry point. Continuing east around the house should lead me to the back where there's typically a window to enter.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1454,
+      "judge_tokens": 288,
+      "goal": "explore the house and surroundings, collect treasures, and descend into the underground empire",
+      "subgoal": "find a way into the house",
+      "belief": null,
+      "confidence": 0.6,
+      "mechanisms_used": []
+    },
+    {
+      "step": 5,
+      "obs": "Behind House\nYou are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar.\n\n",
+      "action": "OPEN WINDOW",
+      "reasoning": "There's a slightly open window behind the house - this is the classic entry point to get inside.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1541,
+      "judge_tokens": 268,
+      "goal": "Explore the underground empire and collect treasures",
+      "subgoal": "Enter the house through the window",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "window",
+        "location": "Behind House"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    }
+  ]
+}
