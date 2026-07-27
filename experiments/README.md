@@ -1,4 +1,4 @@
-# Running experiments and producing comparison plots
+# README
 
 This covers everything needed to go from a clean checkout to a mechanism-comparison
 plot: environment setup, running a single episode, and running the curated
