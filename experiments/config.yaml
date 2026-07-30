@@ -4,7 +4,7 @@ openrouter:
   base_url: "https://openrouter.ai/api/v1"
   request_timeout: 60
 experiments:
-  max_steps: 100
+  max_steps: 500
   autosave_every: 1
   accepted_local_error_k: 3
   info_seek_window: 10

@@ -1,0 +1,507 @@
+{
+  "run_id": "8c4b756c72564ebf9e3a828b72c8b772",
+  "game": "zork1",
+  "summary": {
+    "total_steps": 19,
+    "final_progress": 15,
+    "final_score": 25,
+    "game_over": true,
+    "label": "all_on",
+    "fork_step": null,
+    "started_at": "2026-07-30T09:52:25.151014+00:00",
+    "completed_at": "2026-07-30T09:55:30.371496+00:00"
+  },
+  "milestones": [
+    {
+      "step": 5,
+      "progress_before": 0,
+      "progress_after": 5,
+      "score": 10,
+      "action": "ENTER WINDOW"
+    },
+    {
+      "step": 15,
+      "progress_before": 5,
+      "progress_after": 15,
+      "score": 35,
+      "action": "GO DOWN"
+    }
+  ],
+  "steps": [
+    {
+      "step": 0,
+      "obs": "ZORK I: The Great Underground Empire\nInfocom interactive fiction - a fantasy story\nCopyright (c) 1981, 1982, 1983, 1984, 1985, 1986 Infocom, Inc. All rights reserved.\nZORK is a registered trademark of Infocom, Inc.\nRelease 1 / Serial number 210628\n\nWest of House\nYou are standing in an open field west of a white house, with a boarded front door.\nThere is a small mailbox here.\n\n",
+      "action": "OPEN MAILBOX",
+      "reasoning": "This is the classic Zork opening. I should check the mailbox for the leaflet as a standard first move, then proceed to explore the house exterior to find a way in.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1113,
+      "judge_tokens": 250,
+      "goal": "complete the game",
+      "subgoal": "explore starting area and find entry to house",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "leaflet",
+        "location": "mailbox"
+      },
+      "confidence": 0.7,
+      "mechanisms_used": []
+    },
+    {
+      "step": 1,
+      "obs": "Opening the small mailbox reveals a leaflet.\n\n",
+      "action": "READ LEAFLET",
+      "reasoning": "Mailbox opened and contains a leaflet. I should read it for information, then continue exploring around the house to find an entrance since the front door is boarded.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1584,
+      "judge_tokens": 569,
+      "goal": "complete the game",
+      "subgoal": "read leaflet then explore house exterior for entry",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "leaflet",
+        "location": "mailbox"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 2,
+      "obs": "(Taken)\n\"WELCOME TO ZORK!\n\nZORK is a game of adventure, danger, and low cunning. In it you will explore some of the most amazing territory ever seen by mortals. No computer should be without one!\"\n\n",
+      "action": "GO NORTH",
+      "reasoning": "I've read the leaflet. Now I need to explore around the house to find an entrance since the front door is boarded. I'll head north to start circling the house.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1416,
+      "judge_tokens": 260,
+      "goal": "complete the game",
+      "subgoal": "explore house exterior for entry",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "house",
+        "location": "West of House"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": []
+    },
+    {
+      "step": 3,
+      "obs": "North of House\nYou are facing the north side of a white house. There is no door here, and all the windows are boarded up. To the north a narrow path winds through the trees.\n\n",
+      "action": "GO EAST",
+      "reasoning": "The front is boarded and north side has no door. I should continue circling the house, likely east side has a window entrance.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1485,
+      "judge_tokens": 253,
+      "goal": "complete the game",
+      "subgoal": "find an entrance into the house",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "door/window",
+        "location": "house exterior"
+      },
+      "confidence": 0.5,
+      "mechanisms_used": []
+    },
+    {
+      "step": 4,
+      "obs": "Behind House\nYou are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar.\n\n",
+      "action": "OPEN WINDOW",
+      "reasoning": "There's a window slightly ajar behind the house - this is the entrance I've been looking for. I should open/enter it.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1609,
+      "judge_tokens": 261,
+      "goal": "complete the game",
+      "subgoal": "enter the house through the window",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "window",
+        "location": "Behind House"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 5,
+      "obs": "With great effort, you open the window far enough to allow entry.\n\n",
+      "action": "ENTER WINDOW",
+      "reasoning": "The window is now open enough for entry. I should climb through it into the house.",
+      "progress": 5,
+      "score": 10,
+      "reward": 10,
+      "tokens": 1696,
+      "judge_tokens": 256,
+      "goal": "complete the game",
+      "subgoal": "enter the house through the window",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "window",
+        "location": "Behind House"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 6,
+      "obs": "Kitchen\nYou are in the kitchen of the white house. A table seems to have been used recently for the preparation of food. A passage leads to the west and a dark staircase can be seen leading upward. A dark chimney leads down and to the east is a small window which is open.\nOn the table is an elongated brown sack, smelling of hot peppers.\nA bottle is sitting on the table.\nThe glass bottle contains:\n  A quantity of water\n\n",
+      "action": "{\"reasoning\": \"I'm now in the Kitchen. There's a sack and bottle on the table. I should explore further into the house through the west passage, but first I might want to grab useful items like the sack (food) for later. Let's take the sack first since it may contain useful items.\", \"action\": \"TAKE SACK\", \"goal\": \"complete the game\", \"subgoal\": \"explore the house and collect useful items\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"sack",
+      "reasoning": "{\"reasoning\": \"I'm now in the Kitchen. There's a sack and bottle on the table. I should explore further into the house through the west passage, but first I might want to grab useful items like the sack (food) for later. Let's take the sack first since it may contain useful items.\", \"action\": \"TAKE SACK\", \"goal\": \"complete the game\", \"subgoal\": \"explore the house and collect useful items\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"sack",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2059,
+      "judge_tokens": 382,
+      "goal": "complete the game",
+      "subgoal": "enter the house through the window",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 7,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"I'm now in the Kitchen. There's a sack and bottle on the table. I should explore further into the house through the west passage, but first I might want to grab useful items like the sack (food) for later. Let's take the sack first since it may contain useful items.\", \"action\": \"TAKE SACK\", \"goal\": \"complete the game\", \"subgoal\": \"explore the house and collect useful items\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"sack\nI don't know the word \"{\".\n\n",
+      "action": "TAKE SACK",
+      "reasoning": "The previous action failed due to a formatting error. I need to retry taking the sack from the table in the kitchen.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2817,
+      "judge_tokens": 411,
+      "goal": "complete the game",
+      "subgoal": "explore the house and collect useful items",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "sack",
+        "location": "Kitchen table"
+      },
+      "confidence": 0.8,
+      "mechanisms_used": []
+    },
+    {
+      "step": 8,
+      "obs": "Taken.\n\n",
+      "action": "{\"reasoning\": \"I already have the sack and leaflet. Now I should continue exploring the house. The passage to the west leads to the living room where I can find a lamp and other useful items. Let's head west.\", \"action\": \"GO WEST\", \"goal\": \"complete the game\", \"subgoal\": \"explore the house and collect useful items like the lamp\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"lamp\", \"location\": \"Living Room\"}, \"confidence\": 0",
+      "reasoning": "{\"reasoning\": \"I already have the sack and leaflet. Now I should continue exploring the house. The passage to the west leads to the living room where I can find a lamp and other useful items. Let's head west.\", \"action\": \"GO WEST\", \"goal\": \"complete the game\", \"subgoal\": \"explore the house and collect useful items like the lamp\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"lamp\", \"location\": \"Living Room\"}, \"confidence\": 0",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 3501,
+      "judge_tokens": 958,
+      "goal": "complete the game",
+      "subgoal": "explore the house and collect useful items",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 9,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"I already have the sack and leaflet. Now I should continue exploring the house. The passage to the west leads to the living room where I can find a lamp and other useful items. Let's head west.\", \"action\": \"GO WEST\", \"goal\": \"complete the game\", \"subgoal\": \"explore the house and collect useful items like the lamp\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"lamp\", \"location\": \"Living Room\"}, \"confidence\": 0\nI don't know the word \"{\".\n\n",
+      "action": "GO WEST",
+      "reasoning": "I need to continue exploring west from the Kitchen into the Living Room where I can likely find a lamp and other useful items.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 4425,
+      "judge_tokens": 1147,
+      "goal": "complete the game",
+      "subgoal": "explore the house and collect useful items like the lamp",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "lamp",
+        "location": "Living Room"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": []
+    },
+    {
+      "step": 10,
+      "obs": "Living Room\nYou are in the living room. There is a doorway to the east, a wooden door with strange gothic lettering to the west, which appears to be nailed shut, a trophy case, and a large oriental rug in the center of the room.\nAbove the trophy case hangs an elvish sword of great antiquity.\nA battery-powered brass lantern is on the trophy case.\n\n",
+      "action": "TAKE LANTERN",
+      "reasoning": "I'm in the Living Room and see a brass lantern on the trophy case, which is essential for exploring dark areas underground. I should take it now.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 4011,
+      "judge_tokens": 1159,
+      "goal": "complete the game",
+      "subgoal": "collect the lamp and sword from the living room",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "lantern",
+        "location": "trophy case"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 11,
+      "obs": "Taken.\n\n",
+      "action": "TAKE SWORD",
+      "reasoning": "I now have the lantern. Next I need the sword to fight the troll later, and I should move the rug to reveal the trap door before opening the trophy case, per my plan.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 4914,
+      "judge_tokens": 1936,
+      "goal": "complete the game",
+      "subgoal": "Take the sword, then move the rug to reveal the trap door before opening the trophy case",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "sword",
+        "location": "Living Room"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 12,
+      "obs": "Taken.\n\n",
+      "action": "MOVE RUG",
+      "reasoning": "I have the sword and lantern now. Next step per plan is to move the rug to reveal the trap door underneath.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 4811,
+      "judge_tokens": 1775,
+      "goal": "complete the game",
+      "subgoal": "Move the rug to reveal the trap door, then open it",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "rug",
+        "location": "Living Room"
+      },
+      "confidence": 0.8,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 13,
+      "obs": "With a great effort, the rug is moved to one side of the room, revealing the dusty cover of a closed trap door.\n\n",
+      "action": "OPEN TRAP DOOR",
+      "reasoning": "The trap door has been revealed by moving the rug. Now I need to open it before descending, and I should light the lantern first since it will be dark below.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 4934,
+      "judge_tokens": 1779,
+      "goal": "complete the game",
+      "subgoal": "Open the trap door and light the lantern before descending underground",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "trap door",
+        "location": "Living Room"
+      },
+      "confidence": 0.85,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 14,
+      "obs": "The door reluctantly opens to reveal a rickety staircase descending into darkness.\n\n",
+      "action": "TURN ON LANTERN",
+      "reasoning": "The trap door is now open leading to darkness below. Before descending, I need to turn on the lantern so I can see in the underground areas.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 4881,
+      "judge_tokens": 1629,
+      "goal": "complete the game",
+      "subgoal": "Light the lantern, then descend through the trap door into the cellar",
+      "belief": {
+        "type": "have_item",
+        "item": "brass lantern",
+        "location": null
+      },
+      "confidence": 0.95,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 15,
+      "obs": "The brass lantern is now on.\n\n",
+      "action": "GO DOWN",
+      "reasoning": "The trap door is open and my lantern is now lit, providing light for the dark cellar below. I should now descend through the trap door to begin exploring the underground areas.",
+      "progress": 15,
+      "score": 35,
+      "reward": 25,
+      "tokens": 4979,
+      "judge_tokens": 1638,
+      "goal": "complete the game",
+      "subgoal": "descend into the cellar through the trap door",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "trap door",
+        "location": "Living Room"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 16,
+      "obs": "The trap door crashes shut, and you hear someone barring it.\n\nCellar\nYou are in a dark and damp cellar with a narrow passageway leading north, and a crawlway to the south. On the west is the bottom of a steep metal ramp which is unclimbable.\nYour sword is glowing with a faint blue glow.\n\n",
+      "action": "{\"reasoning\": \"The sword glows blue, indicating a nearby danger, likely the troll. In classic Zork, north from the Cellar leads to the Troll Room, which is the main path deeper into the dungeon. I should proceed north to continue exploring while being ready to fight if the troll appears.\", \"action\": \"GO NORTH\", \"goal\": \"complete the game\", \"subgoal\":",
+      "reasoning": "{\"reasoning\": \"The sword glows blue, indicating a nearby danger, likely the troll. In classic Zork, north from the Cellar leads to the Troll Room, which is the main path deeper into the dungeon. I should proceed north to continue exploring while being ready to fight if the troll appears.\", \"action\": \"GO NORTH\", \"goal\": \"complete the game\", \"subgoal\":",
+      "progress": 15,
+      "score": 35,
+      "reward": 0,
+      "tokens": 5321,
+      "judge_tokens": 1777,
+      "goal": "complete the game",
+      "subgoal": "Since you are already in the Cellar with the lantern on, move south to exit the troll room area or explore the Cellar exits to proceed deeper into the underground.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 17,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The sword glows blue, indicating a nearby danger, likely the troll. In classic Zork, north from the Cellar leads to the Troll Room, which is the main path deeper into the dungeon. I should proceed north to continue exploring while being ready to fight if the troll appears.\", \"action\": \"GO NORTH\", \"goal\": \"complete the game\", \"subgoal\":\nI don't know the word \"{\".\n\n",
+      "action": "GO NORTH",
+      "reasoning": "The formatting error occurred because the JSON was too long or malformed. I need to keep responses concise. I'm in the Cellar with a glowing sword indicating danger nearby. I should proceed north toward the Troll Room to continue deeper into the dungeon.",
+      "progress": 15,
+      "score": 35,
+      "reward": 0,
+      "tokens": 6092,
+      "judge_tokens": 1885,
+      "goal": "complete the game",
+      "subgoal": "move north into the Troll Room and prepare to fight",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "troll",
+        "location": "Troll Room"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 18,
+      "obs": "The Troll Room\nThis is a small room with passages to the east and south and a forbidding hole leading west. Bloodstains and deep scratches (perhaps made by an axe) mar the walls.\nA nasty-looking troll, brandishing a bloody axe, blocks all passages out of the room.\nYour sword has begun to glow very brightly.\nThe flat of the troll's axe skins across your forearm.\n\n",
+      "action": "KILL TROLL WITH SWORD",
+      "reasoning": "I'm in combat with the troll. I need to attack it with my sword to defend myself and eventually kill it to pass through the room.",
+      "progress": 15,
+      "score": 25,
+      "reward": -10,
+      "tokens": 5955,
+      "judge_tokens": 1807,
+      "goal": "complete the game",
+      "subgoal": "defeat the troll blocking passages in the Troll Room",
+      "belief": {
+        "type": "have_item",
+        "item": "sword",
+        "location": null
+      },
+      "confidence": 0.7,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    }
+  ],
+  "integration_events": [
+    {
+      "step": 11,
+      "unused": [
+        "10                Moves: 9",
+        "brass lantern",
+        "brown sack"
+      ],
+      "gap": true,
+      "suggested_combination": "Take the sword and lamp, then move the rug to reveal the trap door before opening the trophy case (need lamp lit for dark areas below)."
+    },
+    {
+      "step": 12,
+      "unused": [
+        "10                Moves: 10",
+        "brass lantern",
+        "brown sack"
+      ],
+      "gap": true,
+      "suggested_combination": "Move the rug in the Living Room to reveal the trap door before proceeding to open the trophy case"
+    },
+    {
+      "step": 13,
+      "unused": [
+        "10                Moves: 11",
+        "brass lantern",
+        "brown sack"
+      ],
+      "gap": true,
+      "suggested_combination": "OPEN TRAP DOOR (after MOVE RUG reveals it), then use brass lantern to light the way before going down"
+    },
+    {
+      "step": 14,
+      "unused": [
+        "10                Moves: 12",
+        "brass lantern",
+        "brown sack"
+      ],
+      "gap": true,
+      "suggested_combination": "TURN ON LANTERN before going down through the trap door, since the underground area will be dark"
+    },
+    {
+      "step": 15,
+      "unused": [
+        "10                Moves: 13",
+        "brass lantern (providing light)",
+        "brown sack"
+      ],
+      "gap": true,
+      "suggested_combination": "Go down / enter trap door now that lantern is lit, to descend into the cellar"
+    },
+    {
+      "step": 16,
+      "unused": [
+        "35                Moves: 14",
+        "brass lantern (providing light)",
+        "brown sack"
+      ],
+      "gap": true,
+      "suggested_combination": "Turn on the brass lantern before going down into the dark cellar through the trap door"
+    },
+    {
+      "step": 17,
+      "unused": [
+        "35                Moves: 14",
+        "brass lantern (providing light)",
+        "brown sack"
+      ],
+      "gap": true,
+      "suggested_combination": "Draw/wield the sword while in the Troll Room to fight the troll, instead of just moving directions; the sword glowing blue signals imminent danger requiring combat action."
+    },
+    {
+      "step": 18,
+      "unused": [
+        "35                Moves: 15",
+        "brass lantern (providing light)",
+        "brown sack",
+        "axe sweeps past as you jump aside"
+      ],
+      "gap": true,
+      "suggested_combination": "Draw/wield the sword (already glowing, signaling danger) before or upon entering the Troll Room so the agent is armed to fight the troll, rather than just moving north empty-handed."
+    }
+  ]
+}
