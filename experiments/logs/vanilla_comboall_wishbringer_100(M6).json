@@ -1,0 +1,2380 @@
+{
+  "run_id": "965bd8fe798f407a817f537da22a9172",
+  "game": "wishbringer",
+  "summary": {
+    "total_steps": 100,
+    "final_progress": 5,
+    "final_score": 6,
+    "game_over": false,
+    "label": "m6_planning",
+    "fork_step": null,
+    "started_at": "2026-07-30T17:26:56.204519+00:00",
+    "completed_at": "2026-07-30T17:41:38.799316+00:00"
+  },
+  "milestones": [
+    {
+      "step": 4,
+      "progress_before": 0,
+      "progress_after": 5,
+      "score": 1,
+      "action": "look"
+    }
+  ],
+  "steps": [
+    {
+      "step": 0,
+      "obs": "\n\"Behind you!\" cries the Princess. \"It's a trap!\"\n\nToo late. The drawbridge crashes shut against the tower wall. You turn to face your enemy, and find yourself staring into the open maw of Thermofax.\n\nOnly your Magick sword can save you now. You swing it high, speak the Word and stand unhurt as the blade absorbs the searing dragon-breath.\n\nThe reptile bellows with rage and flaps its wings to fan the fire in its belly. You are advancing, sword poised to strike, when a familiar voice shatters the daydream and stays your mighty hand...\n\nWISHBRINGER\nThe Magick Stone of Dreams\nCopyright (C)1985 Infocom, Inc. All rights reserved.\nWishbringer is a registered trademark of Infocom, Inc.\nRelease 1 / Serial Number 210629\n\nHilltop\nYou're on a hilltop overlooking the seaside village of Festeron.\n\nTo the south stands the Festeron Post Office. It's a little brick building with a neatly-trimmed lawn. The Post Office door stands invitingly open.\n\nRoads run down the hill to the east and west. There's a signpost nearby.\n\nSomebody inside the Post Office is calling you.\n\nOkay, what do you want to do now?\n",
+      "action": "{\"reasoning\": \"The game just started and someone inside the Post Office is calling me. I should head there to begin the main storyline, as this is likely my job/starting point.\", \"action\": \"GO SOUTH\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Enter the Post Office to see who is calling\", \"belief\": {\"type\": \"item_in_loc\", \"item",
+      "reasoning": "{\"reasoning\": \"The game just started and someone inside the Post Office is calling me. I should head there to begin the main storyline, as this is likely my job/starting point.\", \"action\": \"GO SOUTH\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Enter the Post Office to see who is calling\", \"belief\": {\"type\": \"item_in_loc\", \"item",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1447,
+      "judge_tokens": 328,
+      "goal": null,
+      "subgoal": null,
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 1,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The game just started and someone inside the Post Office is calling me. I should head there to begin the main storyline, as this is likely my job/starting point.\", \"action\": \"GO SOUTH\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Enter the Post Office to see who is calling\", \"belief\": {\"type\": \"item_in_loc\", \"item\n(Sorry, but the word \"{\" is not in the vocabulary that you can use.)\n\nOkay, what do you want to do now?\n",
+      "action": "SOUTH",
+      "reasoning": "I need to enter the Post Office since someone is calling me there. This is the starting point of the game's main plot.",
+      "progress": 0,
+      "score": 1,
+      "reward": 1,
+      "tokens": 1952,
+      "judge_tokens": 392,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the Post Office to see who is calling",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "person calling",
+        "location": "Post Office"
+      },
+      "confidence": 0.8,
+      "mechanisms_used": []
+    },
+    {
+      "step": 2,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is behind the service counter reading other people's postcards.\n\nMr. Crisp hides the postcards away as you enter. \"Where have you been?\" he barks angrily. \"Daydreaming again, eh? I've been looking everywhere for you!\"\n\n(Your score just went up by 1 point! Your total score is 1 out of 101.)\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"Mr. Crisp is angry and looking for me. I should interact with him to learn what he wants, likely job instructions to begin the plot.\", \"action\": \"TALK TO CRISP\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find out what Mr. Crisp wants from me\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"Mr. Crisp\", \"location\": \"Post Office\"",
+      "reasoning": "{\"reasoning\": \"Mr. Crisp is angry and looking for me. I should interact with him to learn what he wants, likely job instructions to begin the plot.\", \"action\": \"TALK TO CRISP\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find out what Mr. Crisp wants from me\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"Mr. Crisp\", \"location\": \"Post Office\"",
+      "progress": 0,
+      "score": 1,
+      "reward": 0,
+      "tokens": 2361,
+      "judge_tokens": 526,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the Post Office to see who is calling",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 3,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"Mr. Crisp is angry and looking for me. I should interact with him to learn what he wants, likely job instructions to begin the plot.\", \"action\": \"TALK TO CRISP\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find out what Mr. Crisp wants from me\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"Mr. Crisp\", \"location\": \"Post Office\"\n(Sorry, but this story doesn't recognize the word \"{.\")\n\nWhat next?\n",
+      "action": "ASK CRISP ABOUT JOB",
+      "reasoning": "I need to output plain text action commands only, not JSON in the action field. Mr. Crisp wants to talk to me; I should ask him what's going on or wait for him to speak.",
+      "progress": 0,
+      "score": 1,
+      "reward": 0,
+      "tokens": 2957,
+      "judge_tokens": 584,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Find out what Mr. Crisp wants from me",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "Mr. Crisp",
+        "location": "Post Office"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": []
+    },
+    {
+      "step": 4,
+      "obs": "(This story doesn't know the word \"job.\")\n\nWhat next?\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 1,
+      "reward": 0,
+      "tokens": 2476,
+      "judge_tokens": 0,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Find out what Mr. Crisp wants from me",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 5,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is watching you impatiently.\n\nMr. Crisp reaches under the service counter and pulls out a mysterious envelope. \"We just got this Special Delivery,\" he snarls, tossing it onto the service counter. \"I want you to drop it off right away. That means NOW!\"\n\nWhat next?\n",
+      "action": "TAKE ENVELOPE",
+      "reasoning": "Mr. Crisp has placed a mysterious envelope on the service counter and wants me to deliver it. I should pick it up first before I can deliver it.",
+      "progress": 5,
+      "score": 6,
+      "reward": 5,
+      "tokens": 3254,
+      "judge_tokens": 599,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Take the special delivery envelope and prepare to deliver it",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "envelope",
+        "location": "service counter"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 6,
+      "obs": "Taken.\n\n(Your score just went up by 5 points! Your total score is 6 out of 101.)\n\nMr. Crisp drums his fingers on the service counter impatiently. \"Quit stalling! The Magick Shoppe closes at five o'clock!\"\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"I need to deliver the special delivery envelope to the Magick Shoppe before it closes. I should check the envelope for an address first, then head out to find the shop.\", \"action\": \"READ ENVELOPE\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Deli",
+      "reasoning": "{\"reasoning\": \"I need to deliver the special delivery envelope to the Magick Shoppe before it closes. I should check the envelope for an address first, then head out to find the shop.\", \"action\": \"READ ENVELOPE\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Deli",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3360,
+      "judge_tokens": 539,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Take the special delivery envelope and prepare to deliver it",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 7,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"I need to deliver the special delivery envelope to the Magick Shoppe before it closes. I should check the envelope for an address first, then head out to find the shop.\", \"action\": \"READ ENVELOPE\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Deli\n(You don't need to use the word \"{\" to finish this story.)\n\nWhat next?\n",
+      "action": "READ ENVELOPE",
+      "reasoning": "I need to output only plain text commands, not JSON. I should read the envelope to check the delivery address before heading to the Magick Shoppe.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3771,
+      "judge_tokens": 581,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Deliver the special delivery envelope to the Magick Shoppe",
+      "belief": {
+        "type": "have_item",
+        "item": "envelope",
+        "location": null
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 8,
+      "obs": "(You'll find the envelope inside your Wishbringer package.)\n\nMr. Crisp wails, \"Get moving!\"\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"Mr. Crisp wants me to deliver the special delivery envelope to the Magick Shoppe before it closes at five. I should head out of the Post Office to find the shop, likely in the village below the hill.\", \"action\": \"NORTH\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Deliver the envelope to the Magick Shoppe\", \"belief\": {\"",
+      "reasoning": "{\"reasoning\": \"Mr. Crisp wants me to deliver the special delivery envelope to the Magick Shoppe before it closes at five. I should head out of the Post Office to find the shop, likely in the village below the hill.\", \"action\": \"NORTH\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Deliver the envelope to the Magick Shoppe\", \"belief\": {\"",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3863,
+      "judge_tokens": 533,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Deliver the special delivery envelope to the Magick Shoppe",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 9,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"Mr. Crisp wants me to deliver the special delivery envelope to the Magick Shoppe before it closes at five. I should head out of the Post Office to find the shop, likely in the village below the hill.\", \"action\": \"NORTH\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Deliver the envelope to the Magick Shoppe\", \"belief\": {\"\n(You don't need to use the word \"{\" to finish this story.)\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"I need to leave the Post Office and head toward the village to find the Magick Shoppe before it closes at five. Going north should take me back to the hilltop.\", \"action\": \"NORTH\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find and deliver the envelope to the Magick Shoppe",
+      "reasoning": "{\"reasoning\": \"I need to leave the Post Office and head toward the village to find the Magick Shoppe before it closes at five. Going north should take me back to the hilltop.\", \"action\": \"NORTH\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find and deliver the envelope to the Magick Shoppe",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 4469,
+      "judge_tokens": 643,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Deliver the special delivery envelope to the Magick Shoppe",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 10,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"I need to leave the Post Office and head toward the village to find the Magick Shoppe before it closes at five. Going north should take me back to the hilltop.\", \"action\": \"NORTH\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find and deliver the envelope to the Magick Shoppe\n(This story doesn't know the word \"{.\")\n\nWhat next?\n",
+      "action": "NORTH",
+      "reasoning": "I need to output plain text only in the action field, not JSON. I have the envelope and need to leave the Post Office to find the Magick Shoppe. Going north should take me back to the hilltop.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 4929,
+      "judge_tokens": 700,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Find and deliver the envelope to the Magick Shoppe",
+      "belief": {
+        "type": "have_item",
+        "item": "envelope",
+        "location": null
+      },
+      "confidence": 0.7,
+      "mechanisms_used": []
+    },
+    {
+      "step": 11,
+      "obs": "As you leave the Post Office, somebody slams and locks the door behind you.\n\nHilltop\n\nWhat next?\n",
+      "action": "READ SIGNPOST",
+      "reasoning": "I'm back at the Hilltop with the envelope. I need to find the Magick Shoppe in the village. There are roads east and west, and a signpost that might give directions.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 5030,
+      "judge_tokens": 688,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Find directions to the Magick Shoppe to deliver the envelope",
+      "belief": {
+        "type": "have_item",
+        "item": "envelope",
+        "location": null
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 12,
+      "obs": "There are two arrows on the signpost. The arrow pointing west says \"To Cemetery.\" The east arrow is marked \"To Festeron.\"\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"The signpost indicates east leads to Festeron village, where the Magick Shoppe is likely located. I need to deliver the envelope there before it closes at five.\", \"action\": \"EAST\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Travel to Festeron village to find the Magick Shoppe\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"Magick Shoppe\", \"location\": \"Festeron\"}, \"confid",
+      "reasoning": "{\"reasoning\": \"The signpost indicates east leads to Festeron village, where the Magick Shoppe is likely located. I need to deliver the envelope there before it closes at five.\", \"action\": \"EAST\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Travel to Festeron village to find the Magick Shoppe\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"Magick Shoppe\", \"location\": \"Festeron\"}, \"confid",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 5185,
+      "judge_tokens": 699,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Find directions to the Magick Shoppe to deliver the envelope",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 13,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The signpost indicates east leads to Festeron village, where the Magick Shoppe is likely located. I need to deliver the envelope there before it closes at five.\", \"action\": \"EAST\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Travel to Festeron village to find the Magick Shoppe\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"Magick Shoppe\", \"location\": \"Festeron\"}, \"confid\n(Sorry, but this story doesn't recognize the word \"{.\")\n\nWhat next?\n",
+      "action": "EAST",
+      "reasoning": "The signpost shows east leads to Festeron, where I expect to find the Magick Shoppe. I need to deliver the envelope there before it closes.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 5770,
+      "judge_tokens": 735,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Travel to Festeron village to find the Magick Shoppe",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "Magick Shoppe",
+        "location": "Festeron"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": []
+    },
+    {
+      "step": 14,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAs you approach the cottage you are greeted by the tiniest poodle you've ever seen in your entire life. It charges across the street, yapping angrily and showing its sharp little teeth.\n\nYou can smell the poodle's hot breath as it yaps.\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"A tiny poodle is yapping at me but seems more annoying than dangerous. I need to continue toward the village to find the Magick Shoppe and deliver the envelope before five o'clock. I",
+      "reasoning": "{\"reasoning\": \"A tiny poodle is yapping at me but seems more annoying than dangerous. I need to continue toward the village to find the Magick Shoppe and deliver the envelope before five o'clock. I",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 5871,
+      "judge_tokens": 613,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Travel to Festeron village to find the Magick Shoppe",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 15,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"A tiny poodle is yapping at me but seems more annoying than dangerous. I need to continue toward the village to find the Magick Shoppe and deliver the envelope before five o'clock. I\n(Sorry, but the word \"{\" is not in the vocabulary that you can use.)\n\nWhat next?\n",
+      "action": "NORTH",
+      "reasoning": "The poodle is small and likely harmless, just an annoyance. I should continue north toward the village to find the Magick Shoppe and deliver the envelope before it closes at five.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6065,
+      "judge_tokens": 543,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Travel to Festeron village to find the Magick Shoppe",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "Magick Shoppe",
+        "location": "Festeron village"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": []
+    },
+    {
+      "step": 16,
+      "obs": "The poodle won't let you go that way.\n\nThe poodle glares at you through eyes red with hatred.\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"The tiny poodle is blocking my path north. I should try to get past it another way, perhaps by going around or dealing with it directly. Let me try moving north again or trying a different approach like petting it or looking for another route.\", \"action\": \"PET POODLE\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Get past the poodle to reach the village and deliver the envelope\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"poodle\", \"location\": \"Outside Cottage\"}, \"confidence\": 0",
+      "reasoning": "{\"reasoning\": \"The tiny poodle is blocking my path north. I should try to get past it another way, perhaps by going around or dealing with it directly. Let me try moving north again or trying a different approach like petting it or looking for another route.\", \"action\": \"PET POODLE\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Get past the poodle to reach the village and deliver the envelope\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"poodle\", \"location\": \"Outside Cottage\"}, \"confidence\": 0",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6317,
+      "judge_tokens": 680,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Travel to Festeron village to find the Magick Shoppe",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 17,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The tiny poodle is blocking my path north. I should try to get past it another way, perhaps by going around or dealing with it directly. Let me try moving north again or trying a different approach like petting it or looking for another route.\", \"action\": \"PET POODLE\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Get past the poodle to reach the village and deliver the envelope\", \"belief\": {\"type\": \"item_in_loc\", \"item\": \"poodle\", \"location\": \"Outside Cottage\"}, \"confidence\": 0\n(Sorry, but the word \"{\" is not in the vocabulary that you can use.)\n\nWhat next?\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6273,
+      "judge_tokens": 0,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Travel to Festeron village to find the Magick Shoppe",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 18,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\nWhat next?\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6394,
+      "judge_tokens": 0,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Travel to Festeron village to find the Magick Shoppe",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 19,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n(You won't see the \"What next?\" prompt any more.)\n",
+      "action": "{\"reasoning\":\"The poodle blocks the north path. I recall from Wishbringer that knocking on the cottage door or asking Miss Voss about her dog might help, or I could try going up the hill instead since the road also bends toward Post Office Hill. Let me try knocking on the cottage door to get Miss Voss's attention.\",\"action\":\"KNOCK ON DOOR\",\"goal\":\"Progress through the Wishbringer story and find the Magick Stone of Dreams\",\"subgoal\":\"Get past the poodle blocking the path north\",\"belief\":{\"type\":\"item_in_loc\",\"item\":\"",
+      "reasoning": "{\"reasoning\":\"The poodle blocks the north path. I recall from Wishbringer that knocking on the cottage door or asking Miss Voss about her dog might help, or I could try going up the hill instead since the road also bends toward Post Office Hill. Let me try knocking on the cottage door to get Miss Voss's attention.\",\"action\":\"KNOCK ON DOOR\",\"goal\":\"Progress through the Wishbringer story and find the Magick Stone of Dreams\",\"subgoal\":\"Get past the poodle blocking the path north\",\"belief\":{\"type\":\"item_in_loc\",\"item\":\"",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7215,
+      "judge_tokens": 692,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Travel to Festeron village to find the Magick Shoppe",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 20,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\":\"The poodle blocks the north path. I recall from Wishbringer that knocking on the cottage door or asking Miss Voss about her dog might help, or I could try going up the hill instead since the road also bends toward Post Office Hill. Let me try knocking on the cottage door to get Miss Voss's attention.\",\"action\":\"KNOCK ON DOOR\",\"goal\":\"Progress through the Wishbringer story and find the Magick Stone of Dreams\",\"subgoal\":\"Get past the poodle blocking the path north\",\"belief\":{\"type\":\"item_in_loc\",\"item\":\"\n(This story doesn't know the word \"{.\")\n\n",
+      "action": "{\"reasoning\": \"The poodle is blocking the path north. I recall that knocking on the cottage door might get Miss Voss to call off her dog.\", \"action\": \"KNOCK ON DOOR\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal",
+      "reasoning": "{\"reasoning\": \"The poodle is blocking the path north. I recall that knocking on the cottage door might get Miss Voss to call off her dog.\", \"action\": \"KNOCK ON DOOR\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7866,
+      "judge_tokens": 724,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Travel to Festeron village to find the Magick Shoppe",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 21,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The poodle is blocking the path north. I recall that knocking on the cottage door might get Miss Voss to call off her dog.\", \"action\": \"KNOCK ON DOOR\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\n(Sorry, but this story doesn't recognize the word \"{.\")\n\n",
+      "action": "KNOCK ON DOOR",
+      "reasoning": "The poodle blocks the path north. Knocking on the cottage door may get Miss Voss to call off her dog.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8220,
+      "judge_tokens": 749,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Get past the poodle blocking the path north",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "poodle",
+        "location": "Outside Cottage"
+      },
+      "confidence": 0.5,
+      "mechanisms_used": []
+    },
+    {
+      "step": 22,
+      "obs": "The poodle won't let you near the cottage.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7595,
+      "judge_tokens": 0,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Get past the poodle blocking the path north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 23,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7703,
+      "judge_tokens": 0,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Get past the poodle blocking the path north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 24,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7820,
+      "judge_tokens": 0,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Get past the poodle blocking the path north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 25,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7930,
+      "judge_tokens": 0,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Get past the poodle blocking the path north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 26,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Look around. You might find something the poodle would like.)\n\n",
+      "action": "{\"reasoning\": \"The hint suggests I need something the poodle would like, likely food. I should check my inventory for any item I could use, or examine the surroundings more closely for something edible nearby.\", \"action",
+      "reasoning": "{\"reasoning\": \"The hint suggests I need something the poodle would like, likely food. I should check my inventory for any item I could use, or examine the surroundings more closely for something edible nearby.\", \"action",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8341,
+      "judge_tokens": 304,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Get past the poodle blocking the path north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 27,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The hint suggests I need something the poodle would like, likely food. I should check my inventory for any item I could use, or examine the surroundings more closely for something edible nearby.\", \"action\n(You don't need to use the word \"{\" to finish this story.)\n\n",
+      "action": "{\"reasoning\": \"The game hint suggests I need something the poodle would like nearby. I should examine the surroundings more closely, perhaps look at the ground or nearby bushes for a bone or treat.\", \"action\": \"EXAMINE GROUND\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something to distract or please the poodle so I can pass\", \"belief\":",
+      "reasoning": "{\"reasoning\": \"The game hint suggests I need something the poodle would like nearby. I should examine the surroundings more closely, perhaps look at the ground or nearby bushes for a bone or treat.\", \"action\": \"EXAMINE GROUND\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something to distract or please the poodle so I can pass\", \"belief\":",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8712,
+      "judge_tokens": 435,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Get past the poodle blocking the path north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 28,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The game hint suggests I need something the poodle would like nearby. I should examine the surroundings more closely, perhaps look at the ground or nearby bushes for a bone or treat.\", \"action\": \"EXAMINE GROUND\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something to distract or please the poodle so I can pass\", \"belief\":\n(Sorry, but this story doesn't recognize the word \"{.\")\n\n",
+      "action": "{\"reasoning\": \"The game hint says to look around for something the poodle would like, such as a bone or treat. I should examine my surroundings for such an item, perhaps a trash can or bush nearby.\", \"action\": \"EXAMINE TRASH CAN\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something",
+      "reasoning": "{\"reasoning\": \"The game hint says to look around for something the poodle would like, such as a bone or treat. I should examine my surroundings for such an item, perhaps a trash can or bush nearby.\", \"action\": \"EXAMINE TRASH CAN\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 9312,
+      "judge_tokens": 558,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Get past the poodle blocking the path north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 29,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The game hint says to look around for something the poodle would like, such as a bone or treat. I should examine my surroundings for such an item, perhaps a trash can or bush nearby.\", \"action\": \"EXAMINE TRASH CAN\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something\n(Sorry, but the word \"{\" is not in the vocabulary that you can use.)\n\n",
+      "action": "{\"reasoning\": \"The hint suggests I need to find something the poodle would like nearby. I should just look around the area to spot an item I could use as a distraction.\", \"action\": \"LOOK\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something the po",
+      "reasoning": "{\"reasoning\": \"The hint suggests I need to find something the poodle would like nearby. I should just look around the area to spot an item I could use as a distraction.\", \"action\": \"LOOK\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something the po",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 9843,
+      "judge_tokens": 661,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Get past the poodle blocking the path north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 30,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The hint suggests I need to find something the poodle would like nearby. I should just look around the area to spot an item I could use as a distraction.\", \"action\": \"LOOK\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something the po\n(This story doesn't know the word \"{.\")\n\n",
+      "action": "{\"reasoning\": \"The poodle hint suggests I need to find something it would like nearby, like a bone or food item. I should examine my surroundings, perhaps check my own inventory or look at nearby objects like garb",
+      "reasoning": "{\"reasoning\": \"The poodle hint suggests I need to find something it would like nearby, like a bone or food item. I should examine my surroundings, perhaps check my own inventory or look at nearby objects like garb",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10265,
+      "judge_tokens": 728,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Get past the poodle blocking the path north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 31,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The poodle hint suggests I need to find something it would like nearby, like a bone or food item. I should examine my surroundings, perhaps check my own inventory or look at nearby objects like garb\n(You don't need to use the word \"{\" to finish this story.)\n\n",
+      "action": "{\"reasoning\": \"The poodle blocks the path. A hint says to look for something it would like nearby. I should check my inventory for useful items like food.\", \"action\": \"INVENTORY\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something to distract the poodle\", \"belief\": {\"type\": \"none\"}, \"confidence\":",
+      "reasoning": "{\"reasoning\": \"The poodle blocks the path. A hint says to look for something it would like nearby. I should check my inventory for useful items like food.\", \"action\": \"INVENTORY\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something to distract the poodle\", \"belief\": {\"type\": \"none\"}, \"confidence\":",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10643,
+      "judge_tokens": 854,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Get past the poodle blocking the path north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 32,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The poodle blocks the path. A hint says to look for something it would like nearby. I should check my inventory for useful items like food.\", \"action\": \"INVENTORY\", \"goal\": \"Progress through the Wishbringer story and find the Magick Stone of Dreams\", \"subgoal\": \"Find something to distract the poodle\", \"belief\": {\"type\": \"none\"}, \"confidence\":\n(Sorry, but this story doesn't recognize the word \"{.\")\n\n",
+      "action": "INVENTORY",
+      "reasoning": "The poodle blocks the path and hints suggest finding something it would like nearby. I should check my inventory for a useful item like food before searching further.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11043,
+      "judge_tokens": 837,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Find something to distract the poodle so I can pass north",
+      "belief": null,
+      "confidence": 0.5,
+      "mechanisms_used": []
+    },
+    {
+      "step": 33,
+      "obs": "You're holding a mysterious envelope.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10319,
+      "judge_tokens": 0,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Find something to distract the poodle so I can pass north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 34,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10427,
+      "judge_tokens": 0,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Find something to distract the poodle so I can pass north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 35,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10544,
+      "judge_tokens": 0,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Find something to distract the poodle so I can pass north",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 36,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10942,
+      "judge_tokens": 288,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore the current room and check inventory/exits (look, inventory) to identify the next item or path toward the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 37,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11054,
+      "judge_tokens": 291,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore your current location and check your inventory to identify any usable items or exits, then head toward the Magick Shoppe to seek clues about the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 38,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11155,
+      "judge_tokens": 284,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check inventory to identify current location and items, then head toward the Cliff House to begin the search for the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 39,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11281,
+      "judge_tokens": 293,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Check current location and inventory (look, examine self) to reorient, then head toward the Magick Shoppe to seek clues about the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 40,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "{\"reasoning\": \"The poodle",
+      "reasoning": "{\"reasoning\": \"The poodle",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11646,
+      "judge_tokens": 548,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the Ye Olde Magick Shoppe and talk to the old woman to obtain the Wishbringer stone.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 41,
+      "obs": "(This story doesn't know the word \"{.\")\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11435,
+      "judge_tokens": 284,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check inventory to establish current location and items, then head toward the witch's shop to begin the search for the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 42,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Maybe you can bribe the poodle with something.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11542,
+      "judge_tokens": 283,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore the current location and examine/take any visible items to identify the next puzzle piece needed for finding the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 43,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11649,
+      "judge_tokens": 281,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore the current location and examine/take any visible items (especially the letter or note), then read it for clues toward the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 44,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11737,
+      "judge_tokens": 261,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check inventory to establish current location and held items before proceeding.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 45,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11890,
+      "judge_tokens": 297,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Check current location and inventory (look, then examine/inventory) to reorient before heading toward the Magick Shoppe to seek clues about the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 46,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11977,
+      "judge_tokens": 274,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore your current location and examine/take any visible items, then check inventory to identify what you're holding before proceeding.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 47,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12097,
+      "judge_tokens": 285,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the Ye Olde Magick Shoppe and talk to the old woman to obtain the envelope containing the Magick Stone quest.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 48,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12206,
+      "judge_tokens": 286,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check your inventory to establish your current location and items, then head toward the Magick Shoppe to seek clues about the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 49,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12329,
+      "judge_tokens": 292,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Check current location and inventory (look/examine surroundings, then inventory) to establish known state before heading toward the old woman's shop to get the letter and stone-related clue.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 50,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12431,
+      "judge_tokens": 284,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore the current room and examine/take any visible items (especially the letter or envelope) to identify the first task for finding the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 51,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Try examining the poodle. You might discover something.)\n\n",
+      "action": "EXAMINE POODLE",
+      "reasoning": "The game hints suggest examining the poodle might reveal something useful, like a way to bribe or distract it.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12822,
+      "judge_tokens": 568,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Discover a way to get past the poodle blocking the path north",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "poodle",
+        "location": "Outside Cottage"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 52,
+      "obs": "The poodle is tiny, mean and hungry-looking.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12635,
+      "judge_tokens": 284,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Go to the Wishbringer Emporium and talk to the Woman to obtain the letter and package for delivery, kicking off the main quest.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 53,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12745,
+      "judge_tokens": 286,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check inventory to establish current location and items, then head toward the Magick Shoppe to ask Alfred about the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 54,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12866,
+      "judge_tokens": 290,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check inventory to identify current location and items, then head toward the Magick Shoppe to ask Franz about the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 55,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12971,
+      "judge_tokens": 285,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check inventory to establish current location and items, then head toward the Magick Shoppe to seek guidance on the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 56,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13076,
+      "judge_tokens": 281,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the Ye Olde Magick Shoppe and talk to the old man to learn about the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 57,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13188,
+      "judge_tokens": 285,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check inventory to establish current location and held items, then head toward the Magick Shoppe to seek clues about the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 58,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13293,
+      "judge_tokens": 273,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Go to the Magick Shoppe and talk to the old woman to obtain the Wishbringer stone.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 59,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13422,
+      "judge_tokens": 292,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Go to the shop and get the letter/package from Ye Olde Shoppe, then read it to learn your next destination toward finding the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 60,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Try examining the poodle. You might discover something.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13516,
+      "judge_tokens": 279,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the Ye Olde Magick Shoppe and talk to the old woman to obtain the Wishbringer stone.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 61,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13633,
+      "judge_tokens": 287,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore your current location and examine/take any visible items (especially reading the note or letter you start with) to identify the first clue toward the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 62,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13739,
+      "judge_tokens": 285,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore your current location and examine/take any visible items (especially the letter or note) to identify the first clue toward the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 63,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13851,
+      "judge_tokens": 280,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Go to the Wishbringer Curio Shop and talk to the old woman to obtain the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 64,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "{\"reasoning\": \"The poodle ke",
+      "reasoning": "{\"reasoning\": \"The poodle ke",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14237,
+      "judge_tokens": 556,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the Ye Olde Magick Shoppe and talk to the old woman to obtain the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 65,
+      "obs": "(You don't need to use the word \"{\" to finish this story.)\n\n",
+      "action": "{",
+      "reasoning": "{",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14275,
+      "judge_tokens": 532,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore the immediate surroundings and check inventory to identify the next available object or exit to interact with.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 66,
+      "obs": "(Sorry, but the word \"{\" is not in the vocabulary that you can use.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14060,
+      "judge_tokens": 273,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check your current inventory to establish your location and items before proceeding toward the Wishbringer stone.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 67,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14192,
+      "judge_tokens": 296,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore the current location and examine/take any visible items, then check inventory to identify what you have before heading toward the Magick Shoppe to seek clues about the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 68,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14294,
+      "judge_tokens": 290,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check inventory to establish current location and items, then head toward the Wishbringer's Shop to find your first clue about the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 69,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14406,
+      "judge_tokens": 285,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Go to the Empire Hotel front desk and pick up the Wishbringer letter/package to begin the quest for the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 70,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14510,
+      "judge_tokens": 279,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Go to the Magick Shoppe and talk to Franz to learn about the Stone of Dreams and get initial instructions.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 71,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Maybe you can bribe the poodle with something.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14633,
+      "judge_tokens": 294,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Check current location and inventory (look and examine your items) to identify what you're holding and where you are, then head toward the Magick Shoppe to talk to the old woman for guidance.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 72,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14741,
+      "judge_tokens": 293,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Talk to Franz at the front desk of the Hotel Ritzy to get the letter/package and learn about the missing girl, then head outside toward the Festeron town square.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 73,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14841,
+      "judge_tokens": 285,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore the current location and examine/take any visible items (especially the letter or envelope) to gather clues toward the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 74,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14946,
+      "judge_tokens": 273,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the Magick Shoppe and talk to the old woman to obtain the Wishbringer stone.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 75,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 15063,
+      "judge_tokens": 280,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Go to the Festeron Post Office and get the package/letter from Ms. Whitehead to start the Wishbringer quest.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 76,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 15181,
+      "judge_tokens": 289,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Go to the Coastal Age Curio Shop and ask Ariel/Franz about the Magick Stone of Dreams to learn where it is hidden.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 77,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 15289,
+      "judge_tokens": 289,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore the current room and read/examine all visible objects (including any letter or note) to identify the next item or clue needed to find the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 78,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 15399,
+      "judge_tokens": 282,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Check current location and inventory (look and examine yourself/items) to establish state before proceeding toward the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 79,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 15509,
+      "judge_tokens": 282,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the Ye Olde Magick Shoppe and talk to the old woman to learn about the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 80,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Look around. You might find something the poodle would like.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 15609,
+      "judge_tokens": 275,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore the current room and examine/take any visible items, then check inventory to identify what you're holding before deciding next move.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 81,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(It's 4:00 pm. Better hurry! The Magick Shoppe closes in less than an hour!)\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 15758,
+      "judge_tokens": 278,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check inventory to establish current location and items, then head toward the witch's shop to begin the Wishbringer quest.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 82,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 15868,
+      "judge_tokens": 280,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Go to the Magick Shoppe and get the Wishbringer stone from the old woman before proceeding to deliver the letter.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 83,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "{\"reasoning\": \"The poodle keeps blocking me and hints suggest finding something it would like near",
+      "reasoning": "{\"reasoning\": \"The poodle keeps blocking me and hints suggest finding something it would like near",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 16243,
+      "judge_tokens": 538,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around the current location and check inventory to identify available items and exits before proceeding.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 84,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The poodle keeps blocking me and hints suggest finding something it would like near\n(Sorry, but this story doesn't recognize the word \"{.\")\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 16134,
+      "judge_tokens": 282,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check current location/inventory to establish state, then head toward the witch's shop to ask about the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 85,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 16247,
+      "judge_tokens": 285,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check inventory to establish current location and items, then head toward the Magick Shoppe to seek guidance on the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 86,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 16359,
+      "judge_tokens": 288,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around the current location and check inventory to identify available items and exits, then head toward the Magick Shoppe to seek clues about the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 87,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 16460,
+      "judge_tokens": 281,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore your current location and check your inventory, then head toward the Magick Shoppe to seek clues about the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 88,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 16572,
+      "judge_tokens": 276,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore your current location and check your inventory to identify any usable items or exits toward the Magick Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 89,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 16679,
+      "judge_tokens": 273,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the shop, talk to the old woman, and accept the letter/errand she gives you to start the quest.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 90,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Maybe you can bribe the poodle with something.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 16805,
+      "judge_tokens": 291,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Check current location and inventory (look and examine items you're carrying), then head toward the Magick Shoppe to ask about the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 91,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 16898,
+      "judge_tokens": 275,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the Magick Shoppe and ask Franz about the Stone of Dreams to learn where to find it.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 92,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 17001,
+      "judge_tokens": 270,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore your current location and examine/take any visible items, then check your inventory to identify what you're holding.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 93,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 17121,
+      "judge_tokens": 273,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check inventory to identify available items, then read the Wishbringer letter for clues on where to go next.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 94,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 17232,
+      "judge_tokens": 274,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore your current location and examine/take any visible items, then check inventory to identify what you're holding before proceeding.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 95,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 17361,
+      "judge_tokens": 294,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Enter the Ye Olde Magick Shoppe and talk to the old man to obtain the note and starting instructions for finding the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 96,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 17442,
+      "judge_tokens": 267,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore your current location and check your inventory to identify any usable items or exits before proceeding.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 97,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 17565,
+      "judge_tokens": 273,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Go to the Magick Shoppe and talk to the old woman to obtain the Wishbringer stone.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 98,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 17687,
+      "judge_tokens": 285,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Look around and check current inventory to identify available items and exits, then head toward the shop or starting location to pick up the wishbringer stone letter/package.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    },
+    {
+      "step": 99,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Look around. You might find something the poodle would like.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 17797,
+      "judge_tokens": 288,
+      "goal": "Progress through the Wishbringer story and find the Magick Stone of Dreams",
+      "subgoal": "Explore the current room and examine all visible objects, then check your inventory to identify an item useful for progressing toward the Stone of Dreams.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_planning_drift"
+      ]
+    }
+  ],
+  "drift_events": [
+    {
+      "step": 35,
+      "drift_score": 0.661,
+      "stagnation": 0.95,
+      "loop_rate": 0.4,
+      "incoherence": 0.33,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 36,
+      "drift_score": 0.679,
+      "stagnation": 0.95,
+      "loop_rate": 0.45,
+      "incoherence": 0.345,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 37,
+      "drift_score": 0.679,
+      "stagnation": 0.95,
+      "loop_rate": 0.45,
+      "incoherence": 0.345,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 38,
+      "drift_score": 0.679,
+      "stagnation": 0.95,
+      "loop_rate": 0.45,
+      "incoherence": 0.345,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 39,
+      "drift_score": 0.697,
+      "stagnation": 0.95,
+      "loop_rate": 0.5,
+      "incoherence": 0.36,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 40,
+      "drift_score": 0.706,
+      "stagnation": 0.95,
+      "loop_rate": 0.5,
+      "incoherence": 0.405,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 41,
+      "drift_score": 0.724,
+      "stagnation": 0.95,
+      "loop_rate": 0.55,
+      "incoherence": 0.42,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 42,
+      "drift_score": 0.724,
+      "stagnation": 0.95,
+      "loop_rate": 0.55,
+      "incoherence": 0.42,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 43,
+      "drift_score": 0.724,
+      "stagnation": 0.95,
+      "loop_rate": 0.55,
+      "incoherence": 0.42,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 44,
+      "drift_score": 0.724,
+      "stagnation": 0.95,
+      "loop_rate": 0.55,
+      "incoherence": 0.42,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 45,
+      "drift_score": 0.724,
+      "stagnation": 0.95,
+      "loop_rate": 0.55,
+      "incoherence": 0.42,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 46,
+      "drift_score": 0.743,
+      "stagnation": 0.95,
+      "loop_rate": 0.6,
+      "incoherence": 0.44,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 47,
+      "drift_score": 0.762,
+      "stagnation": 0.95,
+      "loop_rate": 0.65,
+      "incoherence": 0.46,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 48,
+      "drift_score": 0.78,
+      "stagnation": 0.95,
+      "loop_rate": 0.7,
+      "incoherence": 0.475,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 49,
+      "drift_score": 0.797,
+      "stagnation": 0.95,
+      "loop_rate": 0.75,
+      "incoherence": 0.485,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 50,
+      "drift_score": 0.814,
+      "stagnation": 0.95,
+      "loop_rate": 0.8,
+      "incoherence": 0.495,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 51,
+      "drift_score": 0.817,
+      "stagnation": 0.95,
+      "loop_rate": 0.8,
+      "incoherence": 0.51,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 52,
+      "drift_score": 0.835,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.525,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 53,
+      "drift_score": 0.835,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.525,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 54,
+      "drift_score": 0.835,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.525,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 55,
+      "drift_score": 0.835,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.525,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 56,
+      "drift_score": 0.835,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.525,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 57,
+      "drift_score": 0.835,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.525,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 58,
+      "drift_score": 0.835,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.525,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 59,
+      "drift_score": 0.835,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.525,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 60,
+      "drift_score": 0.845,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 61,
+      "drift_score": 0.845,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 62,
+      "drift_score": 0.845,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 63,
+      "drift_score": 0.845,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 64,
+      "drift_score": 0.834,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.517,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 65,
+      "drift_score": 0.821,
+      "stagnation": 0.95,
+      "loop_rate": 0.8,
+      "incoherence": 0.527,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 66,
+      "drift_score": 0.821,
+      "stagnation": 0.95,
+      "loop_rate": 0.8,
+      "incoherence": 0.527,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 67,
+      "drift_score": 0.821,
+      "stagnation": 0.95,
+      "loop_rate": 0.8,
+      "incoherence": 0.527,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 68,
+      "drift_score": 0.821,
+      "stagnation": 0.95,
+      "loop_rate": 0.8,
+      "incoherence": 0.527,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 69,
+      "drift_score": 0.821,
+      "stagnation": 0.95,
+      "loop_rate": 0.8,
+      "incoherence": 0.527,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 70,
+      "drift_score": 0.821,
+      "stagnation": 0.95,
+      "loop_rate": 0.8,
+      "incoherence": 0.527,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 71,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 72,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 73,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 74,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 75,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 76,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 77,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 78,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 79,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 80,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 81,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 82,
+      "drift_score": 0.836,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.528,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 83,
+      "drift_score": 0.819,
+      "stagnation": 0.95,
+      "loop_rate": 0.8,
+      "incoherence": 0.518,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 84,
+      "drift_score": 0.83,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 85,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 86,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 87,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 88,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 89,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 90,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 91,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 92,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 93,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 94,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 95,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 96,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 97,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 98,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 99,
+      "drift_score": 0.843,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.49,
+      "window": 20,
+      "threshold": 0.65
+    }
+  ]
+}

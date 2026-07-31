@@ -1,0 +1,360 @@
+{
+  "run_id": "991df343b99c4daab28bc31e0c0eb31b",
+  "game": "zork1",
+  "summary": {
+    "total_steps": 17,
+    "final_progress": 15,
+    "final_score": 25,
+    "game_over": true,
+    "label": "m2_memory",
+    "fork_step": null,
+    "started_at": "2026-07-30T15:12:21.898376+00:00",
+    "completed_at": "2026-07-30T15:14:33.347709+00:00"
+  },
+  "milestones": [
+    {
+      "step": 8,
+      "progress_before": 0,
+      "progress_after": 5,
+      "score": 10,
+      "action": "ENTER WINDOW"
+    },
+    {
+      "step": 15,
+      "progress_before": 5,
+      "progress_after": 15,
+      "score": 35,
+      "action": "GO DOWN"
+    }
+  ],
+  "steps": [
+    {
+      "step": 0,
+      "obs": "ZORK I: The Great Underground Empire\nInfocom interactive fiction - a fantasy story\nCopyright (c) 1981, 1982, 1983, 1984, 1985, 1986 Infocom, Inc. All rights reserved.\nZORK is a registered trademark of Infocom, Inc.\nRelease 1 / Serial number 210628\n\nWest of House\nYou are standing in an open field west of a white house, with a boarded front door.\nThere is a small mailbox here.\n\n",
+      "action": "OPEN MAILBOX",
+      "reasoning": "Starting the classic Zork opening. The mailbox is here; I should check it first as a standard early move, then proceed to explore around the house to find the entrance.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1100,
+      "judge_tokens": 249,
+      "goal": "complete the game",
+      "subgoal": "explore starting area and find way into the house",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "mailbox",
+        "location": "West of House"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 1,
+      "obs": "Opening the small mailbox reveals a leaflet.\n\n",
+      "action": "READ LEAFLET",
+      "reasoning": "The mailbox is open and contains a leaflet. Reading it might give useful game information before I proceed.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1174,
+      "judge_tokens": 239,
+      "goal": "complete the game",
+      "subgoal": "read leaflet then explore around the house",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "leaflet",
+        "location": "mailbox"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 2,
+      "obs": "(Taken)\n\"WELCOME TO ZORK!\n\nZORK is a game of adventure, danger, and low cunning. In it you will explore some of the most amazing territory ever seen by mortals. No computer should be without one!\"\n\n",
+      "action": "SOUTH",
+      "reasoning": "I've read the leaflet, which just gave flavor text. Now I need to explore around the house to find a way in, since the front door is boarded.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1337,
+      "judge_tokens": 259,
+      "goal": "complete the game",
+      "subgoal": "explore around the house to find an entrance",
+      "belief": null,
+      "confidence": 0.7,
+      "mechanisms_used": []
+    },
+    {
+      "step": 3,
+      "obs": "South of House\nYou are facing the south side of a white house. There is no door here, and all the windows are boarded.\n\n",
+      "action": "SOUTH",
+      "reasoning": "Continuing around the house to find an entrance, since the front and south sides are blocked.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1377,
+      "judge_tokens": 248,
+      "goal": "complete the game",
+      "subgoal": "explore around the house to find an entrance",
+      "belief": null,
+      "confidence": 0.7,
+      "mechanisms_used": []
+    },
+    {
+      "step": 4,
+      "obs": "Forest\nThis is a dimly lit forest, with large trees all around.\n\n",
+      "action": "NORTH",
+      "reasoning": "I overshot the house while circling it and ended up in the forest. I should head back north to find the east side of the house, which typically has an unboarded window.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1538,
+      "judge_tokens": 272,
+      "goal": "complete the game",
+      "subgoal": "explore around the house to find an entrance",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "house",
+        "location": "south of forest"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": []
+    },
+    {
+      "step": 5,
+      "obs": "Clearing\nYou are in a small clearing in a well marked forest path that extends to the east and west.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1389,
+      "judge_tokens": 0,
+      "goal": "complete the game",
+      "subgoal": "explore around the house to find an entrance",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 6,
+      "obs": "Clearing\nYou are in a small clearing in a well marked forest path that extends to the east and west.\n\n",
+      "action": "WEST",
+      "reasoning": "I overshot into the forest path clearing. I need to backtrack west to find the house again and try the east side, which typically has an unboarded window.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1671,
+      "judge_tokens": 268,
+      "goal": "complete the game",
+      "subgoal": "return to the house and find the east side entrance",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "house",
+        "location": "west"
+      },
+      "confidence": 0.5,
+      "mechanisms_used": []
+    },
+    {
+      "step": 7,
+      "obs": "Behind House\nYou are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar.\n\n",
+      "action": "OPEN WINDOW",
+      "reasoning": "I found the east side of the house with a window slightly ajar. This is the classic entrance to the house in Zork.",
+      "progress": 0,
+      "score": 0,
+      "reward": 0,
+      "tokens": 1750,
+      "judge_tokens": 249,
+      "goal": "complete the game",
+      "subgoal": "enter the house through the window",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "window",
+        "location": "Behind House"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 8,
+      "obs": "With great effort, you open the window far enough to allow entry.\n\n",
+      "action": "ENTER WINDOW",
+      "reasoning": "The window is now open. I should enter the house through it to begin exploring the interior.",
+      "progress": 5,
+      "score": 10,
+      "reward": 10,
+      "tokens": 1775,
+      "judge_tokens": 243,
+      "goal": "complete the game",
+      "subgoal": "enter the house through the window",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "window",
+        "location": "Behind House"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 9,
+      "obs": "Kitchen\nYou are in the kitchen of the white house. A table seems to have been used recently for the preparation of food. A passage leads to the west and a dark staircase can be seen leading upward. A dark chimney leads down and to the east is a small window which is open.\nOn the table is an elongated brown sack, smelling of hot peppers.\nA bottle is sitting on the table.\nThe glass bottle contains:\n  A quantity of water\n\n",
+      "action": "WEST",
+      "reasoning": "I've entered the kitchen through the window as planned. There's a table with a sack and bottle. I should explore further west into the living room, which typically leads to the trophy case and other important areas of the house.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2096,
+      "judge_tokens": 296,
+      "goal": "complete the game",
+      "subgoal": "explore the house interior to find useful items and the way to the underground empire",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "living room",
+        "location": "west of kitchen"
+      },
+      "confidence": 0.7,
+      "mechanisms_used": []
+    },
+    {
+      "step": 10,
+      "obs": "Living Room\nYou are in the living room. There is a doorway to the east, a wooden door with strange gothic lettering to the west, which appears to be nailed shut, a trophy case, and a large oriental rug in the center of the room.\nAbove the trophy case hangs an elvish sword of great antiquity.\nA battery-powered brass lantern is on the trophy case.\n\n",
+      "action": "TAKE LANTERN",
+      "reasoning": "In the living room, I should collect useful items like the brass lantern and sword before exploring further, as they'll be essential for the underground exploration.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2264,
+      "judge_tokens": 274,
+      "goal": "complete the game",
+      "subgoal": "collect essential items (lantern, sword) from living room",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "brass lantern",
+        "location": "trophy case/living room"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 11,
+      "obs": "Taken.\n\n",
+      "action": "TAKE SWORD",
+      "reasoning": "I have the lantern; next I need the sword above the trophy case before heading underground. Taking it now will equip me for combat and exploration.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2297,
+      "judge_tokens": 281,
+      "goal": "complete the game",
+      "subgoal": "collect essential items (lantern, sword) from living room",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "sword",
+        "location": "living room"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 12,
+      "obs": "Taken.\n\n",
+      "action": "MOVE RUG",
+      "reasoning": "I have both the lantern and sword. The classic next step is to move the oriental rug to reveal the trap door leading underground.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2395,
+      "judge_tokens": 277,
+      "goal": "complete the game",
+      "subgoal": "reveal the trap door to go underground",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "trap door",
+        "location": "under rug in living room"
+      },
+      "confidence": 0.7,
+      "mechanisms_used": []
+    },
+    {
+      "step": 13,
+      "obs": "With a great effort, the rug is moved to one side of the room, revealing the dusty cover of a closed trap door.\n\n",
+      "action": "OPEN TRAP DOOR",
+      "reasoning": "The trap door has been revealed under the rug. I need to open it before going down into the underground empire.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2429,
+      "judge_tokens": 265,
+      "goal": "complete the game",
+      "subgoal": "open the trap door and descend underground",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "trap door",
+        "location": "Living Room"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 14,
+      "obs": "The door reluctantly opens to reveal a rickety staircase descending into darkness.\n\n",
+      "action": "TURN ON LANTERN",
+      "reasoning": "The trap door is now open leading to darkness below. Before descending, I should light the lantern since the underground areas are dark and I'll need light to see and avoid the grue.",
+      "progress": 5,
+      "score": 10,
+      "reward": 0,
+      "tokens": 2579,
+      "judge_tokens": 293,
+      "goal": "complete the game",
+      "subgoal": "prepare light source before descending into the underground",
+      "belief": {
+        "type": "have_item",
+        "item": "lantern",
+        "location": null
+      },
+      "confidence": 0.95,
+      "mechanisms_used": []
+    },
+    {
+      "step": 15,
+      "obs": "The brass lantern is now on.\n\n",
+      "action": "GO DOWN",
+      "reasoning": "Lantern is now on, trap door is open. Time to descend into the underground empire to begin exploring and collecting treasures.",
+      "progress": 15,
+      "score": 35,
+      "reward": 25,
+      "tokens": 2632,
+      "judge_tokens": 291,
+      "goal": "complete the game",
+      "subgoal": "descend into the underground and begin exploring for treasures",
+      "belief": {
+        "type": "have_item",
+        "item": "lantern",
+        "location": null
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 16,
+      "obs": "The trap door crashes shut, and you hear someone barring it.\n\nCellar\nYou are in a dark and damp cellar with a narrow passageway leading north, and a crawlway to the south. On the west is the bottom of a steep metal ramp which is unclimbable.\nYour sword is glowing with a faint blue glow.\n\n",
+      "action": "NORTH",
+      "reasoning": "I'm now in the Cellar with sword glowing (indicating nearby danger, likely a troll). The trap door has shut behind me. I should proceed north through the passageway to continue exploring, as that's the main path deeper into the underground.",
+      "progress": 15,
+      "score": 25,
+      "reward": -10,
+      "tokens": 2874,
+      "judge_tokens": 327,
+      "goal": "complete the game",
+      "subgoal": "explore underground passages and locate treasures while avoiding danger",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "none",
+        "location": "Cellar"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": []
+    }
+  ]
+}

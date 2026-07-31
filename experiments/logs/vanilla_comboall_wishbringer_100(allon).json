@@ -1,0 +1,3648 @@
+{
+  "run_id": "cdd108e17ac14d53b42b001508b60f48",
+  "game": "wishbringer",
+  "summary": {
+    "total_steps": 100,
+    "final_progress": 5,
+    "final_score": 6,
+    "game_over": false,
+    "label": "all_on",
+    "fork_step": null,
+    "started_at": "2026-07-30T18:01:35.418965+00:00",
+    "completed_at": "2026-07-30T18:21:24.157969+00:00"
+  },
+  "milestones": [
+    {
+      "step": 1,
+      "progress_before": 0,
+      "progress_after": 5,
+      "score": 1,
+      "action": "look"
+    }
+  ],
+  "steps": [
+    {
+      "step": 0,
+      "obs": "\n\"Behind you!\" cries the Princess. \"It's a trap!\"\n\nToo late. The drawbridge crashes shut against the tower wall. You turn to face your enemy, and find yourself staring into the open maw of Thermofax.\n\nOnly your Magick sword can save you now. You swing it high, speak the Word and stand unhurt as the blade absorbs the searing dragon-breath.\n\nThe reptile bellows with rage and flaps its wings to fan the fire in its belly. You are advancing, sword poised to strike, when a familiar voice shatters the daydream and stays your mighty hand...\n\nWISHBRINGER\nThe Magick Stone of Dreams\nCopyright (C)1985 Infocom, Inc. All rights reserved.\nWishbringer is a registered trademark of Infocom, Inc.\nRelease 1 / Serial Number 210629\n\nHilltop\nYou're on a hilltop overlooking the seaside village of Festeron.\n\nTo the south stands the Festeron Post Office. It's a little brick building with a neatly-trimmed lawn. The Post Office door stands invitingly open.\n\nRoads run down the hill to the east and west. There's a signpost nearby.\n\nSomebody inside the Post Office is calling you.\n\nOkay, what do you want to do now?\n",
+      "action": "GO SOUTH",
+      "reasoning": "The game starts with someone calling me from the Post Office. I should head there to begin the story properly, as this is likely the starting point of the main quest.",
+      "progress": 0,
+      "score": 1,
+      "reward": 1,
+      "tokens": 1386,
+      "judge_tokens": 246,
+      "goal": "complete the game",
+      "subgoal": "enter the Post Office to see who is calling",
+      "belief": {
+        "type": "item_in_loc",
+        "item": null,
+        "location": "Post Office"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": []
+    },
+    {
+      "step": 1,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is behind the service counter reading other people's postcards.\n\nMr. Crisp hides the postcards away as you enter. \"Where have you been?\" he barks angrily. \"Daydreaming again, eh? I've been looking everywhere for you!\"\n\n(Your score just went up by 1 point! Your total score is 1 out of 101.)\n\nWhat next?\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 1,
+      "reward": 0,
+      "tokens": 1770,
+      "judge_tokens": 259,
+      "goal": "complete the game",
+      "subgoal": "enter the Post Office to see who is calling",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 2,
+      "obs": "Post Office\nThis is the lobby of the Festeron Post Office. The walls are lined with small, private mailboxes and wanted posters. A service counter runs along the entire length of the room.\n\nYour boss, Mr. Crisp, is watching you impatiently.\n\nMr. Crisp reaches under the service counter and pulls out a mysterious envelope. \"We just got this Special Delivery,\" he snarls, tossing it onto the service counter. \"I want you to drop it off right away. That means NOW!\"\n\nWhat next?\n",
+      "action": "TAKE ENVELOPE",
+      "reasoning": "Mr. Crisp put a special delivery envelope on the counter for me to deliver. I should pick it up first.",
+      "progress": 5,
+      "score": 6,
+      "reward": 5,
+      "tokens": 2170,
+      "judge_tokens": 510,
+      "goal": "complete the game",
+      "subgoal": "obtain the special delivery envelope from the counter",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "envelope",
+        "location": "service counter"
+      },
+      "confidence": 0.9,
+      "mechanisms_used": []
+    },
+    {
+      "step": 3,
+      "obs": "Taken.\n\n(Your score just went up by 5 points! Your total score is 6 out of 101.)\n\nMr. Crisp drums his fingers on the service counter impatiently. \"Quit stalling, chowderbrain! The Magick Shoppe closes at five o'clock!\"\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"Mr. Crisp hints the envelope should go to the Magick Shoppe before it closes at five.",
+      "reasoning": "{\"reasoning\": \"Mr. Crisp hints the envelope should go to the Magick Shoppe before it closes at five.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3049,
+      "judge_tokens": 1127,
+      "goal": "complete the game",
+      "subgoal": "Leave the Post Office and deliver the envelope you're holding to its intended recipient (e.g., GO NORTH/SOUTH then DELIVER ENVELOPE) instead of taking more items.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 4,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"Mr. Crisp hints the envelope should go to the Magick Shoppe before it closes at five.\n(This story doesn't know the word \"{.\")\n\nWhat next?\n",
+      "action": "GO NORTH",
+      "reasoning": "I need to leave the Post Office to head toward the Magick Shoppe. Going north should take me back to the hilltop area from where I can navigate to the shop.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3324,
+      "judge_tokens": 1248,
+      "goal": "complete the game",
+      "subgoal": "Exit the Post Office and find the way to the Magick Shoppe before it closes at five.",
+      "belief": {
+        "type": "have_item",
+        "item": "mysterious envelope",
+        "location": null
+      },
+      "confidence": 0.9,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 5,
+      "obs": "As you leave the Post Office, somebody slams and locks the door behind you.\n\nHilltop\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"I'm back on the Hilltop with the envelope. I should read it to find the delivery address for the Magick Shoppe before deciding which road to take.\", \"action\": \"READ ENVELOPE\", \"goal\": \"complete the game\", \"subgoal\": \"Find directions to the Magick Shoppe from the envelope or signpost\", \"belief\": {\"type\": \"have_item\", \"item\": \"mysterious envelope\"}, \"confidence\": 0.7",
+      "reasoning": "{\"reasoning\": \"I'm back on the Hilltop with the envelope. I should read it to find the delivery address for the Magick Shoppe before deciding which road to take.\", \"action\": \"READ ENVELOPE\", \"goal\": \"complete the game\", \"subgoal\": \"Find directions to the Magick Shoppe from the envelope or signpost\", \"belief\": {\"type\": \"have_item\", \"item\": \"mysterious envelope\"}, \"confidence\": 0.7",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3402,
+      "judge_tokens": 1278,
+      "goal": "complete the game",
+      "subgoal": "Read the envelope's address for directions, then head toward the Magick Shoppe accordingly before 5 pm.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 6,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"I'm back on the Hilltop with the envelope. I should read it to find the delivery address for the Magick Shoppe before deciding which road to take.\", \"action\": \"READ ENVELOPE\", \"goal\": \"complete the game\", \"subgoal\": \"Find directions to the Magick Shoppe from the envelope or signpost\", \"belief\": {\"type\": \"have_item\", \"item\": \"mysterious envelope\"}, \"confidence\": 0.7\n(You don't need to use the word \"{\" to finish this story.)\n\nWhat next?\n",
+      "action": "READ ENVELOPE",
+      "reasoning": "Previous attempts failed because the action field contained an entire JSON blob instead of a simple command. I need to just issue a plain text command. Reading the envelope should reveal the delivery address for the Magick Shoppe.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 3942,
+      "judge_tokens": 1039,
+      "goal": "complete the game",
+      "subgoal": "Find directions to the Magick Shoppe from the envelope or signpost",
+      "belief": {
+        "type": "have_item",
+        "item": "mysterious envelope",
+        "location": null
+      },
+      "confidence": 0.7,
+      "mechanisms_used": []
+    },
+    {
+      "step": 7,
+      "obs": "(You'll find the envelope inside your Wishbringer package.)\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"The previous READ ENVELOPE gave a meta message about game materials, not useful in-game info. I should exam",
+      "reasoning": "{\"reasoning\": \"The previous READ ENVELOPE gave a meta message about game materials, not useful in-game info. I should exam",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 4056,
+      "judge_tokens": 1018,
+      "goal": "complete the game",
+      "subgoal": "Find directions to the Magick Shoppe from the envelope or signpost",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": []
+    },
+    {
+      "step": 8,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The previous READ ENVELOPE gave a meta message about game materials, not useful in-game info. I should exam\n(Sorry, but this story doesn't recognize the word \"{.\")\n\nWhat next?\n",
+      "action": "READ SIGNPOST",
+      "reasoning": "I need to issue a simple, plain-text command only. To find directions to the Magick Shoppe, examining the signpost near the Hilltop should reveal road names or directions.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 4997,
+      "judge_tokens": 1711,
+      "goal": "complete the game",
+      "subgoal": "Find directions to the Magick Shoppe from the signpost",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "signpost",
+        "location": "Hilltop"
+      },
+      "confidence": 0.7,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 9,
+      "obs": "There are two arrows on the signpost. The arrow pointing west says \"To Cemetery.\" The east arrow is marked \"To Festeron.\"\n\nWhat next?\n",
+      "action": "GO EAST",
+      "reasoning": "The signpost indicates east leads to Festeron, the village where the Magick Shoppe should be located. I'll head east to find it.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 5186,
+      "judge_tokens": 1732,
+      "goal": "complete the game",
+      "subgoal": "Travel to Festeron village to find the Magick Shoppe",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "Magick Shoppe",
+        "location": "Festeron (east road)"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 10,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAs you approach the cottage you are greeted by the tiniest poodle you've ever seen in your entire life. It charges across the street, yapping angrily and showing its sharp little teeth.\n\nYou can smell the poodle's hot breath as it yaps.\n\nWhat next?\n",
+      "action": "GO NORTH",
+      "reasoning": "The poodle is blocking my path but I need to continue north toward the village to find the Magick Shoppe. I'll try to proceed past it.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 4344,
+      "judge_tokens": 1089,
+      "goal": "complete the game",
+      "subgoal": "Travel to Festeron village to find the Magick Shoppe",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "poodle",
+        "location": "Outside Cottage"
+      },
+      "confidence": 0.6,
+      "mechanisms_used": []
+    },
+    {
+      "step": 11,
+      "obs": "The poodle won't let you go that way.\n\nThe poodle glares at you through eyes red with hatred.\n\nWhat next?\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 4671,
+      "judge_tokens": 1282,
+      "goal": "complete the game",
+      "subgoal": "Go south from Outside Cottage toward Festeron village to find the Magick Shoppe and deliver the envelope.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 12,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\nWhat next?\n",
+      "action": "{\"reasoning\": \"The poodle keeps blocking the north road. Since I'm outside Miss Voss's cottage, knocking on her door might get her",
+      "reasoning": "{\"reasoning\": \"The poodle keeps blocking the north road. Since I'm outside Miss Voss's cottage, knocking on her door might get her",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 5285,
+      "judge_tokens": 1750,
+      "goal": "complete the game",
+      "subgoal": "From Outside Cottage, go south toward Festeron village (moving past or calming the snarling poodle if it blocks the way) to reach the Magick Shoppe and deliver the envelope before five.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 13,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The poodle keeps blocking the north road. Since I'm outside Miss Voss's cottage, knocking on her door might get her\n(Sorry, but the word \"{\" is not in the vocabulary that you can use.)\n\nWhat next?\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 5327,
+      "judge_tokens": 1479,
+      "goal": "complete the game",
+      "subgoal": "Go south from Outside Cottage, dealing with the snarling poodle if it blocks the path (e.g., throw it food, soothe it, or push past), to continue toward the Magick Shoppe.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 14,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n(You won't see the \"What next?\" prompt any more.)\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 5454,
+      "judge_tokens": 1487,
+      "goal": "complete the game",
+      "subgoal": "Check inventory for food/treat item to give the poodle (or search surroundings for something to soothe it), then GO SOUTH past it toward the Magick Shoppe.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 15,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "{\"reasoning\": \"The poodle blocks the north road. Miss Voss lives here; getting her attention might call off the dog. I'll try knocking on her cottage door",
+      "reasoning": "{\"reasoning\": \"The poodle blocks the north road. Miss Voss lives here; getting her attention might call off the dog. I'll try knocking on her cottage door",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 5901,
+      "judge_tokens": 1822,
+      "goal": "complete the game",
+      "subgoal": "Check inventory for any food/treat item; if none, search the ground/bushes near the cottage for something edible to throw to the poodle, then go south past it toward the Magick Shoppe.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 16,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The poodle blocks the north road. Miss Voss lives here; getting her attention might call off the dog. I'll try knocking on her cottage door\n(Sorry, but the word \"{\" is not in the vocabulary that you can use.)\n\n",
+      "action": "KNOCK ON DOOR",
+      "reasoning": "The poodle blocks the north road. Rather than fighting it, I should try knocking on Miss Voss's cottage door to get her attention, since she might call off her dog.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 5479,
+      "judge_tokens": 1088,
+      "goal": "complete the game",
+      "subgoal": "Get Miss Voss to call off the poodle so I can pass north toward the Magick Shoppe",
+      "belief": {
+        "type": "item_in_loc",
+        "item": "door",
+        "location": "Outside Cottage"
+      },
+      "confidence": 0.5,
+      "mechanisms_used": []
+    },
+    {
+      "step": 17,
+      "obs": "The poodle won't let you near the cottage.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6001,
+      "judge_tokens": 1453,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door, and when Miss Voss appears, GIVE ENVELOPE TO MISS VOSS (or SHOW ENVELOPE TO MISS VOSS) to get her to call off the poodle.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 18,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6157,
+      "judge_tokens": 1517,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door again, then GIVE ENVELOPE TO MISS VOSS as soon as she appears to make her call off the poodle.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 19,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6124,
+      "judge_tokens": 1394,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door, then immediately GIVE ENVELOPE TO MISS VOSS when she appears to make her call off the poodle.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 20,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Maybe you can bribe the poodle with something.)\n\n",
+      "action": "EXAMINE POODLE",
+      "reasoning": "[Verified] Belief ('door' is in the 'Outside Cottage') contradicted the game state. Actual state: > Outside Cottage                                                                                                            Time:  3:15 pm                    \nOutside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\nEXAMINE POODLE",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 2400,
+      "judge_tokens": 493,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door, then immediately GIVE ENVELOPE TO MISS VOSS when she appears to make her call off the poodle.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m1_info_seeking"
+      ]
+    },
+    {
+      "step": 21,
+      "obs": "The poodle is tiny, mean and hungry-looking.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6245,
+      "judge_tokens": 1141,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door, and when Miss Voss appears immediately GIVE ENVELOPE TO MISS VOSS to make her call off the poodle.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 22,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "{",
+      "reasoning": "{",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6619,
+      "judge_tokens": 1411,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door, then immediately GIVE ENVELOPE TO MISS VOSS when she appears to make her call off the poodle.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 23,
+      "obs": "(You don't need to use the word \"{\" to finish this story.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6382,
+      "judge_tokens": 1128,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door, and as soon as Miss Voss appears, GIVE ENVELOPE TO MISS VOSS to make her call off the poodle.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 24,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6518,
+      "judge_tokens": 1147,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door; when Miss Voss appears, immediately GIVE ENVELOPE TO MISS VOSS to make her call off the poodle.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 25,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "{\"reasoning\": \"The game hinted that I",
+      "reasoning": "{\"reasoning\": \"The game hinted that I",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6915,
+      "judge_tokens": 1431,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door, and the instant Miss Voss appears, immediately GIVE ENVELOPE TO MISS VOSS to make her call off the poodle.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 26,
+      "obs": "(This story doesn't know the word \"{.\")\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 6669,
+      "judge_tokens": 1096,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door, and as soon as Miss Voss appears, immediately GIVE ENVELOPE TO MISS VOSS before taking any other action.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 27,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "{\"reasoning\": \"The game hinted I can bribe the poodle with something, but I need to know what",
+      "reasoning": "{\"reasoning\": \"The game hinted I can bribe the poodle with something, but I need to know what",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7081,
+      "judge_tokens": 1402,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door, and the moment Miss Voss appears, immediately GIVE ENVELOPE TO MISS VOSS before doing anything else.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 28,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The game hinted I can bribe the poodle with something, but I need to know what\n(Sorry, but this story doesn't recognize the word \"{.\")\n\n",
+      "action": "{\"reasoning\": \"The game hints I can bribe the poodle with something, but I need to check what I'm currently carrying before deciding what to offer.\", \"action\": \"INVENTORY\", \"goal\": \"complete the",
+      "reasoning": "{\"reasoning\": \"The game hints I can bribe the poodle with something, but I need to check what I'm currently carrying before deciding what to offer.\", \"action\": \"INVENTORY\", \"goal\": \"complete the",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7444,
+      "judge_tokens": 1548,
+      "goal": "complete the game",
+      "subgoal": "Knock on the cottage door, and the instant Miss Voss appears, immediately GIVE ENVELOPE TO MISS VOSS before any other action (e.g., examining the poodle).",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 29,
+      "obs": "System Warning: Invalid length action command: {\"reasoning\": \"The game hints I can bribe the poodle with something, but I need to check what I'm currently carrying before deciding what to offer.\", \"action\": \"INVENTORY\", \"goal\": \"complete the\n(Sorry, but this story doesn't recognize the word \"{.\")\n\n",
+      "action": "INVENTORY",
+      "reasoning": "I need to check my inventory to find something to bribe the poodle with, like food.",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7863,
+      "judge_tokens": 1654,
+      "goal": "complete the game",
+      "subgoal": "Find an item to bribe the poodle so I can pass north",
+      "belief": {
+        "type": "have_item",
+        "item": "mysterious envelope",
+        "location": null
+      },
+      "confidence": 0.6,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 30,
+      "obs": "You're holding a mysterious envelope.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7492,
+      "judge_tokens": 1164,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle to bribe/distract it, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 31,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7582,
+      "judge_tokens": 1144,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 32,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7617,
+      "judge_tokens": 1088,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 33,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Look around. You might find something the poodle would like.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7771,
+      "judge_tokens": 1116,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 34,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7874,
+      "judge_tokens": 1112,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 35,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 7989,
+      "judge_tokens": 1118,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 36,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8115,
+      "judge_tokens": 1126,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 37,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8227,
+      "judge_tokens": 1128,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 38,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8322,
+      "judge_tokens": 1116,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 39,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8429,
+      "judge_tokens": 1114,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 40,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8550,
+      "judge_tokens": 1117,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 41,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8606,
+      "judge_tokens": 1082,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 42,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Try examining the poodle. You might discover something.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8776,
+      "judge_tokens": 1126,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 43,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8873,
+      "judge_tokens": 1116,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 44,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 8980,
+      "judge_tokens": 1114,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 45,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 9104,
+      "judge_tokens": 1120,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 46,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 9214,
+      "judge_tokens": 1120,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 47,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 9317,
+      "judge_tokens": 1116,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 48,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 9436,
+      "judge_tokens": 1126,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 49,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 9548,
+      "judge_tokens": 1120,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 50,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 9615,
+      "judge_tokens": 1093,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then immediately go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 51,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Maybe you can bribe the poodle with something.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 9782,
+      "judge_tokens": 1133,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then immediately go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 52,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 9885,
+      "judge_tokens": 1129,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then immediately go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 53,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 9996,
+      "judge_tokens": 1131,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then immediately go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 54,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10118,
+      "judge_tokens": 1135,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then immediately go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 55,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10226,
+      "judge_tokens": 1133,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then immediately go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 56,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10329,
+      "judge_tokens": 1129,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then immediately go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 57,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10438,
+      "judge_tokens": 1132,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 58,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "{\"reasoning",
+      "reasoning": "{\"reasoning",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10765,
+      "judge_tokens": 1341,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 59,
+      "obs": "(You don't need to use the word \"{\" to finish this story.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10618,
+      "judge_tokens": 1136,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 60,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10673,
+      "judge_tokens": 1100,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 61,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Look around. You might find something the poodle would like.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10837,
+      "judge_tokens": 1138,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 62,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "{\"reasoning\": \"I've been stuck looking repeatedly",
+      "reasoning": "{\"reasoning\": \"I've been stuck looking repeatedly",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11179,
+      "judge_tokens": 1373,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 63,
+      "obs": "(Sorry, but the word \"{\" is not in the vocabulary that you can use.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 10950,
+      "judge_tokens": 1066,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 64,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11061,
+      "judge_tokens": 1068,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 65,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11181,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 66,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11291,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 67,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11394,
+      "judge_tokens": 1066,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 68,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11517,
+      "judge_tokens": 1080,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 69,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11637,
+      "judge_tokens": 1082,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 70,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11678,
+      "judge_tokens": 1032,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 71,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Try examining the poodle. You might discover something.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11843,
+      "judge_tokens": 1071,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 72,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(It's 4:00 pm. Better hurry! The Magick Shoppe closes in less than an hour!)\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 11983,
+      "judge_tokens": 1067,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 73,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12097,
+      "judge_tokens": 1072,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 74,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12213,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 75,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12323,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 76,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12426,
+      "judge_tokens": 1066,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 77,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12547,
+      "judge_tokens": 1078,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 78,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12657,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 79,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12710,
+      "judge_tokens": 1032,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 80,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Try examining the poodle. You might discover something.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12874,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 81,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 12977,
+      "judge_tokens": 1066,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 82,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13098,
+      "judge_tokens": 1078,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 83,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13208,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 84,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13328,
+      "judge_tokens": 1080,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 85,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13421,
+      "judge_tokens": 1066,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 86,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13562,
+      "judge_tokens": 1098,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 87,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13652,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 88,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13706,
+      "judge_tokens": 1033,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 89,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Look around. You might find something the poodle would like.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13869,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 90,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 13972,
+      "judge_tokens": 1066,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 91,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14084,
+      "judge_tokens": 1069,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 92,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14203,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 93,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14313,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 94,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14416,
+      "judge_tokens": 1066,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 95,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle glares at you through eyes red with hatred.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14527,
+      "judge_tokens": 1068,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 96,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can hear the poodle's sharp little teeth snapping as it nips your heels.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14659,
+      "judge_tokens": 1082,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 97,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nThe poodle circles you warily, snarling and growling with menace.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14700,
+      "judge_tokens": 1032,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 98,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\n(Maybe you can bribe the poodle with something.)\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14865,
+      "judge_tokens": 1070,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    },
+    {
+      "step": 99,
+      "obs": "Outside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+      "action": "look",
+      "reasoning": "",
+      "progress": 5,
+      "score": 6,
+      "reward": 0,
+      "tokens": 14980,
+      "judge_tokens": 1078,
+      "goal": "complete the game",
+      "subgoal": "Give the mysterious envelope to the poodle, then go north.",
+      "belief": null,
+      "confidence": null,
+      "mechanisms_used": [
+        "m6_integration_gap",
+        "m6_planning"
+      ]
+    }
+  ],
+  "ale_events": [
+    {
+      "step": 20,
+      "belief": [
+        "item_in_loc",
+        "door",
+        "Outside Cottage"
+      ],
+      "contradiction": true,
+      "evidence": {
+        "reason": "location_probe",
+        "item": "door",
+        "claimed_location": "Outside Cottage",
+        "probe_text": "> Outside Cottage                                                                                                            Time:  3:15 pm                    \nOutside Cottage\nYou're outside the cottage of Miss Voss, the town librarian. The road turns north toward the village, and bends upward to the summit of Post Office Hill.\n\nAn angry poodle is blocking your path.\n\nYou can smell the poodle's hot breath as it yaps.\n\n",
+        "item_mentioned": false
+      }
+    }
+  ],
+  "drift_events": [
+    {
+      "step": 23,
+      "drift_score": 0.665,
+      "stagnation": 0.95,
+      "loop_rate": 0.4,
+      "incoherence": 0.352,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 24,
+      "drift_score": 0.669,
+      "stagnation": 0.95,
+      "loop_rate": 0.4,
+      "incoherence": 0.372,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 25,
+      "drift_score": 0.677,
+      "stagnation": 0.95,
+      "loop_rate": 0.4,
+      "incoherence": 0.412,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 26,
+      "drift_score": 0.697,
+      "stagnation": 0.95,
+      "loop_rate": 0.45,
+      "incoherence": 0.432,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 27,
+      "drift_score": 0.7,
+      "stagnation": 0.95,
+      "loop_rate": 0.45,
+      "incoherence": 0.447,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 28,
+      "drift_score": 0.704,
+      "stagnation": 0.95,
+      "loop_rate": 0.45,
+      "incoherence": 0.467,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 29,
+      "drift_score": 0.704,
+      "stagnation": 0.95,
+      "loop_rate": 0.45,
+      "incoherence": 0.467,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 30,
+      "drift_score": 0.722,
+      "stagnation": 0.95,
+      "loop_rate": 0.5,
+      "incoherence": 0.483,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 31,
+      "drift_score": 0.722,
+      "stagnation": 0.95,
+      "loop_rate": 0.5,
+      "incoherence": 0.483,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 32,
+      "drift_score": 0.737,
+      "stagnation": 0.95,
+      "loop_rate": 0.55,
+      "incoherence": 0.483,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 33,
+      "drift_score": 0.737,
+      "stagnation": 0.95,
+      "loop_rate": 0.55,
+      "incoherence": 0.482,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 34,
+      "drift_score": 0.737,
+      "stagnation": 0.95,
+      "loop_rate": 0.55,
+      "incoherence": 0.483,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 35,
+      "drift_score": 0.752,
+      "stagnation": 0.95,
+      "loop_rate": 0.6,
+      "incoherence": 0.483,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 36,
+      "drift_score": 0.771,
+      "stagnation": 0.95,
+      "loop_rate": 0.65,
+      "incoherence": 0.505,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 37,
+      "drift_score": 0.771,
+      "stagnation": 0.95,
+      "loop_rate": 0.65,
+      "incoherence": 0.505,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 38,
+      "drift_score": 0.771,
+      "stagnation": 0.95,
+      "loop_rate": 0.65,
+      "incoherence": 0.505,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 39,
+      "drift_score": 0.771,
+      "stagnation": 0.95,
+      "loop_rate": 0.65,
+      "incoherence": 0.505,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 40,
+      "drift_score": 0.786,
+      "stagnation": 0.95,
+      "loop_rate": 0.7,
+      "incoherence": 0.505,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 41,
+      "drift_score": 0.786,
+      "stagnation": 0.95,
+      "loop_rate": 0.7,
+      "incoherence": 0.505,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 42,
+      "drift_score": 0.8,
+      "stagnation": 0.95,
+      "loop_rate": 0.75,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 43,
+      "drift_score": 0.8,
+      "stagnation": 0.95,
+      "loop_rate": 0.75,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 44,
+      "drift_score": 0.8,
+      "stagnation": 0.95,
+      "loop_rate": 0.75,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 45,
+      "drift_score": 0.811,
+      "stagnation": 0.95,
+      "loop_rate": 0.8,
+      "incoherence": 0.48,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 46,
+      "drift_score": 0.811,
+      "stagnation": 0.95,
+      "loop_rate": 0.8,
+      "incoherence": 0.48,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 47,
+      "drift_score": 0.826,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.48,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 48,
+      "drift_score": 0.841,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.48,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 49,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 50,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 51,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 52,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 53,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 54,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 55,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 56,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 57,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 58,
+      "drift_score": 0.849,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.52,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 59,
+      "drift_score": 0.849,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.52,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 60,
+      "drift_score": 0.849,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.52,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 61,
+      "drift_score": 0.849,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.52,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 62,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 63,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 64,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 65,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 66,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 67,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 68,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 69,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 70,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 71,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 72,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 73,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 74,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 75,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 76,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 77,
+      "drift_score": 0.838,
+      "stagnation": 0.95,
+      "loop_rate": 0.85,
+      "incoherence": 0.54,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 78,
+      "drift_score": 0.849,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.52,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 79,
+      "drift_score": 0.849,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.52,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 80,
+      "drift_score": 0.849,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.52,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 81,
+      "drift_score": 0.849,
+      "stagnation": 0.95,
+      "loop_rate": 0.9,
+      "incoherence": 0.52,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 82,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 83,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 84,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 85,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 86,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 87,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 88,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 89,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 90,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 91,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 92,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 93,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 94,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 95,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 96,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 97,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 98,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    },
+    {
+      "step": 99,
+      "drift_score": 0.86,
+      "stagnation": 0.95,
+      "loop_rate": 0.95,
+      "incoherence": 0.5,
+      "window": 20,
+      "threshold": 0.65
+    }
+  ],
+  "integration_events": [
+    {
+      "step": 3,
+      "unused": [
+        "3:03 pm",
+        "You're holding a mysterious envelope",
+        "Mr. Crisp hollers",
+        "\"Deliver that envelope!\"",
+        "What next?"
+      ],
+      "gap": true,
+      "suggested_combination": "Deliver the envelope you're holding (respond to Mr. Crisp's order) instead of continuing to search/take actions - e.g. GO/DELIVER ENVELOPE to fulfill 'Deliver that envelope!'"
+    },
+    {
+      "step": 4,
+      "unused": [
+        "3:03 pm",
+        "You're holding a mysterious envelope",
+        "Mr. Crisp growls",
+        "\"Scram!\"",
+        "What next?"
+      ],
+      "gap": true,
+      "suggested_combination": "Leave the Post Office (e.g., GO NORTH) then DELIVER ENVELOPE at the Magick Shoppe instead of taking more items."
+    },
+    {
+      "step": 5,
+      "unused": [
+        "3:04 pm",
+        "You're holding a mysterious envelope",
+        "What next?"
+      ],
+      "gap": true,
+      "suggested_combination": "Use the mysterious envelope's destination/address clue with the time (3:04 pm) to head directly toward the Magick Shoppe before it closes at five, rather than just moving north/south without purpose."
+    },
+    {
+      "step": 8,
+      "unused": [
+        "3:05 pm",
+        "You're holding a mysterious envelope",
+        "What next?"
+      ],
+      "gap": true,
+      "suggested_combination": "Examine the signpost for directions to the Magick Shoppe instead of re-reading the envelope, since READ ENVELOPE already yielded no useful info twice."
+    },
+    {
+      "step": 9,
+      "unused": [
+        "3:06 pm",
+        "You're holding a mysterious envelope",
+        "What next?"
+      ],
+      "gap": true,
+      "suggested_combination": "Read the signpost directions, then follow them (e.g. GO to the direction indicated for the Magick Shoppe) instead of re-reading items already examined; use the envelope's destination info combined with the signpost's directions to choose the correct exit."
+    },
+    {
+      "step": 11,
+      "unused": [
+        "3:08 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]",
+        "What next?"
+      ],
+      "gap": true,
+      "suggested_combination": "GO SOUTH (travel toward Festeron village using the known south:744 exit) instead of continuing to wander north/east, then deliver the envelope at the Magick Shoppe"
+    },
+    {
+      "step": 12,
+      "unused": [
+        "3:09 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "Go south from Outside Cottage toward Festeron village while holding the envelope, ignoring or calming the poodle if it blocks the path, to reach the Magick Shoppe before it closes at five and deliver the envelope."
+    },
+    {
+      "step": 13,
+      "unused": [
+        "3:09 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "Go south past/through the snarling poodle (or calm it) while holding the envelope, then continue to the Magick Shoppe to deliver it before 5pm instead of exploring cottage/signpost further."
+    },
+    {
+      "step": 14,
+      "unused": [
+        "3:10 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "Use the mysterious envelope's contents (or an item) to distract/soothe the poodle, e.g., throw food to the poodle or offer something to calm it, then GO SOUTH past it toward the Magick Shoppe."
+    },
+    {
+      "step": 15,
+      "unused": [
+        "3:11 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "Check inventory for a food item (or search nearby bushes/ground) to give/throw to the poodle to distract it, then proceed south past it toward the Magick Shoppe with the envelope"
+    },
+    {
+      "step": 17,
+      "unused": [
+        "3:12 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "SHOW ENVELOPE TO MISS VOSS or GIVE ENVELOPE TO MISS VOSS to get her attention/cooperation so she calls off the poodle"
+    },
+    {
+      "step": 18,
+      "unused": [
+        "3:13 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO MISS VOSS (or SHOW ENVELOPE TO MISS VOSS) after she appears at the door, to get her to call off the poodle"
+    },
+    {
+      "step": 19,
+      "unused": [
+        "3:14 pm",
+        "You're holding a mysterious envelope"
+      ],
+      "gap": true,
+      "suggested_combination": "KNOCK ON DOOR then GIVE ENVELOPE TO MISS VOSS when she appears, instead of just knocking again"
+    },
+    {
+      "step": 21,
+      "unused": [
+        "3:16 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "KNOCK ON DOOR, then GIVE ENVELOPE TO MISS VOSS when she appears"
+    },
+    {
+      "step": 22,
+      "unused": [
+        "3:17 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "KNOCK ON DOOR, then when Miss Voss appears GIVE ENVELOPE TO MISS VOSS"
+    },
+    {
+      "step": 23,
+      "unused": [
+        "3:17 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "KNOCK ON DOOR, then GIVE ENVELOPE TO MISS VOSS when she appears"
+    },
+    {
+      "step": 24,
+      "unused": [
+        "3:18 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO MISS VOSS as soon as she appears at the door, to make her call off the poodle"
+    },
+    {
+      "step": 25,
+      "unused": [
+        "3:19 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO MISS VOSS immediately after knocking, instead of examining the poodle or repeating knocks"
+    },
+    {
+      "step": 26,
+      "unused": [
+        "3:19 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO MISS VOSS immediately when she appears at the door, to make her call off the poodle"
+    },
+    {
+      "step": 27,
+      "unused": [
+        "3:20 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "Knock on cottage door, then when Miss Voss appears immediately GIVE ENVELOPE TO MISS VOSS"
+    },
+    {
+      "step": 28,
+      "unused": [
+        "3:20 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "After knocking and Miss Voss appears, immediately GIVE ENVELOPE TO MISS VOSS instead of examining the poodle or delaying further."
+    },
+    {
+      "step": 29,
+      "unused": [
+        "3:20 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "KNOCK ON DOOR, then when Miss Voss appears immediately GIVE ENVELOPE TO MISS VOSS instead of examining the poodle"
+    },
+    {
+      "step": 30,
+      "unused": [
+        "3:21 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "Give/show the mysterious envelope to the poodle to bribe it, or use it as an offering to distract the dog so you can pass north"
+    },
+    {
+      "step": 31,
+      "unused": [
+        "3:22 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then GO NORTH"
+    },
+    {
+      "step": 32,
+      "unused": [
+        "3:23 pm",
+        "You're holding a mysterious envelope"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go NORTH"
+    },
+    {
+      "step": 33,
+      "unused": [
+        "3:24 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 34,
+      "unused": [
+        "3:25 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 35,
+      "unused": [
+        "3:26 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go north"
+    },
+    {
+      "step": 36,
+      "unused": [
+        "3:27 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go NORTH"
+    },
+    {
+      "step": 37,
+      "unused": [
+        "3:28 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then GO NORTH"
+    },
+    {
+      "step": 38,
+      "unused": [
+        "3:29 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go north"
+    },
+    {
+      "step": 39,
+      "unused": [
+        "3:30 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 40,
+      "unused": [
+        "3:31 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north."
+    },
+    {
+      "step": 41,
+      "unused": [
+        "3:32 pm",
+        "You're holding a mysterious envelope"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go north"
+    },
+    {
+      "step": 42,
+      "unused": [
+        "3:33 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go NORTH"
+    },
+    {
+      "step": 43,
+      "unused": [
+        "3:34 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go north"
+    },
+    {
+      "step": 44,
+      "unused": [
+        "3:35 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 45,
+      "unused": [
+        "3:36 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go north"
+    },
+    {
+      "step": 46,
+      "unused": [
+        "3:37 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go north"
+    },
+    {
+      "step": 47,
+      "unused": [
+        "3:38 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go north"
+    },
+    {
+      "step": 48,
+      "unused": [
+        "3:39 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then GO NORTH"
+    },
+    {
+      "step": 49,
+      "unused": [
+        "3:40 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE; then go north"
+    },
+    {
+      "step": 50,
+      "unused": [
+        "3:41 pm",
+        "You're holding a mysterious envelope"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then GO NORTH"
+    },
+    {
+      "step": 51,
+      "unused": [
+        "3:42 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then NORTH"
+    },
+    {
+      "step": 52,
+      "unused": [
+        "3:43 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then NORTH"
+    },
+    {
+      "step": 53,
+      "unused": [
+        "3:44 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then NORTH"
+    },
+    {
+      "step": 54,
+      "unused": [
+        "3:45 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go NORTH"
+    },
+    {
+      "step": 55,
+      "unused": [
+        "3:46 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then NORTH"
+    },
+    {
+      "step": 56,
+      "unused": [
+        "3:47 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then NORTH"
+    },
+    {
+      "step": 57,
+      "unused": [
+        "3:48 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then GO NORTH"
+    },
+    {
+      "step": 58,
+      "unused": [
+        "3:49 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go north"
+    },
+    {
+      "step": 59,
+      "unused": [
+        "3:49 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE; then go NORTH"
+    },
+    {
+      "step": 60,
+      "unused": [
+        "3:50 pm",
+        "You're holding a mysterious envelope"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE; then GO NORTH"
+    },
+    {
+      "step": 61,
+      "unused": [
+        "3:51 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE; then GO NORTH"
+    },
+    {
+      "step": 62,
+      "unused": [
+        "3:52 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go NORTH"
+    },
+    {
+      "step": 63,
+      "unused": [
+        "3:52 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 64,
+      "unused": [
+        "3:53 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 65,
+      "unused": [
+        "3:54 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 66,
+      "unused": [
+        "3:55 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 67,
+      "unused": [
+        "3:56 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 68,
+      "unused": [
+        "3:57 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then GO NORTH"
+    },
+    {
+      "step": 69,
+      "unused": [
+        "3:58 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then GO NORTH"
+    },
+    {
+      "step": 70,
+      "unused": [
+        "3:59 pm",
+        "You're holding a mysterious envelope"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 71,
+      "unused": [
+        "4:00 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north."
+    },
+    {
+      "step": 72,
+      "unused": [
+        "4:01 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north."
+    },
+    {
+      "step": 73,
+      "unused": [
+        "4:02 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go north"
+    },
+    {
+      "step": 74,
+      "unused": [
+        "4:03 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 75,
+      "unused": [
+        "4:04 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 76,
+      "unused": [
+        "4:05 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 77,
+      "unused": [
+        "4:06 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go NORTH"
+    },
+    {
+      "step": 78,
+      "unused": [
+        "4:07 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 79,
+      "unused": [
+        "4:08 pm",
+        "You're holding a mysterious envelope"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 80,
+      "unused": [
+        "4:09 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 81,
+      "unused": [
+        "4:10 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 82,
+      "unused": [
+        "4:11 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go NORTH"
+    },
+    {
+      "step": 83,
+      "unused": [
+        "4:12 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 84,
+      "unused": [
+        "4:13 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then go NORTH"
+    },
+    {
+      "step": 85,
+      "unused": [
+        "4:14 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 86,
+      "unused": [
+        "4:15 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE MYSTERIOUS ENVELOPE TO POODLE, then GO NORTH"
+    },
+    {
+      "step": 87,
+      "unused": [
+        "4:16 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 88,
+      "unused": [
+        "4:17 pm",
+        "You're holding a mysterious envelope"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north."
+    },
+    {
+      "step": 89,
+      "unused": [
+        "4:18 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 90,
+      "unused": [
+        "4:19 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 91,
+      "unused": [
+        "4:20 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north."
+    },
+    {
+      "step": 92,
+      "unused": [
+        "4:21 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 93,
+      "unused": [
+        "4:22 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 94,
+      "unused": [
+        "4:23 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 95,
+      "unused": [
+        "4:24 pm",
+        "You're holding a mysterious envelope",
+        "south:744",
+        "PRSO:",
+        "PRSI: ]"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 96,
+      "unused": [
+        "4:25 pm",
+        "You're holding a mysterious envelope",
+        "poodle circles you warily",
+        "snarling",
+        "growling with menace"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then GO NORTH"
+    },
+    {
+      "step": 97,
+      "unused": [
+        "4:26 pm",
+        "You're holding a mysterious envelope"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 98,
+      "unused": [
+        "4:27 pm",
+        "You're holding a mysterious envelope",
+        "You can smell the poodle's hot breath as it yaps"
+      ],
+      "gap": true,
+      "suggested_combination": "Give the mysterious envelope to the poodle, then go north"
+    },
+    {
+      "step": 99,
+      "unused": [
+        "4:28 pm",
+        "You're holding a mysterious envelope",
+        "poodle glares at you through eyes red with hatred"
+      ],
+      "gap": true,
+      "suggested_combination": "GIVE ENVELOPE TO POODLE, then GO NORTH"
+    }
+  ]
+}
